@@ -31,6 +31,7 @@ jobs:
           KEY_BUILD : ${{ secrets.KEY_BUILD }}
           EXTRA_FEEDS: src-git|garypang13|https://github.com/garypang13/openwrt-packages
           FEEDS_NEED_INSTALL: garypang13
+          INDEX: 1
           PACKAGES: |
             luci-app-passwall
 
@@ -44,7 +45,7 @@ jobs:
         run: |
           BRANCH="packages/$ARCH"
           # Upload base only
-          cd /home/build/openwrt/bin/packages/*/garypang13
+          cd bin/packages/*/garypang13
           git init
           git config user.name "bot"
           git config user.email "bot@github.com"
