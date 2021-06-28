@@ -32,7 +32,6 @@ jobs:
           EXTRA_FEEDS: src-git|garypang13|https://github.com/garypang13/openwrt-packages
           PACKAGES: |
             luci-app-passwall
-            luci-app-ssr-plus
 
       - name: List files
         run: |
