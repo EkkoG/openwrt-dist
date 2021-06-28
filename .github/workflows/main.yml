@@ -50,7 +50,7 @@ jobs:
           git init -b master
           git config user.name "bot"
           git config user.email "bot@github.com"
-          git remote set-url origin https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git remote set-url origin https://${GITHUB_ACTOR}:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY.git
           git checkout -b $BRANCH
           git commit -am "Update"
           git push origin master -f
