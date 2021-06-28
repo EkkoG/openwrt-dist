@@ -43,15 +43,15 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}
         run: |
+          
           BRANCH="packages/$ARCH"
           # Upload base only
           cd bin/packages/*/garypang13
-          git init
+          git init -b master
           git config user.name "bot"
           git config user.email "bot@github.com"
-          git add .
-          git commit -m "$TAG$(TZ='Asia/Shanghai' date +@%Y%m%d)"
-          echo "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY"
-          echo "HEAD:$BRANCH"
-          git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$BRANCH
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git checkout -b $BRANCH
+          git commit -am "Update"
+          git push origin master -f
 
