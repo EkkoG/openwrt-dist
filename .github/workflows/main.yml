@@ -29,13 +29,20 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}
           KEY_BUILD : ${{ secrets.KEY_BUILD }}
-          PACKAGES: luci-app-passwall
+          EXTRA_FEEDS: 'src-git garypang13 https://github.com/garypang13/openwrt-packages'
+          PACKAGES: |
+            luci-app-passwall
+            luci-app-ssr-plus
+
+      - name: List files
+        run: |
+          ls -R bin
 
       - name: Upload
         run: |
           BRANCH="packages/$ARCH"
           # Upload base only
-          cd /home/build/openwrt/bin/packages/*/passwall
+          cd /home/build/openwrt/bin/packages/*/garypang13
           git init
           git config user.name "bot"
           git config user.email "bot@github.com"
