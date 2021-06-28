@@ -39,5 +39,19 @@ jobs:
         run: |
           ls -R bin
 
-      - name: Setup upterm session
-        uses: lhotari/action-upterm@v1
+      - name: Upload
+        env:
+          ARCH: ${{ matrix.arch }}
+        run: |
+          BRANCH="packages/$ARCH"
+          # Upload base only
+          cd bin/packages/*/garypang13
+          sudo chown $who:$who -R .
+          git init
+          git config user.name "bot"
+          git config user.email "bot@github.com"
+          git add .
+          git commit -m "$TAG$(TZ='Asia/Shanghai' date +@%Y%m%d)"
+          echo "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY"
+          echo "HEAD:$BRANCH"
+          git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$BRANCH
