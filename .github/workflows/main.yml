@@ -32,6 +32,8 @@ jobs:
           EXTRA_FEEDS: src-git|garypang13|https://github.com/garypang13/openwrt-packages
           FEEDS_NEED_INSTALL: garypang13
           INDEX: 1
+          PACKAGES: |
+            tcping
 
       - name: List files
         run: |
@@ -49,5 +51,7 @@ jobs:
           git config user.email "bot@github.com"
           git add .
           git commit -m "$TAG$(TZ='Asia/Shanghai' date +@%Y%m%d)"
+          echo "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY"
+          echo "HEAD:$BRANCH"
           git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$BRANCH
 
