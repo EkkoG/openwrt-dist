@@ -30,7 +30,8 @@ jobs:
           ARCH: ${{ matrix.arch }}
           KEY_BUILD : ${{ secrets.KEY_BUILD }}
           EXTRA_FEEDS: |
-            'src-git garypang13 https://github.com/garypang13/openwrt-packages'
+            src-git garypang13 https://github.com/garypang13/openwrt-packages
+            "src-git garypang13 https://github.com/garypang13/openwrt-packages"
           PACKAGES: |
             luci-app-passwall
             luci-app-ssr-plus
