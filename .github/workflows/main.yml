@@ -1,0 +1,45 @@
+name: Openwrt Build Bot
+on:
+  push:
+    branches: master
+    paths:
+      - '**'
+      - '!README.md'
+      - '!.gitignore'
+  schedule:
+  - cron: 0 0 * * *
+
+jobs:
+  buildpkg:
+    name: Build Openwrt Package
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        arch:
+          - x86_64
+          - mips_24kc
+          - aarch64_generic
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Build
+        uses: cielpy/gh-action-sdk@master
+        env:
+          ARCH: ${{ matrix.arch }}
+          KEY_BUILD : ${{ secrets.KEY_BUILD }}
+          PACKAGES: luci-app-passwall
+
+      - name: Upload
+        run: |
+          BRANCH="packages/$ARCH"
+          # Upload base only
+          cd /home/build/openwrt/bin/packages/*/passwall
+          git init
+          git config user.name "bot"
+          git config user.email "bot@github.com"
+          git add .
+          git commit -m "$TAG$(TZ='Asia/Shanghai' date +@%Y%m%d)"
+          git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$BRANCH
+
