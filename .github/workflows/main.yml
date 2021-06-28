@@ -46,7 +46,7 @@ jobs:
           BRANCH="packages/$ARCH"
           # Upload base only
           cd bin/packages/*/garypang13
-          sudo chown $who:$who -R .
+          sudo chown runner:runner -R .
           git init
           git config user.name "bot"
           git config user.email "bot@github.com"
