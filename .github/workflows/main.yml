@@ -33,7 +33,7 @@ jobs:
           FEEDS_NEED_INSTALL: garypang13
           INDEX: 1
           PACKAGES: |
-            tcpping
+            luci-app-passwall
 
       - name: List files
         run: |
