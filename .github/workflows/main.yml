@@ -39,6 +39,8 @@ jobs:
           ls -R bin
 
       - name: Upload
+        env:
+          ARCH: ${{ matrix.arch }}
         run: |
           BRANCH="packages/$ARCH"
           # Upload base only
