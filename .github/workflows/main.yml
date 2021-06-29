@@ -44,7 +44,12 @@ jobs:
             luci-app-nlbwmon
             luci-app-vlmcsd
             luci-app-zerotier
-          
+            luci-app-bypass
+            luci-app-dnsfilter
+            luci-theme-edge
+            chinadns-ng
+            smartdns-le
+
 
       - name: List files
         run: |
