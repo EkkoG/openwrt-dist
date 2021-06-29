@@ -35,6 +35,15 @@ jobs:
           PACKAGES: |
             luci-app-passwall
             luci-app-ssr-plus
+            luci-app-adbyby-plus
+            luci-app-autoreboot
+            luci-app-statistics
+            luci-app-frpc
+            luci-app-filetransfer
+            luci-app-flowoffload
+            luci-app-nlbwmon
+            luci-app-vlmcsd
+            luci-app-zerotier
           
 
       - name: List files
@@ -46,7 +55,6 @@ jobs:
           ARCH: ${{ matrix.arch }}
         run: |
           BRANCH="packages/$ARCH"
-          # Upload base only
           cd bin/packages/*/garypang13
           sudo chown runner:runner -R .
           git init
