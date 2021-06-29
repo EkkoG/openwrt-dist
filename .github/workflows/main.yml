@@ -33,15 +33,8 @@ jobs:
           FEEDS_NEED_INSTALL: garypang13
           INDEX: 1
           PACKAGES: |
-            luci-app-passwall
-            luci-app-ssr-plus
-            luci-app-adbyby-plus
-            luci-app-autoreboot
-            luci-app-statistics
             luci-app-frpc
             luci-app-filetransfer
-            luci-app-flowoffload
-            luci-app-nlbwmon
             luci-app-vlmcsd
             luci-app-zerotier
             luci-app-bypass
@@ -49,6 +42,10 @@ jobs:
             luci-theme-edge
             chinadns-ng
             smartdns-le
+            luci-app-passwall
+            luci-app-ssr-plus
+            luci-app-adbyby-plus
+            luci-app-autoreboot
 
 
       - name: List files
