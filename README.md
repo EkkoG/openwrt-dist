@@ -1,8 +1,7 @@
-This is all the feed url.
+This is all the feed url. Choose one depends on your device arch.
 
 
 ```
-
 src/gz passwall https://github.com/cielpy/openwrt-dist/raw/packages/aarch64_generic
 src/gz passwall https://github.com/cielpy/openwrt-dist/raw/packages/mips_24kc
 src/gz passwall https://github.com/cielpy/openwrt-dist/raw/packages/x86_64
