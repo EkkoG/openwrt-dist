@@ -17,7 +17,6 @@ jobs:
       matrix:
         arch:
           - x86_64
-          - mips_24kc
           - aarch64_generic
     steps:
       - uses: actions/checkout@v2
