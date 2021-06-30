@@ -45,6 +45,7 @@ jobs:
           INDEX: 1
           PACKAGES: |
             luci-base
+            luci-theme-argon
             clash
             overture
             luci-app-clash
