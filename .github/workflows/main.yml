@@ -40,6 +40,8 @@ jobs:
           KEY_BUILD : ${{ secrets.KEY_BUILD }}
           EXTRA_FEEDS: src-link|cielpy|/github/workspace/openwrt-packages
           FEEDS_NEED_INSTALL: cielpy
+          SCRIPT_BEFORE_BUILD: |
+            make defconfig
           INDEX: 1
           PACKAGES: |
             luci-base
