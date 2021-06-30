@@ -66,3 +66,33 @@ jobs:
           git add .
           git commit -m "$(TZ='Asia/Shanghai' date +@%Y%m%d)"
           git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$BRANCH
+
+          LUCI_BRANCH="luci/$ARCH"
+          cd ../luci
+          sudo chown runner:runner -R .
+          git init
+          git config user.name "bot"
+          git config user.email "bot@github.com"
+          git add .
+          git commit -m "$(TZ='Asia/Shanghai' date +@%Y%m%d)"
+          git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$LUCI_BRANCH
+
+          BASE_BRANCH="base/$ARCH"
+          cd ../base
+          sudo chown runner:runner -R .
+          git init
+          git config user.name "bot"
+          git config user.email "bot@github.com"
+          git add .
+          git commit -m "$(TZ='Asia/Shanghai' date +@%Y%m%d)"
+          git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$BASE_BRANCH
+
+          PKG_BRANCH="origin_packages/$ARCH"
+          cd ../packages
+          sudo chown runner:runner -R .
+          git init
+          git config user.name "bot"
+          git config user.email "bot@github.com"
+          git add .
+          git commit -m "$(TZ='Asia/Shanghai' date +@%Y%m%d)"
+          git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$PKG_BRANCH
