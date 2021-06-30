@@ -38,7 +38,7 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}
           KEY_BUILD : ${{ secrets.KEY_BUILD }}
-          EXTRA_FEEDS: src-link cielpy /github/workspace/openwrt-packages
+          EXTRA_FEEDS: src-link|cielpy|/github/workspace/openwrt-packages
           FEEDS_NEED_INSTALL: cielpy
           INDEX: 1
           PACKAGES: |
