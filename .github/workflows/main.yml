@@ -24,18 +24,29 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Prepare feeds
+        run: |
+          git clone https://github.com/garypang13/openwrt-packages.git
+          cd openwrt-packages
+          sed -i 's/libustream-openssl/wget-ssl/' luci-app-ssr-plus/Makefile
+          git clone https://github.com/cielpy/openwrt-clash.git
+          git clone -b master https://github.com/cielpy/luci-app-clash.git
+          git clone https://github.com/cielpy/overture-openwrt.git
+
       - name: Build
         uses: cielpy/gh-action-sdk@master
         env:
           ARCH: ${{ matrix.arch }}
           KEY_BUILD : ${{ secrets.KEY_BUILD }}
-          EXTRA_FEEDS: src-git|garypang13|https://github.com/garypang13/openwrt-packages
-          FEEDS_NEED_INSTALL: garypang13
-          SCRIPT_BEFORE_BUILD: |
-            sed -i 's/libustream-openssl/wget-ssl/' package/feeds/garypang13/luci-app-ssr-plus/Makefile
+          EXTRA_FEEDS: src-link cielpy /github/workspace/openwrt-packages
+          FEEDS_NEED_INSTALL: cielpy
           INDEX: 1
           PACKAGES: |
             luci-base
+            clash
+            overture
+            luci-app-clash
+            luci-app-jd-dailybonus
             luci-app-vssr
             luci-app-wrtbwmon
             luci-app-frpc
@@ -62,7 +73,7 @@ jobs:
           ARCH: ${{ matrix.arch }}
         run: |
           BRANCH="packages/$ARCH"
-          cd bin/packages/*/garypang13
+          cd bin/packages/*/cielpy
           sudo chown runner:runner -R .
           git init
           git config user.name "bot"
