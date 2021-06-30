@@ -29,9 +29,9 @@ jobs:
           git clone https://github.com/garypang13/openwrt-packages.git
           cd openwrt-packages
           sed -i 's/libustream-openssl/wget-ssl/' luci-app-ssr-plus/Makefile
-          git clone https://github.com/cielpy/openwrt-clash.git
+          git clone https://github.com/cielpy/openwrt-clash.git clash
           git clone -b master https://github.com/cielpy/luci-app-clash.git
-          git clone https://github.com/cielpy/overture-openwrt.git
+          git clone https://github.com/cielpy/overture-openwrt.git overture
 
       - name: Build
         uses: cielpy/gh-action-sdk@master
@@ -46,8 +46,9 @@ jobs:
             make defconfig
           INDEX: 1
           PACKAGES: |
+            overture
+            clash
             libcap
-            libcap-bin
             luci-base
             luci-theme-argon
             luci-theme-edge
