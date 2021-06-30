@@ -32,7 +32,7 @@ jobs:
           EXTRA_FEEDS: src-git|garypang13|https://github.com/garypang13/openwrt-packages
           FEEDS_NEED_INSTALL: garypang13
           SCRIPT_BEFORE_BUILD: |
-            sed -i 's/libustream-openssl/wget-ssl/' package/feeds/passwall/luci-app-ssr-plus
+            sed -i 's/libustream-openssl/wget-ssl/' package/feeds/passwall/luci-app-ssr-plus/Makefile
           INDEX: 1
           PACKAGES: |
             feeds/luci/luci-base
