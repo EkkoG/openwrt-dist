@@ -42,10 +42,9 @@ jobs:
           FEEDS_NEED_INSTALL: |
             cielpy
             packages
-          SCRIPT_BEFORE_BUILD: |
-            make defconfig
           INDEX: 1
           PACKAGES: |
+            luci-app-jd-dailybonus aarch64_generic|x86_64
             overture
             clash
             libcap
@@ -53,7 +52,6 @@ jobs:
             luci-theme-argon
             luci-theme-edge
             luci-app-clash
-            luci-app-jd-dailybonus
             luci-app-vssr
             luci-app-wrtbwmon
             luci-app-frpc
