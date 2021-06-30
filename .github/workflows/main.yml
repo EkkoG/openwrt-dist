@@ -35,6 +35,7 @@ jobs:
             sed -i 's/libustream-openssl/wget-ssl/' package/feeds/passwall/luci-app-ssr-plus
           INDEX: 1
           PACKAGES: |
+            feeds/luci/luci-base
             luci-app-vssr
             luci-app-wrtbwmon
             luci-app-frpc
