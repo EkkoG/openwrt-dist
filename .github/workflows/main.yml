@@ -51,7 +51,6 @@ jobs:
             luci-base
             luci-theme-argon
             luci-theme-edge
-            overture
             luci-app-clash
             luci-app-jd-dailybonus
             luci-app-vssr
