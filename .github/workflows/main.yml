@@ -43,7 +43,7 @@ jobs:
             packages
           INDEX: 1
           PACKAGES: |
-            luci-app-jd-dailybonus mips_24kc
+            luci-app-jd-dailybonus
             overture
             clash
             libcap
