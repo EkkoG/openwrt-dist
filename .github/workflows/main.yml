@@ -18,6 +18,7 @@ jobs:
         arch:
           - x86_64
           - aarch64_generic
+          - mips_24kc
     steps:
       - uses: actions/checkout@v2
         with:
