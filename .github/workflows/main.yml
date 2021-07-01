@@ -27,12 +27,13 @@ jobs:
 
       - name: Prepare feeds
         run: |
-          git clone https://github.com/garypang13/openwrt-packages.git
+          git clone --depth=1 https://github.com/garypang13/openwrt-packages.git
           cd openwrt-packages
+          wget https://github.com/NobyDa/Script/raw/master/JD-DailyBonus/JD_DailyBonus.js -O luci-app-jd-dailybonus/root/usr/share/jd-dailybonus/JD_DailyBonus.js
           sed -i 's/libustream-openssl/wget-ssl/' luci-app-ssr-plus/Makefile
-          git clone https://github.com/cielpy/openwrt-clash.git clash
-          git clone -b master https://github.com/cielpy/luci-app-clash.git
-          git clone https://github.com/cielpy/overture-openwrt.git overture
+          git clone --depth=1 https://github.com/cielpy/openwrt-clash.git clash
+          git clone --depth=1 -b master https://github.com/cielpy/luci-app-clash.git
+          git clone --depth=1 https://github.com/cielpy/overture-openwrt.git overture
 
       - name: Build
         uses: cielpy/gh-action-sdk@master
