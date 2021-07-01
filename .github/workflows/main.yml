@@ -44,6 +44,7 @@ jobs:
             packages
           INDEX: 1
           PACKAGES: |
+            ubus
             luci-app-jd-dailybonus|mips_24kc
             overture
             clash
