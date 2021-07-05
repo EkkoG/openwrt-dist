@@ -36,6 +36,7 @@ jobs:
 
       - name: Build
         uses: cielpy/gh-action-sdk@master
+        timeout-minutes: 600
         env:
           ARCH: ${{ matrix.arch }}
           KEY_BUILD : ${{ secrets.KEY_BUILD }}
