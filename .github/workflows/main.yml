@@ -13,7 +13,6 @@ jobs:
   buildpkg:
     name: Build Openwrt Package
     runs-on: ubuntu-20.04
-    timeout-minutes: 600
     strategy:
       matrix:
         arch:
@@ -30,13 +29,14 @@ jobs:
           git clone --depth=1 https://github.com/garypang13/openwrt-packages.git
           cd openwrt-packages
           sed -i 's/libustream-openssl/wget-ssl/' luci-app-ssr-plus/Makefile
+          # 编译 node 耗时太长，容易超过 GitHub 资源限制，改成不显示依赖，需要自己安装 node
+          sed -i 's/+node //g' luci-app-jd-dailybonus/Makefile
           git clone --depth=1 https://github.com/cielpy/openwrt-clash.git clash
           git clone --depth=1 -b master https://github.com/cielpy/luci-app-clash.git
           git clone --depth=1 https://github.com/cielpy/overture-openwrt.git overture
 
       - name: Build
         uses: cielpy/gh-action-sdk@master
-        timeout-minutes: 600
         env:
           ARCH: ${{ matrix.arch }}
           KEY_BUILD : ${{ secrets.KEY_BUILD }}
