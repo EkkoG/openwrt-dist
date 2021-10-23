@@ -46,12 +46,10 @@ jobs:
           PACKAGES: |
             ubus
             overture
-            clash
             libcap
             luci-base
             luci-theme-argon
             luci-theme-edge
-            luci-app-clash
             luci-app-vssr
             luci-app-wrtbwmon
             luci-app-frpc
