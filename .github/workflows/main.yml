@@ -48,7 +48,6 @@ jobs:
             overture
             clash
             libcap
-            luci-app-openclash
             luci-base
             luci-theme-argon
             luci-theme-edge
