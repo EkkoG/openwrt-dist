@@ -29,7 +29,7 @@ jobs:
           git clone --depth=1 https://github.com/garypang13/openwrt-packages.git
           cd openwrt-packages
           sed -i 's/libustream-openssl/wget-ssl/' luci-app-ssr-plus/Makefile
-          git clone --depth=1 https://github.com/cielpy/git remote add origin git@github.com:cielpy/openwrt-clash-for-openclash.git.git clash-for-openclash
+          git clone --depth=1 https://github.com/cielpy/openwrt-clash-for-openclash.git clash-for-openclash
           git clone --depth=1 -b master https://github.com/cielpy/luci-app-clash.git
           git clone --depth=1 https://github.com/cielpy/overture-openwrt.git overture
 
