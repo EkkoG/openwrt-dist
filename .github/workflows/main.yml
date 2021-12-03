@@ -60,7 +60,7 @@ jobs:
             luci-app-dnsfilter
             luci-theme-edge
             chinadns-ng
-            smartdns-le
+            smartdns
             luci-app-passwall
             luci-app-ssr-plus
             luci-app-adbyby-plus
