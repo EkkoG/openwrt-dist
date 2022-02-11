@@ -45,7 +45,6 @@ jobs:
           INDEX: 1
           PACKAGES: |
             clash-for-openclash
-            luci-app-openclash
             overture
             libcap
             luci-base
