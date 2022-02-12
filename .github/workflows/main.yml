@@ -44,8 +44,8 @@ jobs:
             packages
           INDEX: 1
           PACKAGES: |
-            clash-for-openclash
             luci-app-openclash
+            clash-for-openclash
             overture
             libcap
             luci-base
@@ -63,7 +63,6 @@ jobs:
             chinadns-ng
             smartdns
             luci-app-passwall
-            luci-app-ssr-plus
             luci-app-adbyby-plus
             luci-app-autoreboot
 
