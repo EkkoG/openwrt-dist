@@ -40,7 +40,6 @@ jobs:
           EXTRA_FEEDS: src-link|ekkog|/github/workspace/openwrt-packages
           FEEDS_NEED_INSTALL: |
             ekkog
-            packages
           INDEX: 1
           PACKAGES: |
             luci-app-openclash
