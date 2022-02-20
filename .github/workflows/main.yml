@@ -16,9 +16,9 @@ jobs:
     strategy:
       matrix:
         arch:
-          - x86_64
-          - aarch64_generic
-          - mips_24kc
+          - x86_64-21.02.1
+          - aarch64_generic-21.02.1
+          - mips_24kc-21.02.1
     steps:
       - uses: actions/checkout@v2
         with:
@@ -28,31 +28,26 @@ jobs:
         run: |
           git clone --depth=1 https://github.com/garypang13/openwrt-packages.git
           cd openwrt-packages
-          sed -i 's/libustream-openssl/wget-ssl/' luci-app-ssr-plus/Makefile
-          git clone --depth=1 https://github.com/cielpy/openwrt-clash.git clash
-          git clone --depth=1 -b master https://github.com/cielpy/luci-app-clash.git
-          git clone --depth=1 https://github.com/cielpy/overture-openwrt.git overture
+          git clone --depth=1 https://github.com/ekkog/openwrt-clash-for-openclash.git clash-for-openclash
+          git clone --depth=1 -b master https://github.com/ekkog/luci-app-clash.git
+          git clone --depth=1 https://github.com/ekkog/overture-openwrt.git overture
 
       - name: Build
-        uses: cielpy/gh-action-sdk@master
+        uses: ekkog/gh-action-sdk@master
         env:
           ARCH: ${{ matrix.arch }}
           KEY_BUILD : ${{ secrets.KEY_BUILD }}
-          EXTRA_FEEDS: src-link|cielpy|/github/workspace/openwrt-packages
+          EXTRA_FEEDS: src-link|ekkog|/github/workspace/openwrt-packages
           FEEDS_NEED_INSTALL: |
-            cielpy
-            packages
+            ekkog
           INDEX: 1
           PACKAGES: |
-            ubus
+            clash-for-openclash
             overture
-            clash
             libcap
-            luci-app-openclash
             luci-base
             luci-theme-argon
             luci-theme-edge
-            luci-app-clash
             luci-app-vssr
             luci-app-wrtbwmon
             luci-app-frpc
@@ -63,9 +58,8 @@ jobs:
             luci-app-dnsfilter
             luci-theme-edge
             chinadns-ng
-            smartdns-le
+            smartdns
             luci-app-passwall
-            luci-app-ssr-plus
             luci-app-adbyby-plus
             luci-app-autoreboot
 
@@ -79,7 +73,7 @@ jobs:
           ARCH: ${{ matrix.arch }}
         run: |
           BRANCH="packages/$ARCH"
-          cd bin/packages/*/cielpy
+          cd bin/packages/*/ekkog
           sudo chown runner:runner -R .
           git init
           git config user.name "bot"
