@@ -1,0 +1,1230 @@
+Package: adbyby
+Version: 2.7-3
+Depends: libc
+Section: net
+Architecture: x86_64
+Installed-Size: 401243
+Filename: adbyby_2.7-3_x86_64.ipk
+Size: 402011
+SHA256sum: ced43f35245410ebdd38d16b7090e1570c9064bd477b2a0b8c5bf490167c8479
+Description:  Adbyby is a powerful adblock module to block ad,just like adblock.
+
+Package: chinadns-ng
+Version: 1.0-beta.25-20
+Depends: libc, ipset
+License: AGPL-3.0-only
+Section: net
+Architecture: x86_64
+Installed-Size: 18482
+Filename: chinadns-ng_1.0-beta.25-20_x86_64.ipk
+Size: 19230
+SHA256sum: 1a16ac4fe8d258dacefb58ee891d2925a556639368e89fd3030831a7fd181d5e
+Description:  ChinaDNS next generation, refactoring with epoll and ipset.
+
+Package: clash-for-openclash
+Version: 1.9.0
+Depends: libc
+Section: luci
+Architecture: x86_64
+Installed-Size: 3482936
+Filename: clash-for-openclash_1.9.0_x86_64.ipk
+Size: 3474966
+SHA256sum: e1d74cb8c48cb8a51ff2c1c339a010a4343207f500b167ea8a8eb537b855c20a
+Description:  A rule-based tunnel in Go.
+
+Package: dns2socks
+Version: 2.1-10
+Depends: libc, libpthread
+License: BSD-3-Clause
+Section: net
+Architecture: x86_64
+Installed-Size: 10464
+Filename: dns2socks_2.1-10_x86_64.ipk
+Size: 11233
+SHA256sum: 07762c9c3cad652e6d66d56de9f294fc0f0d6d46a78fcfcf3548d44553db05c7
+Description:  This is a command line utility to resolve DNS requests via
+ a SOCKS tunnel like Tor or a HTTP proxy.
+
+Package: dnsmasq-dhcpv6
+Version: 2.85-12
+Depends: libc, libubus20210630
+Provides: dnsmasq
+License: GPL-2.0
+Section: net
+CPE-ID: cpe:/a:thekelleys:dnsmasq
+Architecture: x86_64
+Installed-Size: 160985
+Filename: dnsmasq-dhcpv6_2.85-12_x86_64.ipk
+Size: 161722
+SHA256sum: 078059e1fc70701f5e3d23c5c00d867bd15f48d9d0f7d2dfe8b6841907384f7f
+Description:  It is intended to provide coupled DNS and DHCP service to a LAN.
+ 
+ This is a variant with DHCPv6 support
+
+Package: dnsmasq-full
+Version: 2.85-12
+Depends: libc, libubus20210630, libnettle8, kmod-ipt-ipset, libnetfilter-conntrack3
+Provides: dnsmasq
+License: GPL-2.0
+Section: net
+CPE-ID: cpe:/a:thekelleys:dnsmasq
+Architecture: x86_64
+Installed-Size: 182298
+Filename: dnsmasq-full_2.85-12_x86_64.ipk
+Size: 183160
+SHA256sum: ca6709f8435cbd853a6e5bf7587fb5f16b716be291cbf18819db1d41fad3e05b
+Description:  It is intended to provide coupled DNS and DHCP service to a LAN.
+ 
+ This is a fully configurable variant with DHCPv4, DHCPv6, DNSSEC, Authoritative DNS
+ and IPset, Conntrack support & NO_ID enabled by default.
+
+Package: dnsmasq
+Version: 2.85-12
+Depends: libc, libubus20210630
+License: GPL-2.0
+Section: net
+CPE-ID: cpe:/a:thekelleys:dnsmasq
+Architecture: x86_64
+Installed-Size: 134289
+Filename: dnsmasq_2.85-12_x86_64.ipk
+Size: 135032
+SHA256sum: 7145511fad5f50420f9c3af947618b21f833d2ed304f68fde5871ea5a2e0c8e5
+Description:  It is intended to provide coupled DNS and DHCP service to a LAN.
+
+Package: halog
+Version: 2.4.13-2
+Depends: libc, haproxy
+License: GPL-2.0-only
+Section: net
+CPE-ID: cpe:/a:haproxy:haproxy
+Architecture: x86_64
+Installed-Size: 14074
+Filename: halog_2.4.13-2_x86_64.ipk
+Size: 14842
+SHA256sum: 514c69322656079481728184c85b3db7ac981b88d21a0336e27f68c906087fd3
+Description:  HAProxy Log Analyzer
+
+Package: haproxy-nossl
+Version: 2.4.13-2
+Depends: libc, libpcre, libltdl7, zlib, libpthread, liblua5.3-5.3, libatomic1
+License: GPL-2.0-only
+Section: net
+CPE-ID: cpe:/a:haproxy:haproxy
+Architecture: x86_64
+Installed-Size: 874825
+Filename: haproxy-nossl_2.4.13-2_x86_64.ipk
+Size: 875436
+SHA256sum: a2859b1bfe256decfe00ef72f31fd47477eefe9ea65302a4c94d21f30070e02b
+Description:  Open source Reliable, High Performance TCP/HTTP Load Balancer.
+ This package is built without SSL support.
+
+Package: haproxy
+Version: 2.4.13-2
+Depends: libc, libpcre, libltdl7, zlib, libpthread, liblua5.3-5.3, libopenssl1.1, libncurses6, libreadline8, libatomic1
+License: GPL-2.0-only
+Section: net
+CPE-ID: cpe:/a:haproxy:haproxy
+Architecture: x86_64
+Installed-Size: 946461
+Filename: haproxy_2.4.13-2_x86_64.ipk
+Size: 946693
+SHA256sum: 451b1fd7cc01688e65f8d3adb38530556f3fa8c8b964f8c25fc33a8513ca6d2a
+Description:  Open source Reliable, High Performance TCP/HTTP Load Balancer.
+ This package is built with SSL and LUA support.
+
+Package: ipt2socks
+Version: 1.1.3-12
+Depends: libc, libpthread, libuv1
+License: AGPL-3.0
+Section: net
+Architecture: x86_64
+Installed-Size: 35893
+Filename: ipt2socks_1.1.3-12_x86_64.ipk
+Size: 36705
+SHA256sum: 277d3b940a0d5cdb09f1cc52f0b30bfe31fd5f9bedaa714c2c3126ff812bd167
+Description:  Utility for converting iptables (redirect/tproxy) to socks5.
+
+Package: libmbedtls12
+Version: 2.16.12-7
+Depends: libc
+Provides: libmbedtls
+License: GPL-2.0-or-later
+Section: libs
+ABIVersion: 12
+CPE-ID: cpe:/a:arm:mbed_tls
+Architecture: x86_64
+Installed-Size: 188038
+Filename: libmbedtls12_2.16.12-7_x86_64.ipk
+Size: 188638
+SHA256sum: 676bc625408f79515babd2ab6e0361d30c8d404032c42cda61430177b7ae9146
+Description:  The aim of the mbedtls project is to provide a quality, open-source
+ cryptographic library written in C and targeted at embedded systems.
+ This package contains the mbedtls library.
+
+Package: lua-maxminddb
+Version: 0.2-18
+Depends: libc, lua, libmaxminddb
+License: MIT
+Section: lang
+Architecture: x86_64
+Installed-Size: 2470
+Filename: lua-maxminddb_0.2-18_x86_64.ipk
+Size: 3184
+SHA256sum: a96c0d079c9b6983332f1b5cd609b61b33604599293b1651709c763fab22b026
+Description:  libmaxminddb bindings for lua
+
+Package: luci-app-adbyby-plus
+Version: git-22.056.58360-0638068
+Depends: libc, adbyby, uclient-fetch, ipset, dnsmasq-full
+Section: luci
+Architecture: all
+Installed-Size: 9834
+Filename: luci-app-adbyby-plus_git-22.056.58360-0638068_all.ipk
+Size: 10744
+SHA256sum: 91d04e4e2220d2aeb84cc14b5a10923bf48062ea2248cb78a4292478c7878ab0
+Description:  LuCI support for Adbyby
+
+Package: luci-app-autoreboot
+Version: git-22.056.58360-0638068
+Depends: libc
+Section: luci
+Architecture: all
+Installed-Size: 1506
+Filename: luci-app-autoreboot_git-22.056.58360-0638068_all.ipk
+Size: 2359
+SHA256sum: 3a767b0698f21ef49755a3708c82371f3b60a508ab9e949e8e077db29c73c78b
+Description:  LuCI support for Scheduled Reboot
+
+Package: luci-app-bypass
+Version: git-22.056.58360-0638068
+Depends: libc, ipset, ip-full, iptables-mod-tproxy, dnsmasq-full, smartdns, coreutils, coreutils-base64, curl, tcping, chinadns-ng, lua, luci-compat, unzip, lua-maxminddb, shadowsocks-libev-ss-server, shadowsocks-libev-ss-local, shadowsocks-libev-ss-redir, shadowsocksr-libev-ssr-local, shadowsocksr-libev-ssr-redir, shadowsocksr-libev-ssr-server, simple-obfs, xray-core, trojan-plus, trojan-go, redsocks2, microsocks
+Section: luci
+Architecture: all
+Installed-Size: 2646707
+Filename: luci-app-bypass_git-22.056.58360-0638068_all.ipk
+Size: 2465203
+SHA256sum: 0d25fc640cffeb0913e7530cda87dc4d367e90eeb0a669062d50c3e90dc45686
+Description:  SS/SSR/Xray/Trojan/Trojan-Go/NaiveProxy/Socks5/Tun LuCI interface
+
+Package: luci-app-dnsfilter
+Version: git-22.056.58360-0638068
+Depends: libc, curl, dnsmasq-full, ipset
+License: GPLv2
+Section: luci
+Architecture: all
+Installed-Size: 8115
+Filename: luci-app-dnsfilter_git-22.056.58360-0638068_all.ipk
+Size: 8902
+SHA256sum: 2ebfe7a6c74eae2fe0d3662a14646c12de95f17fce418663b8b39df8ba4e9d68
+Description:  LuCI support for DNSFilter
+
+Package: luci-app-filetransfer
+Version: git-22.056.58360-0638068
+Depends: libc, luci-lib-fs
+Section: luci
+Architecture: all
+Installed-Size: 2670
+Filename: luci-app-filetransfer_git-22.056.58360-0638068_all.ipk
+Size: 3552
+SHA256sum: 96147511ed7c13130e718401bf95e7b807408cf1729fcce1279c13920c4920e7
+Description:  LuCI page for IPK upload
+
+Package: luci-app-frpc
+Version: 1.4
+Depends: libc, wget, frpc
+Section: luci
+Architecture: all
+Installed-Size: 7617
+Filename: luci-app-frpc_1.4_all.ipk
+Size: 8476
+SHA256sum: 67710dcf23e84698e61e72c440eab08b672a04c64c584c5fea2a6a174c54bea3
+Description:  LuCI for FRPC
+
+Package: luci-app-passwall
+Version: git-22.056.58360-0638068
+Depends: libc, coreutils, coreutils-base64, coreutils-nohup, curl, dnsmasq-full, luci-compat, dns2socks, ipset, ip-full, ipt2socks, iptables-mod-tproxy, iptables-mod-iprange, libuci-lua, lua, luci-lib-jsonc, microsocks, tcping, resolveip, unzip, chinadns-ng, haproxy, pdnsd-alt, shadowsocks-libev-ss-local, shadowsocks-libev-ss-redir, shadowsocks-libev-ss-server, shadowsocksr-libev-ssr-local, shadowsocksr-libev-ssr-redir, simple-obfs, trojan-plus, v2ray-core, v2ray-plugin, xray-core
+Section: luci
+Architecture: all
+Installed-Size: 1024165
+Filename: luci-app-passwall_git-22.056.58360-0638068_all.ipk
+Size: 1024934
+SHA256sum: 281884dac437bb607c88acac66b0edcbdbfb8fd963625a93ec9d51a2dda20d78
+Description:  LuCI support for PassWall
+
+Package: luci-app-vlmcsd
+Version: git-22.056.58360-0638068
+Depends: libc, vlmcsd
+Section: luci
+Architecture: all
+Installed-Size: 2489
+Filename: luci-app-vlmcsd_git-22.056.58360-0638068_all.ipk
+Size: 3332
+SHA256sum: 493d050cc681dd572e7bc71916b15f5b61b419eada6d5592a7aa75c1e02c99bd
+Description:  LuCI support for KMS
+
+Package: luci-app-vssr
+Version: git-22.056.58360-0638068
+Depends: libc, ipset, ip-full, iptables-mod-tproxy, dnsmasq-full, coreutils, coreutils-base64, bash, pdnsd-alt, wget-ssl, lua, luasocket, lua-maxminddb, lua-cjson, shadowsocks-libev-ss-local, shadowsocks-libev-ss-redir, shadowsocksr-libev-ssr-local, shadowsocksr-libev-ssr-redir, shadowsocksr-libev-ssr-check, simple-obfs, xray-core, trojan, ipt2socks, xray-plugin, shadowsocksr-libev-ssr-server
+Section: luci
+Architecture: all
+Installed-Size: 3184010
+Filename: luci-app-vssr_git-22.056.58360-0638068_all.ipk
+Size: 3013124
+SHA256sum: 8a5f1d5fea4ac9ad896651544294fc3ae43d34f5b5a56b88971ed4ce5dfc5034
+Description:  A New SS/SSR/Xray/Trojan LuCI interface
+
+Package: luci-app-wrtbwmon
+Version: git-22.056.58360-0638068
+Depends: libc, wrtbwmon
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 8156
+Filename: luci-app-wrtbwmon_git-22.056.58360-0638068_all.ipk
+Size: 9059
+SHA256sum: 9ecbf060c29b0a84631f3161d86a49d98753221fa04e304716fd40da1bd14719
+Description:  A Luci module that uses wrtbwmon to track bandwidth usage
+
+Package: luci-app-zerotier
+Version: git-22.056.58360-0638068
+Depends: libc, zerotier
+Section: luci
+Architecture: all
+Installed-Size: 3442
+Filename: luci-app-zerotier_git-22.056.58360-0638068_all.ipk
+Size: 4280
+SHA256sum: 1cab895f37ba69c72c81a2b780ad0efec1e685582728eb5f48fd67c000aa530a
+Description:  LuCI for Zerotier
+
+Package: luci-base
+Version: git-22.056.58360-0638068
+Depends: libc, lua, luci-lib-nixio, luci-lib-ip, rpcd, libubus-lua, luci-lib-jsonc, liblucihttp-lua, luci-lib-base, rpcd-mod-file, rpcd-mod-luci, cgi-io
+License: MIT
+Section: luci
+Architecture: x86_64
+Installed-Size: 131226
+Filename: luci-base_git-22.056.58360-0638068_x86_64.ipk
+Size: 132329
+SHA256sum: 323196510dfdf276b2f07acc49c33921dc2cefd6272043c8a1fc810551b5fa1d
+Description:  LuCI core libraries
+
+Package: luci-i18n-adbyby-plus-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-adbyby-plus
+Section: luci
+Architecture: all
+Installed-Size: 2297
+Filename: luci-i18n-adbyby-plus-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 3150
+SHA256sum: a2db5197724eb2f095ec86e0f5bdaa61741f79813994a9fc26d376178321d045
+Description:  Translation for luci-app-adbyby-plus - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-autoreboot-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-autoreboot
+Section: luci
+Architecture: all
+Installed-Size: 518
+Filename: luci-i18n-autoreboot-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 1360
+SHA256sum: 8f4c73bffce8e87effe1a914a5d91c8ea7089fb6e194e15c0e55d3f0abfa65ad
+Description:  Translation for luci-app-autoreboot - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-base-ar
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 37772
+Filename: luci-i18n-base-ar_git-22.056.58360-0638068_all.ipk
+Size: 38690
+SHA256sum: 202ae0d9b22c89d1aff100ea12bd9cf926f291f5dfa848e14acd51d21a4b8588
+Description:  Translation for luci-base - العربية (Arabic)
+
+Package: luci-i18n-base-bg
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 8157
+Filename: luci-i18n-base-bg_git-22.056.58360-0638068_all.ipk
+Size: 9028
+SHA256sum: df86a4e216a6e2a748d60503036c5758b6cdca61c4418e9420efe9993f1e3cbf
+Description:  Translation for luci-base - български (Bulgarian)
+
+Package: luci-i18n-base-bn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 1580
+Filename: luci-i18n-base-bn_git-22.056.58360-0638068_all.ipk
+Size: 2422
+SHA256sum: 68c68a2ea625b7cb608d06f2a0a36e709c79609e9bb0253cbd54bbcd33c7a501
+Description:  Translation for luci-base - বাংলা (Bengali)
+
+Package: luci-i18n-base-ca
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 14148
+Filename: luci-i18n-base-ca_git-22.056.58360-0638068_all.ipk
+Size: 14958
+SHA256sum: e4e1ec660e42095b910128030fa5afb8da236bf6111ff5930a97a277b4debaff
+Description:  Translation for luci-base - Català (Catalan)
+
+Package: luci-i18n-base-cs
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 31991
+Filename: luci-i18n-base-cs_git-22.056.58360-0638068_all.ipk
+Size: 32854
+SHA256sum: 8a29f1492338a39eddd1500120c54169ae85edbc1c46b756d02010f25b910701
+Description:  Translation for luci-base - Čeština (Czech)
+
+Package: luci-i18n-base-da
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 36092
+Filename: luci-i18n-base-da_git-22.056.58360-0638068_all.ipk
+Size: 36972
+SHA256sum: 7fed056591715863abedb28189a0294d8ae8570d7265ac406196240d069bfbe3
+Description:  Translation for luci-base - 
+
+Package: luci-i18n-base-de
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 40945
+Filename: luci-i18n-base-de_git-22.056.58360-0638068_all.ipk
+Size: 41730
+SHA256sum: 7586a4400394e3ac048e5dc12bd645e38b5ca6f66e8f6c633ecf236625a2afdb
+Description:  Translation for luci-base - Deutsch (German)
+
+Package: luci-i18n-base-el
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 12816
+Filename: luci-i18n-base-el_git-22.056.58360-0638068_all.ipk
+Size: 13613
+SHA256sum: 101cc3f25aabb5eb8c798c81a32ccbdd29c4cb6f249d65eb01ac35704beb670d
+Description:  Translation for luci-base - Ελληνικά (Greek)
+
+Package: luci-i18n-base-en
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 792
+Filename: luci-i18n-base-en_git-22.056.58360-0638068_all.ipk
+Size: 1601
+SHA256sum: d1bdd5df857b06bd4c34f8b366d17ad5051ab1b650fd57dc6c40996a1aba0dcc
+Description:  Translation for luci-base - English
+
+Package: luci-i18n-base-es
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 40326
+Filename: luci-i18n-base-es_git-22.056.58360-0638068_all.ipk
+Size: 41167
+SHA256sum: 39cafb146ed00e0f2a5d5f009ceb0018d63bd5d29035769e231ac6f01f240afe
+Description:  Translation for luci-base - Español (Spanish)
+
+Package: luci-i18n-base-fi
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 35020
+Filename: luci-i18n-base-fi_git-22.056.58360-0638068_all.ipk
+Size: 35895
+SHA256sum: ce1bb5fae14c804aa0a685169912b60a03d7b1cbb4d501eff59a55543f7f6a87
+Description:  Translation for luci-base - Suomi (Finnish)
+
+Package: luci-i18n-base-fr
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 35665
+Filename: luci-i18n-base-fr_git-22.056.58360-0638068_all.ipk
+Size: 36520
+SHA256sum: 54e4e20a806895bd65cbf198373ecbc30b439c26bfe82eb3af98f03c9f8fbb8b
+Description:  Translation for luci-base - Français (French)
+
+Package: luci-i18n-base-he
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 4805
+Filename: luci-i18n-base-he_git-22.056.58360-0638068_all.ipk
+Size: 5622
+SHA256sum: 9bcdb54fa98acfa79e8ab8290d51ae9ab4c533454ae1868d68eb0a13cd813099
+Description:  Translation for luci-base - עִבְרִית (Hebrew)
+
+Package: luci-i18n-base-hi
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 2155
+Filename: luci-i18n-base-hi_git-22.056.58360-0638068_all.ipk
+Size: 2960
+SHA256sum: e5bdc0811828dfa02528865c65f3204316e2ac8bfac1e373a90f7e43a7f2074f
+Description:  Translation for luci-base - हिंदी (Hindi)
+
+Package: luci-i18n-base-hu
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 31357
+Filename: luci-i18n-base-hu_git-22.056.58360-0638068_all.ipk
+Size: 32141
+SHA256sum: c6778b71cb42bc262478b275db146baebbc1609b1d59cceeb8fb1147df36f03d
+Description:  Translation for luci-base - Magyar (Hungarian)
+
+Package: luci-i18n-base-it
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 21827
+Filename: luci-i18n-base-it_git-22.056.58360-0638068_all.ipk
+Size: 22656
+SHA256sum: 9882ce333b20e65743a4403caa929488e5822d05d8a968469755a6492d7b41b6
+Description:  Translation for luci-base - Italiano (Italian)
+
+Package: luci-i18n-base-ja
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 38512
+Filename: luci-i18n-base-ja_git-22.056.58360-0638068_all.ipk
+Size: 39421
+SHA256sum: cc4b9dbe75af91353d1c8dc352067a4d72d2bd3015867e11b0ef81a8cb8918ed
+Description:  Translation for luci-base - 日本語 (Japanese)
+
+Package: luci-i18n-base-ko
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 14516
+Filename: luci-i18n-base-ko_git-22.056.58360-0638068_all.ipk
+Size: 15350
+SHA256sum: c74d8591a69a6b4112bd661b5ae95ab0b9e846cf50bb2fbf71b6c879c46d330a
+Description:  Translation for luci-base - 한국어 (Korean)
+
+Package: luci-i18n-base-mr
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 1456
+Filename: luci-i18n-base-mr_git-22.056.58360-0638068_all.ipk
+Size: 2292
+SHA256sum: f416993857eac54149d69e7aac50bf940510535c4d99aaf84164893ae3535389
+Description:  Translation for luci-base - Marāṭhī (Marathi)
+
+Package: luci-i18n-base-ms
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 4989
+Filename: luci-i18n-base-ms_git-22.056.58360-0638068_all.ipk
+Size: 5780
+SHA256sum: 859cba53c54e1348ca5b1d1eabaf60793e63c1603f370c505634cfdc302b60c2
+Description:  Translation for luci-base - Bahasa Melayu (Malay)
+
+Package: luci-i18n-base-nl
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 4003
+Filename: luci-i18n-base-nl_git-22.056.58360-0638068_all.ipk
+Size: 4790
+SHA256sum: 57fccd70fbdf8afc6e81d53431f0d41f553efc00e2625b2884e4dc029eb5b2eb
+Description:  Translation for luci-base - Nederlands (Dutch)
+
+Package: luci-i18n-base-no
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 16025
+Filename: luci-i18n-base-no_git-22.056.58360-0638068_all.ipk
+Size: 16789
+SHA256sum: 31fce7a705ca53a188caf6d3aab7bba152a6ef1e6b28e570de388ac940d8755d
+Description:  Translation for luci-base - Norsk (Norwegian)
+
+Package: luci-i18n-base-pl
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 41238
+Filename: luci-i18n-base-pl_git-22.056.58360-0638068_all.ipk
+Size: 42057
+SHA256sum: 12b4650b2aa17e5cc623616525b4bdf342f5c0a4dc0cd01ff9fc79de9a7fbfd8
+Description:  Translation for luci-base - Polski (Polish)
+
+Package: luci-i18n-base-pt-br
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 42302
+Filename: luci-i18n-base-pt-br_git-22.056.58360-0638068_all.ipk
+Size: 43113
+SHA256sum: 053014efad4e390917d6e2432e751fe9d360e78b8192465fce54e57d1d8653ee
+Description:  Translation for luci-base - Português do Brasil (Brazilian Portuguese)
+
+Package: luci-i18n-base-pt
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 41414
+Filename: luci-i18n-base-pt_git-22.056.58360-0638068_all.ipk
+Size: 42268
+SHA256sum: f4291ef5be3307e0cbc6f2c0127e09f6c78e8d478672e10327fbb186f5b8cde9
+Description:  Translation for luci-base - Português (Portuguese)
+
+Package: luci-i18n-base-ro
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 40313
+Filename: luci-i18n-base-ro_git-22.056.58360-0638068_all.ipk
+Size: 41159
+SHA256sum: 0e2c3991133bd75181ec0275ebf3fd44d18a154f814a80de69ef900b1730d3c3
+Description:  Translation for luci-base - Română (Romanian)
+
+Package: luci-i18n-base-ru
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 47938
+Filename: luci-i18n-base-ru_git-22.056.58360-0638068_all.ipk
+Size: 48515
+SHA256sum: 36d59b3f18f4a68218637ef48adc65a3ae516dabde006e65eef3c3a2666ce295
+Description:  Translation for luci-base - Русский (Russian)
+
+Package: luci-i18n-base-sk
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 15575
+Filename: luci-i18n-base-sk_git-22.056.58360-0638068_all.ipk
+Size: 16380
+SHA256sum: cd7808b9f9e7a2bad854a55f67bc7f533b8da1964a68cf9abe7875750570f0b5
+Description:  Translation for luci-base - Slovenčina (Slovak)
+
+Package: luci-i18n-base-sv
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 12900
+Filename: luci-i18n-base-sv_git-22.056.58360-0638068_all.ipk
+Size: 13674
+SHA256sum: 09aa1702fdaff8c974b2aeb204e9d5974f5fd09108d1ed36f2a574a1cd9011a5
+Description:  Translation for luci-base - Svenska (Swedish)
+
+Package: luci-i18n-base-tr
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 40242
+Filename: luci-i18n-base-tr_git-22.056.58360-0638068_all.ipk
+Size: 41096
+SHA256sum: 60d2163a547cdced63f625adfa33d3dd99a05a5df018319d91e144676feff436
+Description:  Translation for luci-base - Türkçe (Turkish)
+
+Package: luci-i18n-base-uk
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 41585
+Filename: luci-i18n-base-uk_git-22.056.58360-0638068_all.ipk
+Size: 42381
+SHA256sum: 7dce882889bd057754d30fcfe477c4157b96fb8b312476d9050d928c7daa21b1
+Description:  Translation for luci-base - Українська (Ukrainian)
+
+Package: luci-i18n-base-vi
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 25578
+Filename: luci-i18n-base-vi_git-22.056.58360-0638068_all.ipk
+Size: 26379
+SHA256sum: 3e0a6186833214844fba00fe8a374e8b062b215f0796264cab7535cd6227dfc6
+Description:  Translation for luci-base - Tiếng Việt (Vietnamese)
+
+Package: luci-i18n-base-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 37777
+Filename: luci-i18n-base-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 38704
+SHA256sum: f65f3461ebbfcc9001d9451c33b4047464df288627021d27637bd62bb4409771
+Description:  Translation for luci-base - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-base-zh-tw
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+License: MIT
+Section: luci
+Architecture: all
+Installed-Size: 39958
+Filename: luci-i18n-base-zh-tw_git-22.056.58360-0638068_all.ipk
+Size: 40853
+SHA256sum: 4e415d94e9a24df0c27dfe1be4f41164b15bcd051c8dc9eebb5ce21ac9c6f9bd
+Description:  Translation for luci-base - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-bypass-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-bypass
+Section: luci
+Architecture: all
+Installed-Size: 5333
+Filename: luci-i18n-bypass-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 6151
+SHA256sum: d1b61e21196d472989d0831c6fbc1a7b2a52d904df41215b8095b5bc107e6757
+Description:  Translation for luci-app-bypass - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-dnsfilter-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-dnsfilter
+License: GPLv2
+Section: luci
+Architecture: all
+Installed-Size: 1443
+Filename: luci-i18n-dnsfilter-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 2327
+SHA256sum: 327c78035c0573c5bb8387a6be777e180e41445c2f0d48df887fb341007e0a5f
+Description:  Translation for luci-app-dnsfilter - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-filetransfer-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-filetransfer
+Section: luci
+Architecture: all
+Installed-Size: 781
+Filename: luci-i18n-filetransfer-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 1627
+SHA256sum: c030174f53add0459830b49c68f354eb946a6ec9bca6f17d1050602b79e0270c
+Description:  Translation for luci-app-filetransfer - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-frpc-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-frpc
+Section: luci
+Architecture: all
+Installed-Size: 3012
+Filename: luci-i18n-frpc-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 3819
+SHA256sum: 25f37ec62c4447864e8ac8d98ff7220a051b55fd7600feb36f87df08db32bb32
+Description:  Translation for luci-app-frpc - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-passwall-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-passwall
+Section: luci
+Architecture: all
+Installed-Size: 11148
+Filename: luci-i18n-passwall-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 12003
+SHA256sum: 0d99488b5de00e3b6c527e61f99d51d53d21fb8063a040adaec0c4c3af706cf9
+Description:  Translation for luci-app-passwall - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-vlmcsd-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-vlmcsd
+Section: luci
+Architecture: all
+Installed-Size: 707
+Filename: luci-i18n-vlmcsd-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 1550
+SHA256sum: 97badc89be1950da5d68c1515c1f2b97ea7389fabda7578e0861ae66fb6e5212
+Description:  Translation for luci-app-vlmcsd - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-vssr-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-vssr
+Section: luci
+Architecture: all
+Installed-Size: 4950
+Filename: luci-i18n-vssr-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 5763
+SHA256sum: 841e3fc3a8c565e528b1d788d893be3044fda987ebcdfd2ca9b20d5b5ff5be13
+Description:  Translation for luci-app-vssr - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-wrtbwmon-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-wrtbwmon
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 1533
+Filename: luci-i18n-wrtbwmon-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 2398
+SHA256sum: 3884b6364145e019486737a833da825ae95bf6d3b27b0bae7e64a9c8bfe7822f
+Description:  Translation for luci-app-wrtbwmon - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-zerotier-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-zerotier
+Section: luci
+Architecture: all
+Installed-Size: 813
+Filename: luci-i18n-zerotier-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 1660
+SHA256sum: 938375614ceb34c41fd41a6d6740868c6672098e2e8bf40f87e19fdcfa3f7690
+Description:  Translation for luci-app-zerotier - 简体中文 (Chinese Simplified)
+
+Package: luci-theme-argon
+Version: git-22.056.58360-0638068
+Depends: libc
+Section: luci
+Architecture: all
+Installed-Size: 414512
+Filename: luci-theme-argon_git-22.056.58360-0638068_all.ipk
+Size: 415182
+SHA256sum: 241348391daefb7f21a5637ab2a4cb215061fc2546584ca0d1b19d5f8514e1a7
+Description:  Argon Theme
+
+Package: luci-theme-edge
+Version: git-22.056.58360-0638068
+Depends: libc, curl
+License: Apache-2.0
+Section: luci
+Architecture: all
+Installed-Size: 231272
+Filename: luci-theme-edge_git-22.056.58360-0638068_all.ipk
+Size: 232219
+SHA256sum: 0e658790d07b4926ca6b26bc557482123b620810cc1d4dc6fbf96b5b33378202
+Description:  Edge Theme
+
+Package: mbedtls-util
+Version: 2.16.12-7
+Depends: libc, libmbedtls12
+License: GPL-2.0-or-later
+Section: utils
+CPE-ID: cpe:/a:arm:mbed_tls
+Architecture: x86_64
+Installed-Size: 7005
+Filename: mbedtls-util_2.16.12-7_x86_64.ipk
+Size: 7882
+SHA256sum: b67836c1c885d041978ef7b56b11f9e32cc447af326e6713cfb57542ed042969
+Description:  The aim of the mbedtls project is to provide a quality, open-source
+ cryptographic library written in C and targeted at embedded systems.
+ This package contains mbedtls helper programs for private key and
+ CSR generation (gen_key, cert_req)
+
+Package: microsocks
+Version: 1.0.2-20
+Depends: libc, libpthread
+License: MIT
+Section: net
+Architecture: x86_64
+Installed-Size: 5382
+Filename: microsocks_1.0.2-20_x86_64.ipk
+Size: 6191
+SHA256sum: d73ff9aaa140f0adc719ed535be11dbfba854cd41d110d410177f6eaf10447ef
+Description:  A SOCKS5 service that you can run on your remote boxes to tunnel connections
+ through them, if for some reason SSH doesn't cut it for you.
+
+Package: overture
+Version: 1.8-rc1-2
+Depends: libc
+License: MIT
+Section: net
+Architecture: x86_64
+Installed-Size: 3348200
+Filename: overture_1.8-rc1-2_x86_64.ipk
+Size: 3341304
+SHA256sum: 3b338dbd339ce2f160893d77ba1e2bb7661b395232c66ce261cacdb68141b2d0
+Description:  Overture is a DNS server/forwarder/dispatcher written in Go.
+ Overture means an orchestral piece at the beginning of a classical music composition, just like DNS which is nearly the first step of surfing the Internet.
+
+Package: pdnsd-alt
+Version: 1.2.9b-par-18
+Depends: libc, libpthread
+Section: net
+Architecture: x86_64
+Installed-Size: 90976
+Filename: pdnsd-alt_1.2.9b-par-18_x86_64.ipk
+Size: 92001
+SHA256sum: eb25f8fb77df661de17ded99093b2b4d07f45537460721f8a34af11fc2db4b08
+Description:  pdnsd, is an IPv6 capable proxy DNS server with permanent caching (the cache
+ contents are written to hard disk on exit) that is designed to cope with
+ unreachable or down DNS servers (for example in dial-in networking).
+ 
+ pdnsd can be used with applications that do dns lookups, eg on startup, and
+ can't be configured to change that behaviour, to prevent the often
+ minute-long hangs (or even crashes) that result from stalled dns queries.
+
+Package: redsocks2
+Version: 0.67-7
+Depends: libc, libevent2-7, libopenssl1.1
+Section: net
+Architecture: x86_64
+Installed-Size: 55658
+Filename: redsocks2_0.67-7_x86_64.ipk
+Size: 56566
+SHA256sum: 325b5d020372a0d0e7a8118bb6aaaaf290ccbd91301ef531cf974256bb90f9dd
+Description:  This is a modified version of original redsocks. The name is changed to be REDSOCKS2 since this release to distinguish with original redsocks. This variant is useful for anti-GFW (Great Fire Wall).
+
+Package: shadowsocksr-libev-ssr-check
+Version: 2.5.6-34
+Depends: libc, libev, libsodium, libopenssl1.1, libpthread, libpcre, libudns, zlib
+License: GPL-3.0
+Section: net
+Architecture: x86_64
+Installed-Size: 2344
+Filename: shadowsocksr-libev-ssr-check_2.5.6-34_x86_64.ipk
+Size: 3078
+SHA256sum: 723149309a55d1590195e0eb533c664865b5b31955a67ce631bf46d02d7b7355
+Description:  shadowsocksr-libev ssr-check
+
+Package: shadowsocksr-libev-ssr-local
+Version: 2.5.6-34
+Depends: libc, libev, libsodium, libopenssl1.1, libpthread, libpcre, libudns, zlib
+License: GPL-3.0
+Section: net
+Architecture: x86_64
+Installed-Size: 61673
+Filename: shadowsocksr-libev-ssr-local_2.5.6-34_x86_64.ipk
+Size: 62533
+SHA256sum: eb32ce139b5b6fa79dafa0cc02627d05c8a405ddd9760238d28b7598cadcd521
+Description:  shadowsocksr-libev ssr-local
+
+Package: shadowsocksr-libev-ssr-nat
+Version: 2.5.6-34
+Depends: libc, libev, libsodium, libopenssl1.1, libpthread, libpcre, libudns, zlib
+License: GPL-3.0
+Section: net
+Architecture: x86_64
+Installed-Size: 2227
+Filename: shadowsocksr-libev-ssr-nat_2.5.6-34_x86_64.ipk
+Size: 2987
+SHA256sum: 43f4d005c6c6688f93d0c062d810ca96f5d952e089e903c7d79916a25e8804c4
+Description:  shadowsocksr-libev ssr-nat
+
+Package: shadowsocksr-libev-ssr-redir
+Version: 2.5.6-34
+Depends: libc, libev, libsodium, libopenssl1.1, libpthread, libpcre, libudns, zlib
+License: GPL-3.0
+Section: net
+Architecture: x86_64
+Installed-Size: 55610
+Filename: shadowsocksr-libev-ssr-redir_2.5.6-34_x86_64.ipk
+Size: 56426
+SHA256sum: 58a6b6684e6ea85e3040ddc80888cf7377d7190af8c21d5b54504882eba32917
+Description:  shadowsocksr-libev ssr-redir
+
+Package: shadowsocksr-libev-ssr-server
+Version: 2.5.6-34
+Depends: libc, libev, libsodium, libopenssl1.1, libpthread, libpcre, libudns, zlib
+License: GPL-3.0
+Section: net
+Architecture: x86_64
+Installed-Size: 65294
+Filename: shadowsocksr-libev-ssr-server_2.5.6-34_x86_64.ipk
+Size: 66129
+SHA256sum: 0f7cdc2598968bc698ceaf5f90eeaf649fb61514c5e4378e96f2760087bfa726
+Description:  shadowsocksr-libev ssr-server
+
+Package: simple-obfs-server
+Version: 0.0.5-12
+Depends: libc, libpthread, libev
+License: GPL-3.0-or-later
+Section: net
+Architecture: x86_64
+Installed-Size: 32427
+Filename: simple-obfs-server_0.0.5-12_x86_64.ipk
+Size: 33298
+SHA256sum: f4f24b2e5c16fc0028c875c8f49a9fecd08fe9e4cd44d0148343ad77f5254949
+Description:  Simple-obfs is a simple obfusacting tool, designed as plugin server of shadowsocks.
+
+Package: simple-obfs
+Version: 0.0.5-12
+Depends: libc, libpthread, libev
+License: GPL-3.0-or-later
+Section: net
+Architecture: x86_64
+Installed-Size: 30206
+Filename: simple-obfs_0.0.5-12_x86_64.ipk
+Size: 30988
+SHA256sum: e0f79e9c2506aa0381cf84715fa9f89b632db721baec64ff44b18bd3eb827311
+Description:  Simple-obfs is a simple obfusacting tool, designed as plugin server of shadowsocks.
+
+Package: smartdns
+Version: Release35-3
+Depends: libc, libpthread, libopenssl1.1
+License: GPL-3.0-or-later
+Section: net
+Architecture: x86_64
+Installed-Size: 86893
+Filename: smartdns_Release35-3_x86_64.ipk
+Size: 87865
+SHA256sum: c0574d9844609b856c54afc3d191ccfe6908daf2405a3592f064e3c07c1bf27d
+Description:  SmartDNS is a local DNS server which accepts DNS query requests from local network clients,
+ gets DNS query results from multiple upstream DNS servers concurrently, and returns the fastest IP to clients.
+ Unlike dnsmasq's all-servers, smartdns returns the fastest IP. 
+
+Package: tcping
+Version: 0.3-20
+Depends: libc
+License: GPL-2.0-only
+Section: net
+Architecture: x86_64
+Installed-Size: 3689
+Filename: tcping_0.3-20_x86_64.ipk
+Size: 4413
+SHA256sum: 2386688c6623efae23001c0001127297cbeca61c80d8ac0261e01adc3b780f90
+Description:  tcping measures the latency of a tcp-connection
+
+Package: trojan-go
+Version: 0.10.6-20
+Depends: libc, ca-bundle
+License: GPL-3.0-only
+Section: net
+Architecture: x86_64
+Installed-Size: 5037881
+Filename: trojan-go_0.10.6-20_x86_64.ipk
+Size: 5025660
+SHA256sum: 6c4e3e187d4988f8eb0460362b9006eb178fc1c604178ae996404d552923a82d
+Description:  Trojan features multiple protocols over TLS to avoid both
+ active/passive detections and ISP QoS limitations.
+
+Package: trojan-plus
+Version: 10.0.3-8
+Depends: libc, libpthread, libstdcpp6, libopenssl1.1, boost, boost-system, boost-program_options
+License: GPL-3.0
+Section: net
+Architecture: x86_64
+Installed-Size: 392753
+Filename: trojan-plus_10.0.3-8_x86_64.ipk
+Size: 393593
+SHA256sum: f0d486a362868b2561e5cfee118e76fa02a67e2076b78f6887931219b2f5d848
+Description:  An unidentifiable mechanism that helps you bypass GFW. It's compatible with original trojan with experimental features.
+
+Package: trojan
+Version: 1.16.0-7
+Depends: libc, libpthread, libstdcpp6, libopenssl1.1, boost, boost-system, boost-program_options, boost-date_time
+License: GPL-3.0
+Section: net
+Architecture: x86_64
+Installed-Size: 282833
+Filename: trojan_1.16.0-7_x86_64.ipk
+Size: 283709
+SHA256sum: e300e8b25537f35d2e4055c7c4399dc05b838097d9622c67f65658089a927f39
+Description:  An unidentifiable mechanism that helps you bypass GFW
+
+Package: v2ray-core
+Version: 4.44.0-37
+Depends: libc, ca-bundle
+License: MIT
+Section: net
+Architecture: x86_64
+Installed-Size: 6654063
+Filename: v2ray-core_4.44.0-37_x86_64.ipk
+Size: 6637364
+SHA256sum: 4198ca22e1eaf03c04a766f4a82328efae5051fa1a4b90137117a8f574bd4dd5
+Description:  Project V is a set of network tools that help you to build your own computer network.
+ It secures your network connections and thus protects your privacy.
+
+Package: v2ray-ctl
+Version: 4.44.0-37
+Depends: libc, v2ray-core
+License: MIT
+Section: net
+Architecture: x86_64
+Installed-Size: 6630598
+Filename: v2ray-ctl_4.44.0-37_x86_64.ipk
+Size: 6612979
+SHA256sum: 809f4b78ec0e701911b0ce55932c304eaa66015098e23bd8f81889e4b47d3658
+Description:  Project V is a set of network tools that help you to build your own computer network.
+ It secures your network connections and thus protects your privacy.
+ 
+ This includes configuration tool for v2ray-core.
+
+Package: v2ray-example
+Version: 4.44.0-37
+Depends: libc, v2ray-core
+License: MIT
+Section: net
+Architecture: all
+Installed-Size: 565
+Filename: v2ray-example_4.44.0-37_all.ipk
+Size: 1422
+SHA256sum: 37cd5e6233c8e2644e8c7d47ff1cd5b7b13c14f79294bf1e542b87d5060b4e77
+Description:  Project V is a set of network tools that help you to build your own computer network.
+ It secures your network connections and thus protects your privacy.
+ 
+ This includes example configuration files for v2ray-core.
+
+Package: v2ray-extra
+Version: 4.44.0-37
+Depends: libc, v2ray-core
+License: MIT
+Section: net
+Architecture: all
+Installed-Size: 298635
+Filename: v2ray-extra_4.44.0-37_all.ipk
+Size: 299370
+SHA256sum: 042e5df52d0c43c7af4dbcd1e8605449bb88f013bc5f01fbdf140364a369d123
+Description:  Project V is a set of network tools that help you to build your own computer network.
+ It secures your network connections and thus protects your privacy.
+ 
+ This includes extra resources for v2ray-core.
+
+Package: v2ray-plugin
+Version: 5.0.2-56
+Depends: libc, ca-bundle
+License: MIT
+Section: net
+Architecture: x86_64
+Installed-Size: 4734033
+Filename: v2ray-plugin_5.0.2-56_x86_64.ipk
+Size: 4723074
+SHA256sum: 8d1a79be715b170abab786eb235ff962aef9931822fe7aa2e0d5ca198b57cc7c
+Description:  SIP003 plugin for shadowsocks, based on v2ray
+
+Package: vlmcsd
+Version: svn1113-19
+Depends: libc, libpthread
+License: MIT
+Section: net
+Architecture: x86_64
+Installed-Size: 22718
+Filename: vlmcsd_svn1113-19_x86_64.ipk
+Size: 23434
+SHA256sum: ea788e0bebf963ee60be62c3e81217684bc8e3f1d9e9d6160a6be1155bfd2882
+Description:  vlmcsd is a KMS Emulator in C.
+
+Package: wrtbwmon
+Version: 1.2.1-12
+Depends: libc, iptables
+Section: net
+Architecture: all
+Installed-Size: 7179
+Filename: wrtbwmon_1.2.1-12_all.ipk
+Size: 7954
+SHA256sum: fd3cdda9248bba4e5a72e26c519833a79a829a9c7f3804b05fcf75e23cd1f6d0
+Description:  An CERNET client daemon,
+ Most usually used in China collages.
+
+Package: xray-core
+Version: 1.5.3-38
+Depends: libc, ca-bundle
+License: MPL-2.0
+Section: net
+Architecture: x86_64
+Installed-Size: 6891203
+Filename: xray-core_1.5.3-38_x86_64.ipk
+Size: 6873178
+SHA256sum: fa7ea32d7ed32312df8c8bb543b4b304d757434e11fff427595817b4cfca3482
+Description:  Xray, Penetrates Everything. It helps you to build your own computer network.
+ It secures your network connections and thus protects your privacy.
+
+Package: xray-example
+Version: 1.5.3-38
+Depends: libc, xray-core
+License: MPL-2.0
+Section: net
+Architecture: all
+Installed-Size: 551
+Filename: xray-example_1.5.3-38_all.ipk
+Size: 1413
+SHA256sum: 76accba6af341e7ca3080a624a31849bd2cff601708f7f0a991eaacb8d2f60de
+Description:  Xray, Penetrates Everything. It helps you to build your own computer network.
+ It secures your network connections and thus protects your privacy.
+ 
+ This includes example configuration files for xray-core.
+
+Package: xray-geodata
+Version: 1.5.3-38
+Depends: libc, xray-core
+License: MPL-2.0
+Section: net
+Architecture: all
+Installed-Size: 2947986
+Filename: xray-geodata_1.5.3-38_all.ipk
+Size: 2415637
+SHA256sum: 06981bacb653ca1fd8c39820323dfbc05fbb7b1615391999915cd55900e7fb16
+Description:  Xray, Penetrates Everything. It helps you to build your own computer network.
+ It secures your network connections and thus protects your privacy.
+ 
+ This includes GEO datas used for xray-core.
+
+Package: xray-plugin
+Version: 1.5.3-32
+Depends: libc, ca-bundle
+License: MIT
+Section: net
+Architecture: x86_64
+Installed-Size: 5265044
+Filename: xray-plugin_1.5.3-32_x86_64.ipk
+Size: 5252582
+SHA256sum: ed39d628f4c29c7931cb0657eacd98acf75610216c988f14c508cff227f92016
+Description:  SIP003 plugin for Shadowsocks, based on Xray
+
