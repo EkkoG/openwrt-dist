@@ -1,0 +1,129 @@
+Package: liblucihttp-lua
+Version: 2021-06-11-3dc89af4-1
+Depends: libc, liblucihttp0, liblua5.1.5
+Source: feeds/luci/contrib/package/lucihttp
+SourceName: liblucihttp-lua
+License: ISC
+LicenseFiles: LICENSE
+Section: libs
+SourceDateEpoch: 1623520917
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: mips_24kc
+Installed-Size: 3502
+Filename: liblucihttp-lua_2021-06-11-3dc89af4-1_mips_24kc.ipk
+Size: 4261
+SHA256sum: 6cb1a9b2edcec35e4e1897397e91e78fc18db19efbc97c64033c3c346a0fe712
+Description:  Lua binding for the LuCI HTTP utility library
+
+Package: liblucihttp0
+Version: 2021-06-11-3dc89af4-1
+Depends: libc
+Provides: liblucihttp
+Source: feeds/luci/contrib/package/lucihttp
+SourceName: liblucihttp
+License: ISC
+LicenseFiles: LICENSE
+Section: libs
+SourceDateEpoch: 1623520917
+ABIVersion: 0
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: mips_24kc
+Installed-Size: 6722
+Filename: liblucihttp0_2021-06-11-3dc89af4-1_mips_24kc.ipk
+Size: 7524
+SHA256sum: 9ceb2db564b438420662b1f64761e22594d0a9a4289eee8b8da548a2206027a6
+Description:  LuCI HTTP utility library
+
+Package: luci-compat
+Version: git-21.099.45066-7bb2fc4
+Depends: libc, luci-base
+Source: feeds/luci/modules/luci-compat
+SourceName: luci-compat
+Section: luci
+SourceDateEpoch: 1617971466
+Maintainer: OpenWrt LuCI community
+Architecture: all
+Installed-Size: 45365
+Filename: luci-compat_git-21.099.45066-7bb2fc4_all.ipk
+Size: 46163
+SHA256sum: 3a3ff0e06a5c5cfc8d8aff84db5c47c5958d6efa3642427d564ba4581a0dcdab
+Description:  LuCI compatibility libraries
+
+Package: luci-lib-base
+Version: git-20.232.39649-1f6dc29
+Depends: libc, lua, luci-lib-nixio, luci-lib-ip, luci-lib-jsonc, liblucihttp-lua
+Source: feeds/luci/libs/luci-lib-base
+SourceName: luci-lib-base
+Section: luci
+SourceDateEpoch: 1597834849
+Maintainer: OpenWrt LuCI community
+Architecture: all
+Installed-Size: 12486
+Filename: luci-lib-base_git-20.232.39649-1f6dc29_all.ipk
+Size: 13345
+SHA256sum: 7b9d21361cb8f297bfbf3bda4813d999ca26d1945366e06cfd43abd8c6c70b8d
+Description:  basic libraries for luci
+
+Package: luci-lib-ip
+Version: git-20.250.76529-62505bd
+Depends: libc, liblua5.1.5, libnl-tiny1
+Source: feeds/luci/libs/luci-lib-ip
+SourceName: luci-lib-ip
+License: Apache-2.0
+Section: luci
+SourceDateEpoch: 1599426929
+Maintainer: OpenWrt LuCI community
+Architecture: mips_24kc
+Installed-Size: 10893
+Filename: luci-lib-ip_git-20.250.76529-62505bd_mips_24kc.ipk
+Size: 11738
+SHA256sum: 36e0e35efcbddcc6f5b935ab2ed73bdd2453fcf8591d82e60acbee25bfff7f0d
+Description:  Lua library for IP calculation and routing information
+
+Package: luci-lib-jsonc
+Version: git-19.317.29469-8da8f38
+Depends: libc, liblua5.1.5, libjson-c5
+Source: feeds/luci/libs/luci-lib-jsonc
+SourceName: luci-lib-jsonc
+Section: luci
+SourceDateEpoch: 1573632669
+Maintainer: OpenWrt LuCI community
+Architecture: mips_24kc
+Installed-Size: 4359
+Filename: luci-lib-jsonc_git-19.317.29469-8da8f38_mips_24kc.ipk
+Size: 5167
+SHA256sum: 66b79ef49e058b58df12f1b2977a6112ed5a96ddc3f93e502458280962e37cd9
+Description:  Lua binding for JSON-C
+
+Package: luci-lib-nixio
+Version: git-20.234.06894-c4a4e43
+Depends: libc, liblua5.1.5
+Source: feeds/luci/libs/luci-lib-nixio
+SourceName: luci-lib-nixio
+License: Apache-2.0
+Section: luci
+SourceDateEpoch: 1597974894
+Maintainer: OpenWrt LuCI community
+Architecture: mips_24kc
+Installed-Size: 28300
+Filename: luci-lib-nixio_git-20.234.06894-c4a4e43_mips_24kc.ipk
+Size: 28779
+SHA256sum: e3a030ede0670623f9d949d0d5304b056954d74e0c4c849c781409d6a9bd7983
+Description:  NIXIO POSIX library
+
+Package: rpcd-mod-luci
+Version: 20210614
+Depends: libc, rpcd, libubox20210516, libubus20210630, libnl-tiny1
+Source: feeds/luci/libs/rpcd-mod-luci
+SourceName: rpcd-mod-luci
+License: Apache-2.0
+Section: libs
+SourceDateEpoch: 1634072629
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: mips_24kc
+Installed-Size: 12289
+Filename: rpcd-mod-luci_20210614_mips_24kc.ipk
+Size: 13125
+SHA256sum: 071f5e7a61b476329bd5915c9a10881588dc4806d8d47e2faaa4f38b948ad249
+Description:  Provides LuCI backend ubus RPC operations.
+
