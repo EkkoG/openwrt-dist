@@ -1,0 +1,1689 @@
+Package: adbyby
+Version: 2.7-3
+Depends: libc
+Source: /github/workspace/openwrt-packages/adbyby
+SourceName: adbyby
+Section: net
+SourceDateEpoch: 1645805560
+Architecture: aarch64_generic
+Installed-Size: 455216
+Filename: adbyby_2.7-3_aarch64_generic.ipk
+Size: 455531
+SHA256sum: 4afc4adadcd6195f83ba06254051b9ff61c87d1b234ae723d3b3958320e9a3bc
+Description:  Adbyby is a powerful adblock module to block ad,just like adblock.
+
+Package: chinadns-ng
+Version: 1.0-beta.25-20
+Depends: libc, ipset
+Source: /github/workspace/openwrt-packages/chinadns-ng
+SourceName: chinadns-ng
+License: AGPL-3.0-only
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: pexcn <i@pexcn.me>
+Architecture: aarch64_generic
+Installed-Size: 17759
+Filename: chinadns-ng_1.0-beta.25-20_aarch64_generic.ipk
+Size: 18544
+SHA256sum: 1ab9fe030780946ace2d8dcb17958b90b8ad829d431d65a0958556437aac16f0
+Description:  ChinaDNS next generation, refactoring with epoll and ipset.
+
+Package: clash-for-openclash
+Version: 1.9.0
+Depends: libc
+Source: /github/workspace/openwrt-packages/clash-for-openclash
+SourceName: clash-for-openclash
+Section: luci
+SourceDateEpoch: 1641098440
+Maintainer: frainzy1477
+Architecture: aarch64_generic
+Installed-Size: 3189081
+Filename: clash-for-openclash_1.9.0_aarch64_generic.ipk
+Size: 3179923
+SHA256sum: e75f798f6ac6e378908c3200a254ef81ed5e03912ed35525287abd7de9c60122
+Description:  A rule-based tunnel in Go.
+
+Package: dns2socks
+Version: 2.1-10
+Depends: libc, libpthread
+Source: /github/workspace/openwrt-packages/dns2socks
+SourceName: dns2socks
+License: BSD-3-Clause
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: ghostmaker
+Architecture: aarch64_generic
+Installed-Size: 11217
+Filename: dns2socks_2.1-10_aarch64_generic.ipk
+Size: 12029
+SHA256sum: 9ef3b1e26386ce74c834a9cd785a5f7ee111c921e7ce2d064f79b8695ddecbde
+Description:  This is a command line utility to resolve DNS requests via
+ a SOCKS tunnel like Tor or a HTTP proxy.
+
+Package: dnsmasq-dhcpv6
+Version: 2.85-12
+Depends: libc, libubus20210630
+Provides: dnsmasq
+Source: /github/workspace/openwrt-packages/dnsmasq
+SourceName: dnsmasq-dhcpv6
+License: GPL-2.0
+LicenseFiles: COPYING
+Section: net
+Require-User: dnsmasq=453:dnsmasq=453
+SourceDateEpoch: 1645805560
+CPE-ID: cpe:/a:thekelleys:dnsmasq
+Architecture: aarch64_generic
+Installed-Size: 162403
+Filename: dnsmasq-dhcpv6_2.85-12_aarch64_generic.ipk
+Size: 163178
+SHA256sum: cceb857bf9336af4aa0a752bb2afa64b479ea4681bd3112b71eba57e369bcf5f
+Description:  It is intended to provide coupled DNS and DHCP service to a LAN.
+ 
+ This is a variant with DHCPv6 support
+
+Package: dnsmasq-full
+Version: 2.85-12
+Depends: libc, libubus20210630, libnettle8, kmod-ipt-ipset, libnetfilter-conntrack3
+Provides: dnsmasq
+Source: /github/workspace/openwrt-packages/dnsmasq
+SourceName: dnsmasq-full
+License: GPL-2.0
+LicenseFiles: COPYING
+Section: net
+Require-User: dnsmasq=453:dnsmasq=453
+SourceDateEpoch: 1645805560
+CPE-ID: cpe:/a:thekelleys:dnsmasq
+Architecture: aarch64_generic
+Installed-Size: 183421
+Filename: dnsmasq-full_2.85-12_aarch64_generic.ipk
+Size: 184168
+SHA256sum: f763cc2b81e94b1e9b1a5e714981b964f292e4b5be1718d7c67915c99b6ea42e
+Description:  It is intended to provide coupled DNS and DHCP service to a LAN.
+ 
+ This is a fully configurable variant with DHCPv4, DHCPv6, DNSSEC, Authoritative DNS
+ and IPset, Conntrack support & NO_ID enabled by default.
+
+Package: dnsmasq
+Version: 2.85-12
+Depends: libc, libubus20210630
+Source: /github/workspace/openwrt-packages/dnsmasq
+SourceName: dnsmasq
+License: GPL-2.0
+LicenseFiles: COPYING
+Section: net
+Require-User: dnsmasq=453:dnsmasq=453
+SourceDateEpoch: 1645805560
+CPE-ID: cpe:/a:thekelleys:dnsmasq
+Architecture: aarch64_generic
+Installed-Size: 136060
+Filename: dnsmasq_2.85-12_aarch64_generic.ipk
+Size: 136820
+SHA256sum: ef22157da9b4d131a066873c8bfe9c18efbc2f0b4a2b01b63697ac07ec20a94a
+Description:  It is intended to provide coupled DNS and DHCP service to a LAN.
+
+Package: halog
+Version: 2.4.13-2
+Depends: libc, haproxy
+Source: /github/workspace/openwrt-packages/haproxy
+SourceName: halog
+License: GPL-2.0-only
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+CPE-ID: cpe:/a:haproxy:haproxy
+Maintainer: Thomas Heil <heil@terminal-consulting.de>, Christian Lachner <gladiac@gmail.com>
+Architecture: aarch64_generic
+Installed-Size: 14547
+Filename: halog_2.4.13-2_aarch64_generic.ipk
+Size: 15329
+SHA256sum: 1675fb563a850f6de7528615c8d48c7830a92e3f525cd0eec884e12ee43410c7
+Description:  HAProxy Log Analyzer
+
+Package: haproxy-nossl
+Version: 2.4.13-2
+Depends: libc, libpcre, libltdl7, zlib, libpthread, liblua5.3-5.3, libatomic1
+Source: /github/workspace/openwrt-packages/haproxy
+SourceName: haproxy-nossl
+License: GPL-2.0-only
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+CPE-ID: cpe:/a:haproxy:haproxy
+Maintainer: Thomas Heil <heil@terminal-consulting.de>, Christian Lachner <gladiac@gmail.com>
+Architecture: aarch64_generic
+Installed-Size: 888837
+Filename: haproxy-nossl_2.4.13-2_aarch64_generic.ipk
+Size: 888534
+SHA256sum: 2585e096e3a7358c2265a6ae595165415146bf449edacc60747233996f2da9c1
+Description:  Open source Reliable, High Performance TCP/HTTP Load Balancer.
+ This package is built without SSL support.
+
+Package: haproxy
+Version: 2.4.13-2
+Depends: libc, libpcre, libltdl7, zlib, libpthread, liblua5.3-5.3, libopenssl1.1, libncurses6, libreadline8, libatomic1
+Source: /github/workspace/openwrt-packages/haproxy
+SourceName: haproxy
+License: GPL-2.0-only
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+CPE-ID: cpe:/a:haproxy:haproxy
+Maintainer: Thomas Heil <heil@terminal-consulting.de>, Christian Lachner <gladiac@gmail.com>
+Architecture: aarch64_generic
+Installed-Size: 963495
+Filename: haproxy_2.4.13-2_aarch64_generic.ipk
+Size: 962274
+SHA256sum: 9e4d0731dc8710b687260bedd1b6fa1353d5db9153dceae1381e46840f47526c
+Description:  Open source Reliable, High Performance TCP/HTTP Load Balancer.
+ This package is built with SSL and LUA support.
+
+Package: ipt2socks
+Version: 1.1.3-12
+Depends: libc, libpthread, libuv1
+Source: /github/workspace/openwrt-packages/ipt2socks
+SourceName: ipt2socks
+License: AGPL-3.0
+Section: net
+SourceDateEpoch: 1645805560
+Architecture: aarch64_generic
+Installed-Size: 34483
+Filename: ipt2socks_1.1.3-12_aarch64_generic.ipk
+Size: 35298
+SHA256sum: 9993d2366bc4cc4c5ba2661117f00d8e8720ff0bdaacf7f4cbf36b3fa1decbcf
+Description:  Utility for converting iptables (redirect/tproxy) to socks5.
+
+Package: libmbedtls12
+Version: 2.16.12-7
+Depends: libc
+Provides: libmbedtls
+Source: /github/workspace/openwrt-packages/mbedtls
+SourceName: libmbedtls
+License: GPL-2.0-or-later
+LicenseFiles: gpl-2.0.txt
+Section: libs
+SourceDateEpoch: 1645805560
+ABIVersion: 12
+CPE-ID: cpe:/a:arm:mbed_tls
+Architecture: aarch64_generic
+Installed-Size: 199562
+Filename: libmbedtls12_2.16.12-7_aarch64_generic.ipk
+Size: 200122
+SHA256sum: 075015621f41f6dafb6a9852b7f1bef4e12cf71ab858565cb702dca6910770c5
+Description:  The aim of the mbedtls project is to provide a quality, open-source
+ cryptographic library written in C and targeted at embedded systems.
+ This package contains the mbedtls library.
+
+Package: lua-maxminddb
+Version: 0.2-18
+Depends: libc, lua, libmaxminddb
+Source: /github/workspace/openwrt-packages/lua-maxminddb
+SourceName: lua-maxminddb
+License: MIT
+Section: lang
+SourceDateEpoch: 1645805560
+Maintainer: fabled
+Architecture: aarch64_generic
+Installed-Size: 2631
+Filename: lua-maxminddb_0.2-18_aarch64_generic.ipk
+Size: 3336
+SHA256sum: b38197d52856ded5558d5dc0953ddde720243953b53172d1b9ecc8d229d06f39
+Description:  libmaxminddb bindings for lua
+
+Package: luci-app-adbyby-plus
+Version: git-22.056.58360-0638068
+Depends: libc, adbyby, uclient-fetch, ipset, dnsmasq-full
+Source: /github/workspace/openwrt-packages/luci-app-adbyby-plus
+SourceName: luci-app-adbyby-plus
+Section: luci
+SourceDateEpoch: 1645805560
+Maintainer: OpenWrt LuCI community
+Architecture: all
+Installed-Size: 9834
+Filename: luci-app-adbyby-plus_git-22.056.58360-0638068_all.ipk
+Size: 10744
+SHA256sum: 91d04e4e2220d2aeb84cc14b5a10923bf48062ea2248cb78a4292478c7878ab0
+Description:  LuCI support for Adbyby
+
+Package: luci-app-autoreboot
+Version: git-22.056.58360-0638068
+Depends: libc
+Source: /github/workspace/openwrt-packages/luci-app-autoreboot
+SourceName: luci-app-autoreboot
+Section: luci
+SourceDateEpoch: 1645805560
+Maintainer: OpenWrt LuCI community
+Architecture: all
+Installed-Size: 1506
+Filename: luci-app-autoreboot_git-22.056.58360-0638068_all.ipk
+Size: 2359
+SHA256sum: 3a767b0698f21ef49755a3708c82371f3b60a508ab9e949e8e077db29c73c78b
+Description:  LuCI support for Scheduled Reboot
+
+Package: luci-app-bypass
+Version: git-22.056.58360-0638068
+Depends: libc, ipset, ip-full, iptables-mod-tproxy, dnsmasq-full, smartdns, coreutils, coreutils-base64, curl, tcping, chinadns-ng, lua, luci-compat, unzip, lua-maxminddb, shadowsocks-libev-ss-server, shadowsocks-libev-ss-local, shadowsocks-libev-ss-redir, shadowsocksr-libev-ssr-local, shadowsocksr-libev-ssr-redir, shadowsocksr-libev-ssr-server, simple-obfs, xray-core, trojan-plus, trojan-go, redsocks2, microsocks
+Source: /github/workspace/openwrt-packages/luci-app-bypass
+SourceName: luci-app-bypass
+Section: luci
+SourceDateEpoch: 1645805560
+Maintainer: OpenWrt LuCI community
+Architecture: all
+Installed-Size: 2646707
+Filename: luci-app-bypass_git-22.056.58360-0638068_all.ipk
+Size: 2465203
+SHA256sum: 0d25fc640cffeb0913e7530cda87dc4d367e90eeb0a669062d50c3e90dc45686
+Description:  SS/SSR/Xray/Trojan/Trojan-Go/NaiveProxy/Socks5/Tun LuCI interface
+
+Package: luci-app-dnsfilter
+Version: git-22.056.58360-0638068
+Depends: libc, curl, dnsmasq-full, ipset
+Source: /github/workspace/openwrt-packages/luci-app-dnsfilter
+SourceName: luci-app-dnsfilter
+License: GPLv2
+Section: luci
+SourceDateEpoch: 1645805560
+Maintainer: OpenWrt LuCI community
+Architecture: all
+Installed-Size: 8115
+Filename: luci-app-dnsfilter_git-22.056.58360-0638068_all.ipk
+Size: 8902
+SHA256sum: 2ebfe7a6c74eae2fe0d3662a14646c12de95f17fce418663b8b39df8ba4e9d68
+Description:  LuCI support for DNSFilter
+
+Package: luci-app-filetransfer
+Version: git-22.056.58360-0638068
+Depends: libc, luci-lib-fs
+Source: /github/workspace/openwrt-packages/luci-app-filetransfer
+SourceName: luci-app-filetransfer
+Section: luci
+SourceDateEpoch: 1645805560
+Maintainer: OpenWrt LuCI community
+Architecture: all
+Installed-Size: 2670
+Filename: luci-app-filetransfer_git-22.056.58360-0638068_all.ipk
+Size: 3552
+SHA256sum: 96147511ed7c13130e718401bf95e7b807408cf1729fcce1279c13920c4920e7
+Description:  LuCI page for IPK upload
+
+Package: luci-app-frpc
+Version: 1.4
+Depends: libc, wget, frpc
+Source: /github/workspace/openwrt-packages/luci-app-frpc
+SourceName: luci-app-frpc
+Section: luci
+SourceDateEpoch: 1645805560
+Maintainer: OpenWrt LuCI community
+Architecture: all
+Installed-Size: 7617
+Filename: luci-app-frpc_1.4_all.ipk
+Size: 8476
+SHA256sum: 67710dcf23e84698e61e72c440eab08b672a04c64c584c5fea2a6a174c54bea3
+Description:  LuCI for FRPC
+
+Package: luci-app-passwall
+Version: git-22.056.58360-0638068
+Depends: libc, coreutils, coreutils-base64, coreutils-nohup, curl, dnsmasq-full, luci-compat, dns2socks, ipset, ip-full, ipt2socks, iptables-mod-tproxy, iptables-mod-iprange, libuci-lua, lua, luci-lib-jsonc, microsocks, tcping, resolveip, unzip, chinadns-ng, haproxy, pdnsd-alt, shadowsocks-libev-ss-local, shadowsocks-libev-ss-redir, shadowsocks-libev-ss-server, shadowsocks-rust-sslocal, shadowsocksr-libev-ssr-local, shadowsocksr-libev-ssr-redir, simple-obfs, trojan-plus, v2ray-core, v2ray-plugin, xray-core
+Source: /github/workspace/openwrt-packages/luci-app-passwall
+SourceName: luci-app-passwall
+Section: luci
+SourceDateEpoch: 1645805560
+Maintainer: OpenWrt LuCI community
+Architecture: all
+Installed-Size: 1024165
+Filename: luci-app-passwall_git-22.056.58360-0638068_all.ipk
+Size: 1024940
+SHA256sum: ba17c4ab651a7ea448865303c20d8ab22cdc941f2ac2727ea66c07a3c9020e15
+Description:  LuCI support for PassWall
+
+Package: luci-app-vlmcsd
+Version: git-22.056.58360-0638068
+Depends: libc, vlmcsd
+Source: /github/workspace/openwrt-packages/luci-app-vlmcsd
+SourceName: luci-app-vlmcsd
+Section: luci
+SourceDateEpoch: 1645805560
+Maintainer: OpenWrt LuCI community
+Architecture: all
+Installed-Size: 2489
+Filename: luci-app-vlmcsd_git-22.056.58360-0638068_all.ipk
+Size: 3332
+SHA256sum: 493d050cc681dd572e7bc71916b15f5b61b419eada6d5592a7aa75c1e02c99bd
+Description:  LuCI support for KMS
+
+Package: luci-app-vssr
+Version: git-22.056.58360-0638068
+Depends: libc, ipset, ip-full, iptables-mod-tproxy, dnsmasq-full, coreutils, coreutils-base64, bash, pdnsd-alt, wget-ssl, lua, luasocket, lua-maxminddb, lua-cjson, shadowsocks-libev-ss-local, shadowsocks-libev-ss-redir, shadowsocksr-libev-ssr-local, shadowsocksr-libev-ssr-redir, shadowsocksr-libev-ssr-check, simple-obfs, xray-core, trojan, ipt2socks, xray-plugin, shadowsocksr-libev-ssr-server
+Source: /github/workspace/openwrt-packages/luci-app-vssr
+SourceName: luci-app-vssr
+Section: luci
+SourceDateEpoch: 1645805560
+Maintainer: OpenWrt LuCI community
+Architecture: all
+Installed-Size: 3184010
+Filename: luci-app-vssr_git-22.056.58360-0638068_all.ipk
+Size: 3013124
+SHA256sum: 8a5f1d5fea4ac9ad896651544294fc3ae43d34f5b5a56b88971ed4ce5dfc5034
+Description:  A New SS/SSR/Xray/Trojan LuCI interface
+
+Package: luci-app-wrtbwmon
+Version: git-22.056.58360-0638068
+Depends: libc, wrtbwmon
+Source: /github/workspace/openwrt-packages/luci-app-wrtbwmon
+SourceName: luci-app-wrtbwmon
+License: Apache-2.0
+Section: luci
+SourceDateEpoch: 1645805560
+Maintainer: OpenWrt LuCI community
+Architecture: all
+Installed-Size: 8156
+Filename: luci-app-wrtbwmon_git-22.056.58360-0638068_all.ipk
+Size: 9059
+SHA256sum: 9ecbf060c29b0a84631f3161d86a49d98753221fa04e304716fd40da1bd14719
+Description:  A Luci module that uses wrtbwmon to track bandwidth usage
+
+Package: luci-app-zerotier
+Version: git-22.056.58360-0638068
+Depends: libc, zerotier
+Source: /github/workspace/openwrt-packages/luci-app-zerotier
+SourceName: luci-app-zerotier
+Section: luci
+SourceDateEpoch: 1645805560
+Maintainer: OpenWrt LuCI community
+Architecture: all
+Installed-Size: 3442
+Filename: luci-app-zerotier_git-22.056.58360-0638068_all.ipk
+Size: 4280
+SHA256sum: 1cab895f37ba69c72c81a2b780ad0efec1e685582728eb5f48fd67c000aa530a
+Description:  LuCI for Zerotier
+
+Package: luci-base
+Version: git-22.056.58360-0638068
+Depends: libc, lua, luci-lib-nixio, luci-lib-ip, rpcd, libubus-lua, luci-lib-jsonc, liblucihttp-lua, luci-lib-base, rpcd-mod-file, rpcd-mod-luci, cgi-io
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-base
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Maintainer: OpenWrt LuCI community
+Architecture: aarch64_generic
+Installed-Size: 132442
+Filename: luci-base_git-22.056.58360-0638068_aarch64_generic.ipk
+Size: 133541
+SHA256sum: 9246344e90ec8df64905f24301a7f59607f2cacde44d26cf43f7f3d67938273c
+Description:  LuCI core libraries
+
+Package: luci-i18n-adbyby-plus-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-adbyby-plus
+Source: /github/workspace/openwrt-packages/luci-app-adbyby-plus
+SourceName: luci-i18n-adbyby-plus-zh-cn
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 2297
+Filename: luci-i18n-adbyby-plus-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 3150
+SHA256sum: a2db5197724eb2f095ec86e0f5bdaa61741f79813994a9fc26d376178321d045
+Description:  Translation for luci-app-adbyby-plus - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-autoreboot-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-autoreboot
+Source: /github/workspace/openwrt-packages/luci-app-autoreboot
+SourceName: luci-i18n-autoreboot-zh-cn
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 518
+Filename: luci-i18n-autoreboot-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 1360
+SHA256sum: 8f4c73bffce8e87effe1a914a5d91c8ea7089fb6e194e15c0e55d3f0abfa65ad
+Description:  Translation for luci-app-autoreboot - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-base-ar
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-ar
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 37772
+Filename: luci-i18n-base-ar_git-22.056.58360-0638068_all.ipk
+Size: 38690
+SHA256sum: 202ae0d9b22c89d1aff100ea12bd9cf926f291f5dfa848e14acd51d21a4b8588
+Description:  Translation for luci-base - العربية (Arabic)
+
+Package: luci-i18n-base-bg
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-bg
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 8157
+Filename: luci-i18n-base-bg_git-22.056.58360-0638068_all.ipk
+Size: 9028
+SHA256sum: df86a4e216a6e2a748d60503036c5758b6cdca61c4418e9420efe9993f1e3cbf
+Description:  Translation for luci-base - български (Bulgarian)
+
+Package: luci-i18n-base-bn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-bn
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 1580
+Filename: luci-i18n-base-bn_git-22.056.58360-0638068_all.ipk
+Size: 2422
+SHA256sum: 68c68a2ea625b7cb608d06f2a0a36e709c79609e9bb0253cbd54bbcd33c7a501
+Description:  Translation for luci-base - বাংলা (Bengali)
+
+Package: luci-i18n-base-ca
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-ca
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 14148
+Filename: luci-i18n-base-ca_git-22.056.58360-0638068_all.ipk
+Size: 14958
+SHA256sum: e4e1ec660e42095b910128030fa5afb8da236bf6111ff5930a97a277b4debaff
+Description:  Translation for luci-base - Català (Catalan)
+
+Package: luci-i18n-base-cs
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-cs
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 31991
+Filename: luci-i18n-base-cs_git-22.056.58360-0638068_all.ipk
+Size: 32854
+SHA256sum: 8a29f1492338a39eddd1500120c54169ae85edbc1c46b756d02010f25b910701
+Description:  Translation for luci-base - Čeština (Czech)
+
+Package: luci-i18n-base-da
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-da
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 36092
+Filename: luci-i18n-base-da_git-22.056.58360-0638068_all.ipk
+Size: 36972
+SHA256sum: 7fed056591715863abedb28189a0294d8ae8570d7265ac406196240d069bfbe3
+Description:  Translation for luci-base - 
+
+Package: luci-i18n-base-de
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-de
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 40945
+Filename: luci-i18n-base-de_git-22.056.58360-0638068_all.ipk
+Size: 41730
+SHA256sum: 7586a4400394e3ac048e5dc12bd645e38b5ca6f66e8f6c633ecf236625a2afdb
+Description:  Translation for luci-base - Deutsch (German)
+
+Package: luci-i18n-base-el
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-el
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 12816
+Filename: luci-i18n-base-el_git-22.056.58360-0638068_all.ipk
+Size: 13613
+SHA256sum: 101cc3f25aabb5eb8c798c81a32ccbdd29c4cb6f249d65eb01ac35704beb670d
+Description:  Translation for luci-base - Ελληνικά (Greek)
+
+Package: luci-i18n-base-en
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-en
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 792
+Filename: luci-i18n-base-en_git-22.056.58360-0638068_all.ipk
+Size: 1601
+SHA256sum: d1bdd5df857b06bd4c34f8b366d17ad5051ab1b650fd57dc6c40996a1aba0dcc
+Description:  Translation for luci-base - English
+
+Package: luci-i18n-base-es
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-es
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 40326
+Filename: luci-i18n-base-es_git-22.056.58360-0638068_all.ipk
+Size: 41167
+SHA256sum: 39cafb146ed00e0f2a5d5f009ceb0018d63bd5d29035769e231ac6f01f240afe
+Description:  Translation for luci-base - Español (Spanish)
+
+Package: luci-i18n-base-fi
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-fi
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 35020
+Filename: luci-i18n-base-fi_git-22.056.58360-0638068_all.ipk
+Size: 35895
+SHA256sum: ce1bb5fae14c804aa0a685169912b60a03d7b1cbb4d501eff59a55543f7f6a87
+Description:  Translation for luci-base - Suomi (Finnish)
+
+Package: luci-i18n-base-fr
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-fr
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 35665
+Filename: luci-i18n-base-fr_git-22.056.58360-0638068_all.ipk
+Size: 36520
+SHA256sum: 54e4e20a806895bd65cbf198373ecbc30b439c26bfe82eb3af98f03c9f8fbb8b
+Description:  Translation for luci-base - Français (French)
+
+Package: luci-i18n-base-he
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-he
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 4805
+Filename: luci-i18n-base-he_git-22.056.58360-0638068_all.ipk
+Size: 5622
+SHA256sum: 9bcdb54fa98acfa79e8ab8290d51ae9ab4c533454ae1868d68eb0a13cd813099
+Description:  Translation for luci-base - עִבְרִית (Hebrew)
+
+Package: luci-i18n-base-hi
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-hi
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 2155
+Filename: luci-i18n-base-hi_git-22.056.58360-0638068_all.ipk
+Size: 2960
+SHA256sum: e5bdc0811828dfa02528865c65f3204316e2ac8bfac1e373a90f7e43a7f2074f
+Description:  Translation for luci-base - हिंदी (Hindi)
+
+Package: luci-i18n-base-hu
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-hu
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 31357
+Filename: luci-i18n-base-hu_git-22.056.58360-0638068_all.ipk
+Size: 32141
+SHA256sum: c6778b71cb42bc262478b275db146baebbc1609b1d59cceeb8fb1147df36f03d
+Description:  Translation for luci-base - Magyar (Hungarian)
+
+Package: luci-i18n-base-it
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-it
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 21827
+Filename: luci-i18n-base-it_git-22.056.58360-0638068_all.ipk
+Size: 22656
+SHA256sum: 9882ce333b20e65743a4403caa929488e5822d05d8a968469755a6492d7b41b6
+Description:  Translation for luci-base - Italiano (Italian)
+
+Package: luci-i18n-base-ja
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-ja
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 38512
+Filename: luci-i18n-base-ja_git-22.056.58360-0638068_all.ipk
+Size: 39421
+SHA256sum: cc4b9dbe75af91353d1c8dc352067a4d72d2bd3015867e11b0ef81a8cb8918ed
+Description:  Translation for luci-base - 日本語 (Japanese)
+
+Package: luci-i18n-base-ko
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-ko
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 14516
+Filename: luci-i18n-base-ko_git-22.056.58360-0638068_all.ipk
+Size: 15350
+SHA256sum: c74d8591a69a6b4112bd661b5ae95ab0b9e846cf50bb2fbf71b6c879c46d330a
+Description:  Translation for luci-base - 한국어 (Korean)
+
+Package: luci-i18n-base-mr
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-mr
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 1456
+Filename: luci-i18n-base-mr_git-22.056.58360-0638068_all.ipk
+Size: 2292
+SHA256sum: f416993857eac54149d69e7aac50bf940510535c4d99aaf84164893ae3535389
+Description:  Translation for luci-base - Marāṭhī (Marathi)
+
+Package: luci-i18n-base-ms
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-ms
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 4989
+Filename: luci-i18n-base-ms_git-22.056.58360-0638068_all.ipk
+Size: 5780
+SHA256sum: 859cba53c54e1348ca5b1d1eabaf60793e63c1603f370c505634cfdc302b60c2
+Description:  Translation for luci-base - Bahasa Melayu (Malay)
+
+Package: luci-i18n-base-nl
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-nl
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 4003
+Filename: luci-i18n-base-nl_git-22.056.58360-0638068_all.ipk
+Size: 4790
+SHA256sum: 57fccd70fbdf8afc6e81d53431f0d41f553efc00e2625b2884e4dc029eb5b2eb
+Description:  Translation for luci-base - Nederlands (Dutch)
+
+Package: luci-i18n-base-no
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-no
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 16025
+Filename: luci-i18n-base-no_git-22.056.58360-0638068_all.ipk
+Size: 16789
+SHA256sum: 31fce7a705ca53a188caf6d3aab7bba152a6ef1e6b28e570de388ac940d8755d
+Description:  Translation for luci-base - Norsk (Norwegian)
+
+Package: luci-i18n-base-pl
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-pl
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 41238
+Filename: luci-i18n-base-pl_git-22.056.58360-0638068_all.ipk
+Size: 42057
+SHA256sum: 12b4650b2aa17e5cc623616525b4bdf342f5c0a4dc0cd01ff9fc79de9a7fbfd8
+Description:  Translation for luci-base - Polski (Polish)
+
+Package: luci-i18n-base-pt-br
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-pt-br
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 42302
+Filename: luci-i18n-base-pt-br_git-22.056.58360-0638068_all.ipk
+Size: 43113
+SHA256sum: 053014efad4e390917d6e2432e751fe9d360e78b8192465fce54e57d1d8653ee
+Description:  Translation for luci-base - Português do Brasil (Brazilian Portuguese)
+
+Package: luci-i18n-base-pt
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-pt
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 41414
+Filename: luci-i18n-base-pt_git-22.056.58360-0638068_all.ipk
+Size: 42268
+SHA256sum: f4291ef5be3307e0cbc6f2c0127e09f6c78e8d478672e10327fbb186f5b8cde9
+Description:  Translation for luci-base - Português (Portuguese)
+
+Package: luci-i18n-base-ro
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-ro
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 40313
+Filename: luci-i18n-base-ro_git-22.056.58360-0638068_all.ipk
+Size: 41159
+SHA256sum: 0e2c3991133bd75181ec0275ebf3fd44d18a154f814a80de69ef900b1730d3c3
+Description:  Translation for luci-base - Română (Romanian)
+
+Package: luci-i18n-base-ru
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-ru
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 47938
+Filename: luci-i18n-base-ru_git-22.056.58360-0638068_all.ipk
+Size: 48515
+SHA256sum: 36d59b3f18f4a68218637ef48adc65a3ae516dabde006e65eef3c3a2666ce295
+Description:  Translation for luci-base - Русский (Russian)
+
+Package: luci-i18n-base-sk
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-sk
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 15575
+Filename: luci-i18n-base-sk_git-22.056.58360-0638068_all.ipk
+Size: 16380
+SHA256sum: cd7808b9f9e7a2bad854a55f67bc7f533b8da1964a68cf9abe7875750570f0b5
+Description:  Translation for luci-base - Slovenčina (Slovak)
+
+Package: luci-i18n-base-sv
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-sv
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 12900
+Filename: luci-i18n-base-sv_git-22.056.58360-0638068_all.ipk
+Size: 13674
+SHA256sum: 09aa1702fdaff8c974b2aeb204e9d5974f5fd09108d1ed36f2a574a1cd9011a5
+Description:  Translation for luci-base - Svenska (Swedish)
+
+Package: luci-i18n-base-tr
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-tr
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 40242
+Filename: luci-i18n-base-tr_git-22.056.58360-0638068_all.ipk
+Size: 41096
+SHA256sum: 60d2163a547cdced63f625adfa33d3dd99a05a5df018319d91e144676feff436
+Description:  Translation for luci-base - Türkçe (Turkish)
+
+Package: luci-i18n-base-uk
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-uk
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 41585
+Filename: luci-i18n-base-uk_git-22.056.58360-0638068_all.ipk
+Size: 42381
+SHA256sum: 7dce882889bd057754d30fcfe477c4157b96fb8b312476d9050d928c7daa21b1
+Description:  Translation for luci-base - Українська (Ukrainian)
+
+Package: luci-i18n-base-vi
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-vi
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 25578
+Filename: luci-i18n-base-vi_git-22.056.58360-0638068_all.ipk
+Size: 26379
+SHA256sum: 3e0a6186833214844fba00fe8a374e8b062b215f0796264cab7535cd6227dfc6
+Description:  Translation for luci-base - Tiếng Việt (Vietnamese)
+
+Package: luci-i18n-base-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-zh-cn
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 37777
+Filename: luci-i18n-base-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 38704
+SHA256sum: f65f3461ebbfcc9001d9451c33b4047464df288627021d27637bd62bb4409771
+Description:  Translation for luci-base - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-base-zh-tw
+Version: git-22.056.58360-0638068
+Depends: libc, luci-base
+Source: /github/workspace/openwrt-packages/luci-base
+SourceName: luci-i18n-base-zh-tw
+License: MIT
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 39958
+Filename: luci-i18n-base-zh-tw_git-22.056.58360-0638068_all.ipk
+Size: 40853
+SHA256sum: 4e415d94e9a24df0c27dfe1be4f41164b15bcd051c8dc9eebb5ce21ac9c6f9bd
+Description:  Translation for luci-base - 繁體中文 (Chinese Traditional)
+
+Package: luci-i18n-bypass-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-bypass
+Source: /github/workspace/openwrt-packages/luci-app-bypass
+SourceName: luci-i18n-bypass-zh-cn
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 5333
+Filename: luci-i18n-bypass-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 6151
+SHA256sum: d1b61e21196d472989d0831c6fbc1a7b2a52d904df41215b8095b5bc107e6757
+Description:  Translation for luci-app-bypass - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-dnsfilter-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-dnsfilter
+Source: /github/workspace/openwrt-packages/luci-app-dnsfilter
+SourceName: luci-i18n-dnsfilter-zh-cn
+License: GPLv2
+Section: luci
+SourceDateEpoch: 1645805560
+Maintainer: small_5 kiddin9
+Architecture: all
+Installed-Size: 1443
+Filename: luci-i18n-dnsfilter-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 2327
+SHA256sum: 327c78035c0573c5bb8387a6be777e180e41445c2f0d48df887fb341007e0a5f
+Description:  Translation for luci-app-dnsfilter - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-filetransfer-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-filetransfer
+Source: /github/workspace/openwrt-packages/luci-app-filetransfer
+SourceName: luci-i18n-filetransfer-zh-cn
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 781
+Filename: luci-i18n-filetransfer-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 1627
+SHA256sum: c030174f53add0459830b49c68f354eb946a6ec9bca6f17d1050602b79e0270c
+Description:  Translation for luci-app-filetransfer - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-frpc-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-frpc
+Source: /github/workspace/openwrt-packages/luci-app-frpc
+SourceName: luci-i18n-frpc-zh-cn
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 3012
+Filename: luci-i18n-frpc-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 3819
+SHA256sum: 25f37ec62c4447864e8ac8d98ff7220a051b55fd7600feb36f87df08db32bb32
+Description:  Translation for luci-app-frpc - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-passwall-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-passwall
+Source: /github/workspace/openwrt-packages/luci-app-passwall
+SourceName: luci-i18n-passwall-zh-cn
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 11148
+Filename: luci-i18n-passwall-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 12003
+SHA256sum: 0d99488b5de00e3b6c527e61f99d51d53d21fb8063a040adaec0c4c3af706cf9
+Description:  Translation for luci-app-passwall - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-vlmcsd-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-vlmcsd
+Source: /github/workspace/openwrt-packages/luci-app-vlmcsd
+SourceName: luci-i18n-vlmcsd-zh-cn
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 707
+Filename: luci-i18n-vlmcsd-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 1550
+SHA256sum: 97badc89be1950da5d68c1515c1f2b97ea7389fabda7578e0861ae66fb6e5212
+Description:  Translation for luci-app-vlmcsd - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-vssr-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-vssr
+Source: /github/workspace/openwrt-packages/luci-app-vssr
+SourceName: luci-i18n-vssr-zh-cn
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 4950
+Filename: luci-i18n-vssr-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 5763
+SHA256sum: 841e3fc3a8c565e528b1d788d893be3044fda987ebcdfd2ca9b20d5b5ff5be13
+Description:  Translation for luci-app-vssr - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-wrtbwmon-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-wrtbwmon
+Source: /github/workspace/openwrt-packages/luci-app-wrtbwmon
+SourceName: luci-i18n-wrtbwmon-zh-cn
+License: Apache-2.0
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 1533
+Filename: luci-i18n-wrtbwmon-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 2398
+SHA256sum: 3884b6364145e019486737a833da825ae95bf6d3b27b0bae7e64a9c8bfe7822f
+Description:  Translation for luci-app-wrtbwmon - 简体中文 (Chinese Simplified)
+
+Package: luci-i18n-zerotier-zh-cn
+Version: git-22.056.58360-0638068
+Depends: libc, luci-app-zerotier
+Source: /github/workspace/openwrt-packages/luci-app-zerotier
+SourceName: luci-i18n-zerotier-zh-cn
+Section: luci
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 813
+Filename: luci-i18n-zerotier-zh-cn_git-22.056.58360-0638068_all.ipk
+Size: 1660
+SHA256sum: 938375614ceb34c41fd41a6d6740868c6672098e2e8bf40f87e19fdcfa3f7690
+Description:  Translation for luci-app-zerotier - 简体中文 (Chinese Simplified)
+
+Package: luci-theme-argon
+Version: git-22.056.58360-0638068
+Depends: libc
+Source: /github/workspace/openwrt-packages/luci-theme-argon
+SourceName: luci-theme-argon
+Section: luci
+SourceDateEpoch: 1645805560
+Maintainer: OpenWrt LuCI community
+Architecture: all
+Installed-Size: 414512
+Filename: luci-theme-argon_git-22.056.58360-0638068_all.ipk
+Size: 415182
+SHA256sum: 241348391daefb7f21a5637ab2a4cb215061fc2546584ca0d1b19d5f8514e1a7
+Description:  Argon Theme
+
+Package: luci-theme-edge
+Version: git-22.056.58360-0638068
+Depends: libc, curl
+Source: /github/workspace/openwrt-packages/luci-theme-edge
+SourceName: luci-theme-edge
+License: Apache-2.0
+Section: luci
+SourceDateEpoch: 1645805560
+Maintainer: OpenWrt LuCI community
+Architecture: all
+Installed-Size: 231272
+Filename: luci-theme-edge_git-22.056.58360-0638068_all.ipk
+Size: 232219
+SHA256sum: 0e658790d07b4926ca6b26bc557482123b620810cc1d4dc6fbf96b5b33378202
+Description:  Edge Theme
+
+Package: mbedtls-util
+Version: 2.16.12-7
+Depends: libc, libmbedtls12
+Source: /github/workspace/openwrt-packages/mbedtls
+SourceName: mbedtls-util
+License: GPL-2.0-or-later
+LicenseFiles: gpl-2.0.txt
+Section: utils
+SourceDateEpoch: 1645805560
+CPE-ID: cpe:/a:arm:mbed_tls
+Architecture: aarch64_generic
+Installed-Size: 7359
+Filename: mbedtls-util_2.16.12-7_aarch64_generic.ipk
+Size: 8257
+SHA256sum: efef6223b705323dc1f7619d5ff72e88cdef05dc6882f89b3bd4c899123b1232
+Description:  The aim of the mbedtls project is to provide a quality, open-source
+ cryptographic library written in C and targeted at embedded systems.
+ This package contains mbedtls helper programs for private key and
+ CSR generation (gen_key, cert_req)
+
+Package: microsocks
+Version: 1.0.2-20
+Depends: libc, libpthread
+Source: /github/workspace/openwrt-packages/microsocks
+SourceName: microsocks
+License: MIT
+LicenseFiles: COPYING
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: lean
+Architecture: aarch64_generic
+Installed-Size: 5773
+Filename: microsocks_1.0.2-20_aarch64_generic.ipk
+Size: 6560
+SHA256sum: bdffd9a22af27bebf5babbfe0187abd3f3e4d3ead675e699629cdf7256bc7c56
+Description:  A SOCKS5 service that you can run on your remote boxes to tunnel connections
+ through them, if for some reason SSH doesn't cut it for you.
+
+Package: overture
+Version: 1.8-rc1-2
+Depends: libc
+Source: /github/workspace/openwrt-packages/overture
+SourceName: overture
+License: MIT
+LicenseFiles: LICENSE.md
+Section: net
+SourceDateEpoch: 1636278926
+Architecture: aarch64_generic
+Installed-Size: 3102641
+Filename: overture_1.8-rc1-2_aarch64_generic.ipk
+Size: 3094847
+SHA256sum: a60f1293f59c426fc7b964135faec834392ef13bffd3b062edd2b15e00166465
+Description:  Overture is a DNS server/forwarder/dispatcher written in Go.
+ Overture means an orchestral piece at the beginning of a classical music composition, just like DNS which is nearly the first step of surfing the Internet.
+
+Package: pdnsd-alt
+Version: 1.2.9b-par-18
+Depends: libc, libpthread
+Source: /github/workspace/openwrt-packages/pdnsd-alt
+SourceName: pdnsd-alt
+Section: net
+SourceDateEpoch: 1645805560
+Architecture: aarch64_generic
+Installed-Size: 92363
+Filename: pdnsd-alt_1.2.9b-par-18_aarch64_generic.ipk
+Size: 93289
+SHA256sum: 6baff7a767c7e7d2d4b2a49efede9f77c73b194b634616b9bfa9c012df71037b
+Description:  pdnsd, is an IPv6 capable proxy DNS server with permanent caching (the cache
+ contents are written to hard disk on exit) that is designed to cope with
+ unreachable or down DNS servers (for example in dial-in networking).
+ 
+ pdnsd can be used with applications that do dns lookups, eg on startup, and
+ can't be configured to change that behaviour, to prevent the often
+ minute-long hangs (or even crashes) that result from stalled dns queries.
+
+Package: redsocks2
+Version: 0.67-7
+Depends: libc, libevent2-7, libopenssl1.1
+Source: /github/workspace/openwrt-packages/redsocks2
+SourceName: redsocks2
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: semigodking <semigodking@gmail.com>
+Architecture: aarch64_generic
+Installed-Size: 57356
+Filename: redsocks2_0.67-7_aarch64_generic.ipk
+Size: 58285
+SHA256sum: 2ab1cfe98e76d8658270f87579c3906adce0a707bcd27ac6a75cad2912591810
+Description:  This is a modified version of original redsocks. The name is changed to be REDSOCKS2 since this release to distinguish with original redsocks. This variant is useful for anti-GFW (Great Fire Wall).
+
+Package: shadowsocks-rust-sslocal
+Version: 1.13.5-28
+Depends: libc
+Source: /github/workspace/openwrt-packages/shadowsocks-rust
+SourceName: shadowsocks-rust-sslocal
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Architecture: aarch64_generic
+Installed-Size: 2712949
+Filename: shadowsocks-rust-sslocal_1.13.5-28_aarch64_generic.ipk
+Size: 2702621
+SHA256sum: 1db37db63073d4cc10e4102718e7fe3e2f399fee6051bcd194bfd5008e6b3344
+Description:  shadowsocks-rust sslocal
+
+Package: shadowsocks-rust-ssmanager
+Version: 1.13.5-28
+Depends: libc
+Source: /github/workspace/openwrt-packages/shadowsocks-rust
+SourceName: shadowsocks-rust-ssmanager
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Architecture: aarch64_generic
+Installed-Size: 1814143
+Filename: shadowsocks-rust-ssmanager_1.13.5-28_aarch64_generic.ipk
+Size: 1807404
+SHA256sum: 540da58b2a346bd2ade0cc2a8f7cf29dba3457ebe8e1b12992a0633efe54af54
+Description:  shadowsocks-rust ssmanager
+
+Package: shadowsocks-rust-ssserver
+Version: 1.13.5-28
+Depends: libc
+Source: /github/workspace/openwrt-packages/shadowsocks-rust
+SourceName: shadowsocks-rust-ssserver
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Architecture: aarch64_generic
+Installed-Size: 1751668
+Filename: shadowsocks-rust-ssserver_1.13.5-28_aarch64_generic.ipk
+Size: 1744400
+SHA256sum: 95e22243ff31aa835052186afbade3234777ae454450f52ee11a9d3ac291add5
+Description:  shadowsocks-rust ssserver
+
+Package: shadowsocks-rust-ssservice
+Version: 1.13.5-28
+Depends: libc
+Source: /github/workspace/openwrt-packages/shadowsocks-rust
+SourceName: shadowsocks-rust-ssservice
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Architecture: aarch64_generic
+Installed-Size: 2883392
+Filename: shadowsocks-rust-ssservice_1.13.5-28_aarch64_generic.ipk
+Size: 2873833
+SHA256sum: c64a075531fd986bd9faaf1a93b89f25b091d51aa751873ee08adf2310b9e67b
+Description:  shadowsocks-rust ssservice
+
+Package: shadowsocks-rust-ssurl
+Version: 1.13.5-28
+Depends: libc
+Source: /github/workspace/openwrt-packages/shadowsocks-rust
+SourceName: shadowsocks-rust-ssurl
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Architecture: aarch64_generic
+Installed-Size: 633010
+Filename: shadowsocks-rust-ssurl_1.13.5-28_aarch64_generic.ipk
+Size: 631572
+SHA256sum: f76209604a24a684109f4608dc9f3b2f6c0c4e911de97c42836243630f12df42
+Description:  shadowsocks-rust ssurl
+
+Package: shadowsocksr-libev-ssr-check
+Version: 2.5.6-34
+Depends: libc, libev, libsodium, libopenssl1.1, libpthread, libpcre, libudns, zlib
+Source: /github/workspace/openwrt-packages/shadowsocksr-libev
+SourceName: shadowsocksr-libev-ssr-check
+License: GPL-3.0
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Architecture: aarch64_generic
+Installed-Size: 2579
+Filename: shadowsocksr-libev-ssr-check_2.5.6-34_aarch64_generic.ipk
+Size: 3313
+SHA256sum: 5b41d861e405522cddcbb17fdf5dbc7a850e547cfa8310ee275bcf041ddafabe
+Description:  shadowsocksr-libev ssr-check
+
+Package: shadowsocksr-libev-ssr-local
+Version: 2.5.6-34
+Depends: libc, libev, libsodium, libopenssl1.1, libpthread, libpcre, libudns, zlib
+Source: /github/workspace/openwrt-packages/shadowsocksr-libev
+SourceName: shadowsocksr-libev-ssr-local
+License: GPL-3.0
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Architecture: aarch64_generic
+Installed-Size: 62012
+Filename: shadowsocksr-libev-ssr-local_2.5.6-34_aarch64_generic.ipk
+Size: 62753
+SHA256sum: ec1fe5ce59f26f7fa5f988fde518e9279fa56bdba44a19730616ef2cbf46eacf
+Description:  shadowsocksr-libev ssr-local
+
+Package: shadowsocksr-libev-ssr-nat
+Version: 2.5.6-34
+Depends: libc, libev, libsodium, libopenssl1.1, libpthread, libpcre, libudns, zlib
+Source: /github/workspace/openwrt-packages/shadowsocksr-libev
+SourceName: shadowsocksr-libev-ssr-nat
+License: GPL-3.0
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Architecture: aarch64_generic
+Installed-Size: 2227
+Filename: shadowsocksr-libev-ssr-nat_2.5.6-34_aarch64_generic.ipk
+Size: 2992
+SHA256sum: e65061cb08f4b20e89c543b3848ae33c8bf166e928acd7595582dd41c9115980
+Description:  shadowsocksr-libev ssr-nat
+
+Package: shadowsocksr-libev-ssr-redir
+Version: 2.5.6-34
+Depends: libc, libev, libsodium, libopenssl1.1, libpthread, libpcre, libudns, zlib
+Source: /github/workspace/openwrt-packages/shadowsocksr-libev
+SourceName: shadowsocksr-libev-ssr-redir
+License: GPL-3.0
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Architecture: aarch64_generic
+Installed-Size: 55714
+Filename: shadowsocksr-libev-ssr-redir_2.5.6-34_aarch64_generic.ipk
+Size: 56395
+SHA256sum: 3113cccf579c8f90d7c378605e5adb855f22b6524c37da3be7dfd630f4563d65
+Description:  shadowsocksr-libev ssr-redir
+
+Package: shadowsocksr-libev-ssr-server
+Version: 2.5.6-34
+Depends: libc, libev, libsodium, libopenssl1.1, libpthread, libpcre, libudns, zlib
+Source: /github/workspace/openwrt-packages/shadowsocksr-libev
+SourceName: shadowsocksr-libev-ssr-server
+License: GPL-3.0
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Architecture: aarch64_generic
+Installed-Size: 64902
+Filename: shadowsocksr-libev-ssr-server_2.5.6-34_aarch64_generic.ipk
+Size: 65670
+SHA256sum: 4ff4a3687970dbdc9ee31340efa725785703a5897efeae45cd027aee450dbb48
+Description:  shadowsocksr-libev ssr-server
+
+Package: simple-obfs-server
+Version: 0.0.5-12
+Depends: libc, libpthread, libev
+Source: /github/workspace/openwrt-packages/simple-obfs
+SourceName: simple-obfs-server
+License: GPL-3.0-or-later
+LicenseFiles: COPYING LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: Jian Chang <aa65535@live.com>
+Architecture: aarch64_generic
+Installed-Size: 33566
+Filename: simple-obfs-server_0.0.5-12_aarch64_generic.ipk
+Size: 34435
+SHA256sum: 5aa5d865737793f1241872b239fde61290696342e47d7cd8537823e018bd24b4
+Description:  Simple-obfs is a simple obfusacting tool, designed as plugin server of shadowsocks.
+
+Package: simple-obfs
+Version: 0.0.5-12
+Depends: libc, libpthread, libev
+Source: /github/workspace/openwrt-packages/simple-obfs
+SourceName: simple-obfs
+License: GPL-3.0-or-later
+LicenseFiles: COPYING LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: Jian Chang <aa65535@live.com>
+Architecture: aarch64_generic
+Installed-Size: 31221
+Filename: simple-obfs_0.0.5-12_aarch64_generic.ipk
+Size: 31948
+SHA256sum: cf7332515c99735f4e1ed77a119e13157e8d3cd4c6b4ca1878a08b3d4e670ce7
+Description:  Simple-obfs is a simple obfusacting tool, designed as plugin server of shadowsocks.
+
+Package: smartdns
+Version: Release35-3
+Depends: libc, libpthread, libopenssl1.1
+Source: /github/workspace/openwrt-packages/smartdns
+SourceName: smartdns
+License: GPL-3.0-or-later
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: Nick Peng <pymumu@gmail.com>
+Architecture: aarch64_generic
+Installed-Size: 89576
+Filename: smartdns_Release35-3_aarch64_generic.ipk
+Size: 90448
+SHA256sum: 09110162eb8fae496938e2a7acf95f45d7a632a4afbb79a82e3c59678607adbb
+Description:  SmartDNS is a local DNS server which accepts DNS query requests from local network clients,
+ gets DNS query results from multiple upstream DNS servers concurrently, and returns the fastest IP to clients.
+ Unlike dnsmasq's all-servers, smartdns returns the fastest IP. 
+
+Package: tcping
+Version: 0.3-20
+Depends: libc
+Source: /github/workspace/openwrt-packages/tcping
+SourceName: tcping
+License: GPL-2.0-only
+LicenseFiles: license.txt
+Section: net
+SourceDateEpoch: 1645805560
+Architecture: aarch64_generic
+Installed-Size: 3528
+Filename: tcping_0.3-20_aarch64_generic.ipk
+Size: 4238
+SHA256sum: 53ea23fcf8805fbe4dbb3c2fae3d18a692ff0bbce290d683843d4458952a5aad
+Description:  tcping measures the latency of a tcp-connection
+
+Package: trojan-go
+Version: 0.10.6-20
+Depends: libc, ca-bundle
+Source: /github/workspace/openwrt-packages/trojan-go
+SourceName: trojan-go
+License: GPL-3.0-only
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Architecture: aarch64_generic
+Installed-Size: 4613970
+Filename: trojan-go_0.10.6-20_aarch64_generic.ipk
+Size: 4600625
+SHA256sum: bce45b37f9c309544ea7e57739d110f275d52f498e19fa4deb0d5ad5a6054b25
+Description:  Trojan features multiple protocols over TLS to avoid both
+ active/passive detections and ISP QoS limitations.
+
+Package: trojan-plus
+Version: 10.0.3-8
+Depends: libc, libpthread, libstdcpp6, libopenssl1.1, boost, boost-system, boost-program_options
+Source: /github/workspace/openwrt-packages/trojan-plus
+SourceName: trojan-plus
+License: GPL-3.0
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: Trojan-Plus-Group
+Architecture: aarch64_generic
+Installed-Size: 367953
+Filename: trojan-plus_10.0.3-8_aarch64_generic.ipk
+Size: 368724
+SHA256sum: 12cd574f2250680919b6eaa54dccea1ee74f7cac132b217ee002a5e6cbb3108c
+Description:  An unidentifiable mechanism that helps you bypass GFW. It's compatible with original trojan with experimental features.
+
+Package: trojan
+Version: 1.16.0-7
+Depends: libc, libpthread, libstdcpp6, libopenssl1.1, boost, boost-system, boost-program_options, boost-date_time
+Source: /github/workspace/openwrt-packages/trojan
+SourceName: trojan
+License: GPL-3.0
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: GreaterFire
+Architecture: aarch64_generic
+Installed-Size: 261154
+Filename: trojan_1.16.0-7_aarch64_generic.ipk
+Size: 261910
+SHA256sum: cfaafe79cddedb9d71e55ffb0b9ab7ff5ea1a6c99ecbdfca77e5a677cd06aafd
+Description:  An unidentifiable mechanism that helps you bypass GFW
+
+Package: v2ray-core
+Version: 4.44.0-37
+Depends: libc, ca-bundle
+Source: /github/workspace/openwrt-packages/v2ray-core
+SourceName: v2ray-core
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Architecture: aarch64_generic
+Installed-Size: 6112179
+Filename: v2ray-core_4.44.0-37_aarch64_generic.ipk
+Size: 6093527
+SHA256sum: 87c65ea4bb98c4d26a58dfb30683d19217e22e72ece55f4c23da40782f9e8ca5
+Description:  Project V is a set of network tools that help you to build your own computer network.
+ It secures your network connections and thus protects your privacy.
+
+Package: v2ray-ctl
+Version: 4.44.0-37
+Depends: libc, v2ray-core
+Source: /github/workspace/openwrt-packages/v2ray-core
+SourceName: v2ray-ctl
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Architecture: aarch64_generic
+Installed-Size: 6094034
+Filename: v2ray-ctl_4.44.0-37_aarch64_generic.ipk
+Size: 6075069
+SHA256sum: 7c4d03249493a80b02d8f872230593d0062a65c8ab645343381acb97b6987a9f
+Description:  Project V is a set of network tools that help you to build your own computer network.
+ It secures your network connections and thus protects your privacy.
+ 
+ This includes configuration tool for v2ray-core.
+
+Package: v2ray-example
+Version: 4.44.0-37
+Depends: libc, v2ray-core
+Source: /github/workspace/openwrt-packages/v2ray-core
+SourceName: v2ray-example
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Architecture: all
+Installed-Size: 565
+Filename: v2ray-example_4.44.0-37_all.ipk
+Size: 1422
+SHA256sum: 37cd5e6233c8e2644e8c7d47ff1cd5b7b13c14f79294bf1e542b87d5060b4e77
+Description:  Project V is a set of network tools that help you to build your own computer network.
+ It secures your network connections and thus protects your privacy.
+ 
+ This includes example configuration files for v2ray-core.
+
+Package: v2ray-extra
+Version: 4.44.0-37
+Depends: libc, v2ray-core
+Source: /github/workspace/openwrt-packages/v2ray-core
+SourceName: v2ray-extra
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Architecture: all
+Installed-Size: 298635
+Filename: v2ray-extra_4.44.0-37_all.ipk
+Size: 299370
+SHA256sum: 042e5df52d0c43c7af4dbcd1e8605449bb88f013bc5f01fbdf140364a369d123
+Description:  Project V is a set of network tools that help you to build your own computer network.
+ It secures your network connections and thus protects your privacy.
+ 
+ This includes extra resources for v2ray-core.
+
+Package: v2ray-plugin
+Version: 5.0.2-56
+Depends: libc, ca-bundle
+Source: /github/workspace/openwrt-packages/v2ray-plugin
+SourceName: v2ray-plugin
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: madeye <max.c.lv@gmail.com>
+Architecture: aarch64_generic
+Installed-Size: 4352622
+Filename: v2ray-plugin_5.0.2-56_aarch64_generic.ipk
+Size: 4339573
+SHA256sum: 1e128d9bc884b484a32003905fb447efc2925be1b8c40e6a4e3292c731f42fe1
+Description:  SIP003 plugin for shadowsocks, based on v2ray
+
+Package: vlmcsd
+Version: svn1113-19
+Depends: libc, libpthread
+Source: /github/workspace/openwrt-packages/vlmcsd
+SourceName: vlmcsd
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: fuyumi <280604399@qq.com>
+Architecture: aarch64_generic
+Installed-Size: 23959
+Filename: vlmcsd_svn1113-19_aarch64_generic.ipk
+Size: 24625
+SHA256sum: 2566652bd97b6c6126bdc82d0c77e3b0fb6d28617d8ed9daedcdbe846759bd20
+Description:  vlmcsd is a KMS Emulator in C.
+
+Package: wrtbwmon
+Version: 1.2.1-12
+Depends: libc, iptables
+Source: /github/workspace/openwrt-packages/wrtbwmon
+SourceName: wrtbwmon
+Section: net
+SourceDateEpoch: 1645805560
+Architecture: all
+Installed-Size: 7179
+Filename: wrtbwmon_1.2.1-12_all.ipk
+Size: 7954
+SHA256sum: fd3cdda9248bba4e5a72e26c519833a79a829a9c7f3804b05fcf75e23cd1f6d0
+Description:  An CERNET client daemon,
+ Most usually used in China collages.
+
+Package: xray-core
+Version: 1.5.3-38
+Depends: libc, ca-bundle
+Source: /github/workspace/openwrt-packages/xray-core
+SourceName: xray-core
+License: MPL-2.0
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Architecture: aarch64_generic
+Installed-Size: 6325227
+Filename: xray-core_1.5.3-38_aarch64_generic.ipk
+Size: 6305561
+SHA256sum: cdde4c6fc7b0087232ba89bcf4700fed018df789ece26b16d894585bd49f7ac8
+Description:  Xray, Penetrates Everything. It helps you to build your own computer network.
+ It secures your network connections and thus protects your privacy.
+
+Package: xray-example
+Version: 1.5.3-38
+Depends: libc, xray-core
+Source: /github/workspace/openwrt-packages/xray-core
+SourceName: xray-example
+License: MPL-2.0
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Architecture: all
+Installed-Size: 551
+Filename: xray-example_1.5.3-38_all.ipk
+Size: 1413
+SHA256sum: 76accba6af341e7ca3080a624a31849bd2cff601708f7f0a991eaacb8d2f60de
+Description:  Xray, Penetrates Everything. It helps you to build your own computer network.
+ It secures your network connections and thus protects your privacy.
+ 
+ This includes example configuration files for xray-core.
+
+Package: xray-geodata
+Version: 1.5.3-38
+Depends: libc, xray-core
+Source: /github/workspace/openwrt-packages/xray-core
+SourceName: xray-geodata
+License: MPL-2.0
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: Tianling Shen <cnsztl@immortalwrt.org>
+Architecture: all
+Installed-Size: 2947986
+Filename: xray-geodata_1.5.3-38_all.ipk
+Size: 2415637
+SHA256sum: 06981bacb653ca1fd8c39820323dfbc05fbb7b1615391999915cd55900e7fb16
+Description:  Xray, Penetrates Everything. It helps you to build your own computer network.
+ It secures your network connections and thus protects your privacy.
+ 
+ This includes GEO datas used for xray-core.
+
+Package: xray-plugin
+Version: 1.5.3-32
+Depends: libc, ca-bundle
+Source: /github/workspace/openwrt-packages/xray-plugin
+SourceName: xray-plugin
+License: MIT
+LicenseFiles: LICENSE
+Section: net
+SourceDateEpoch: 1645805560
+Maintainer: Tianling Shen <cnsztl@project-openwrt.eu.org>
+Architecture: aarch64_generic
+Installed-Size: 4836181
+Filename: xray-plugin_1.5.3-32_aarch64_generic.ipk
+Size: 4821691
+SHA256sum: 631c11db75cabeb97dc98a530d1975341b059d0648f143ed897f0f3a3f4b3c8e
+Description:  SIP003 plugin for Shadowsocks, based on Xray
+
