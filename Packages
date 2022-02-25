@@ -1,0 +1,95 @@
+Package: liblucihttp-lua
+Version: 2021-06-11-3dc89af4-1
+Depends: libc, liblucihttp0, liblua5.1.5
+License: ISC
+Section: libs
+Architecture: x86_64
+Installed-Size: 3586
+Filename: liblucihttp-lua_2021-06-11-3dc89af4-1_x86_64.ipk
+Size: 4373
+SHA256sum: 0c4be72968ac8ae844e80698c8290125ecd3f8f862d6519e7a9d191aaf66b9c8
+Description:  Lua binding for the LuCI HTTP utility library
+
+Package: liblucihttp0
+Version: 2021-06-11-3dc89af4-1
+Depends: libc
+Provides: liblucihttp
+License: ISC
+Section: libs
+ABIVersion: 0
+Architecture: x86_64
+Installed-Size: 7609
+Filename: liblucihttp0_2021-06-11-3dc89af4-1_x86_64.ipk
+Size: 8425
+SHA256sum: 17305807345d8d206e91d14f16c8bdbd65df9056063e165c29e03b301075be39
+Description:  LuCI HTTP utility library
+
+Package: luci-compat
+Version: git-21.099.45066-7bb2fc4
+Depends: libc, luci-base
+Section: luci
+Architecture: all
+Installed-Size: 45365
+Filename: luci-compat_git-21.099.45066-7bb2fc4_all.ipk
+Size: 46163
+SHA256sum: 3a3ff0e06a5c5cfc8d8aff84db5c47c5958d6efa3642427d564ba4581a0dcdab
+Description:  LuCI compatibility libraries
+
+Package: luci-lib-base
+Version: git-20.232.39649-1f6dc29
+Depends: libc, lua, luci-lib-nixio, luci-lib-ip, luci-lib-jsonc, liblucihttp-lua
+Section: luci
+Architecture: all
+Installed-Size: 12486
+Filename: luci-lib-base_git-20.232.39649-1f6dc29_all.ipk
+Size: 13345
+SHA256sum: 7b9d21361cb8f297bfbf3bda4813d999ca26d1945366e06cfd43abd8c6c70b8d
+Description:  basic libraries for luci
+
+Package: luci-lib-ip
+Version: git-20.250.76529-62505bd
+Depends: libc, liblua5.1.5, libnl-tiny1
+License: Apache-2.0
+Section: luci
+Architecture: x86_64
+Installed-Size: 12188
+Filename: luci-lib-ip_git-20.250.76529-62505bd_x86_64.ipk
+Size: 13064
+SHA256sum: 357ecd4865bf8b191c2f6b9e50616d03596c0cb463f4dea11cae337faccf2420
+Description:  Lua library for IP calculation and routing information
+
+Package: luci-lib-jsonc
+Version: git-19.317.29469-8da8f38
+Depends: libc, liblua5.1.5, libjson-c5
+Section: luci
+Architecture: x86_64
+Installed-Size: 4338
+Filename: luci-lib-jsonc_git-19.317.29469-8da8f38_x86_64.ipk
+Size: 5141
+SHA256sum: 1fcf9ab3df4d611aa8b0d83fff932003afd47fc423e968dc04fb36fd474703fa
+Description:  Lua binding for JSON-C
+
+Package: luci-lib-nixio
+Version: git-20.234.06894-c4a4e43
+Depends: libc, liblua5.1.5
+License: Apache-2.0
+Section: luci
+Architecture: x86_64
+Installed-Size: 32932
+Filename: luci-lib-nixio_git-20.234.06894-c4a4e43_x86_64.ipk
+Size: 33794
+SHA256sum: 1e635cdf5112320e6a361e67669b0d73a3ca67231bb63b9cfe97b5f15d829b1b
+Description:  NIXIO POSIX library
+
+Package: rpcd-mod-luci
+Version: 20210614
+Depends: libc, rpcd, libubox20210516, libubus20210630, libnl-tiny1
+License: Apache-2.0
+Section: libs
+Architecture: x86_64
+Installed-Size: 13439
+Filename: rpcd-mod-luci_20210614_x86_64.ipk
+Size: 14261
+SHA256sum: 65d49dfabac8cfafe97a1cd51ae6eb000f2a56e4bb27f560f11c01906635aa58
+Description:  Provides LuCI backend ubus RPC operations.
+
