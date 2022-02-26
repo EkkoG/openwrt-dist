@@ -16,9 +16,9 @@ jobs:
     strategy:
       matrix:
         arch:
-          - x86_64-21.02.1
-          - aarch64_generic-21.02.1
-          - mips_24kc-21.02.1
+          - x86_64
+          - aarch64_generic
+          - mips_24kc
     steps:
       - uses: actions/checkout@v2
         with:
