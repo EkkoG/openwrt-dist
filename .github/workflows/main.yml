@@ -28,8 +28,7 @@ jobs:
         run: |
           git clone --depth=1 https://github.com/garypang13/openwrt-packages.git
           cd openwrt-packages
-          git clone --depth=1 https://github.com/ekkog/openwrt-clash-for-openclash.git clash-for-openclash
-          git clone --depth=1 -b master https://github.com/ekkog/luci-app-clash.git
+
           git clone --depth=1 https://github.com/ekkog/overture-openwrt.git overture
 
       - name: Build
@@ -42,7 +41,6 @@ jobs:
             ekkog
           INDEX: 1
           PACKAGES: |
-            clash-for-openclash
             overture
             libcap
             luci-base
