@@ -42,24 +42,7 @@ jobs:
           INDEX: 1
           PACKAGES: |
             overture
-            libcap
-            luci-base
             luci-theme-argon
-            luci-theme-edge
-            luci-app-vssr
-            luci-app-wrtbwmon
-            luci-app-frpc
-            luci-app-filetransfer
-            luci-app-vlmcsd
-            luci-app-zerotier
-            luci-app-bypass
-            luci-app-dnsfilter
-            luci-theme-edge
-            chinadns-ng
-            smartdns
-            luci-app-passwall
-            luci-app-adbyby-plus
-            luci-app-autoreboot
 
 
       - name: List files
