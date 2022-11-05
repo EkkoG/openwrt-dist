@@ -41,7 +41,7 @@ jobs:
             ekkog
           INDEX: 1
           PACKAGES: |
-            overture2
+            overture
             luci-theme-argon
 
 
