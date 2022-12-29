@@ -27,10 +27,10 @@ jobs:
 
       - name: Prepare feeds
         run: |
-          cd openwrt-packages
+          mkdir openwrt-packages
 
-          git clone --depth=1 https://github.com/vernesong/OpenClash.git openwrt-packages/OpenClash
-          git clone --depth=1 https://github.com/ekkog/overture-openwrt.git overture
+          git clone --depth=1 https://github.com/vernesong/OpenClash.git openwrt-packages/luci-app-openclash
+          git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon.git openwrt-packages/luci-theme-argon
 
       - name: Build
         uses: ekkog/gh-action-sdk@master
