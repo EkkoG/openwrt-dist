@@ -27,9 +27,9 @@ jobs:
 
       - name: Prepare feeds
         run: |
-          git clone --depth=1 https://github.com/garypang13/openwrt-packages.git
           cd openwrt-packages
 
+          git clone --depth=1 https://github.com/vernesong/OpenClash.git openwrt-packages/OpenClash
           git clone --depth=1 https://github.com/ekkog/overture-openwrt.git overture
 
       - name: Build
