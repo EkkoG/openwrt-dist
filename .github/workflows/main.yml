@@ -53,7 +53,7 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}
         run: |
-          BRANCH="packages/$ARCH"
+          BRANCH="packages/${ARCH::-2}"
           cd bin/packages/*/ekkog
           sudo chown runner:runner -R .
           git init
@@ -63,7 +63,7 @@ jobs:
           git commit -m "$(TZ='Asia/Shanghai' date +@%Y%m%d)"
           git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$BRANCH
 
-          LUCI_BRANCH="luci/$ARCH"
+          LUCI_BRANCH="luci/${ARCH::-2}"
           cd ../luci
           sudo chown runner:runner -R .
           git init
@@ -73,7 +73,7 @@ jobs:
           git commit -m "$(TZ='Asia/Shanghai' date +@%Y%m%d)"
           git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$LUCI_BRANCH
 
-          BASE_BRANCH="base/$ARCH"
+          BASE_BRANCH="base/${ARCH::-2}"
           cd ../base
           sudo chown runner:runner -R .
           git init
@@ -83,7 +83,7 @@ jobs:
           git commit -m "$(TZ='Asia/Shanghai' date +@%Y%m%d)"
           git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$BASE_BRANCH
 
-          PKG_BRANCH="origin_packages/$ARCH"
+          PKG_BRANCH="origin_packages/${ARCH::-2}"
           cd ../packages
           sudo chown runner:runner -R .
           git init
