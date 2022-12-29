@@ -18,7 +18,7 @@ jobs:
         arch:
           - x86_64-21.02.5
           - aarch64_generic-21.02.5
-          - mips_24kc
+          - aarch64_generic-22.03.2
     steps:
       - uses: actions/checkout@v2
         with:
@@ -42,6 +42,7 @@ jobs:
           INDEX: 1
           PACKAGES: |
             luci-theme-argon
+            luci-app-openclash
 
 
       - name: List files
