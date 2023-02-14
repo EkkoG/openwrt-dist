@@ -33,11 +33,12 @@ jobs:
           git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon.git openwrt-packages/luci-theme-argon
 
       - name: Build
-        uses: openwrt/gh-action-sdk@master
+        uses: ekkog/gh-action-sdk@index
         env:
           ARCH: ${{ matrix.arch }}
-          KEY_BUILD : ${{ secrets.KEY_BUILD }}
+          KEY_BUILD: ${{ secrets.KEY_BUILD }}
           EXTRA_FEEDS: src-link|ekkog|/github/workspace/openwrt-packages
+          INDEX: 1
           PACKAGES: |
             luci-theme-argon
             luci-app-openclash
