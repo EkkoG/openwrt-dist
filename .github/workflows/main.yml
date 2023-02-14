@@ -45,14 +45,14 @@ jobs:
 
       - name: List files
         run: |
-          ls -R /artifacts/
+          ls -R bin/
 
       - name: Upload
         env:
           ARCH: ${{ matrix.arch }}
         run: |
           BRANCH="packages/${ARCH::-2}"
-          cd /artifacts/bin/packages/*/ekkog
+          cd bin/packages/*/action
           sudo chown runner:runner -R .
           git init
           git config user.name "bot"
