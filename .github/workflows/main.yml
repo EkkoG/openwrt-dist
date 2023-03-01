@@ -43,7 +43,6 @@ jobs:
           PACKAGES: |
             luci-theme-argon
             luci-app-openclash
-            natter
 
 
       - name: List files
