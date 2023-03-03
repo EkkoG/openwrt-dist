@@ -32,6 +32,7 @@ jobs:
           git clone --depth=1 https://github.com/vernesong/OpenClash.git openwrt-packages/luci-app-openclash
           git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon.git openwrt-packages/luci-theme-argon
           git clone --depth=1 https://github.com/muink/openwrt-Natter.git openwrt-packages/natter
+          git clone --depth=1 https://github.com/gSpotx2f/luci-app-temp-status.git openwrt-packages/luci-app-temp-status
 
       - name: Build
         uses: ekkog/gh-action-sdk@index
@@ -43,6 +44,7 @@ jobs:
           PACKAGES: |
             luci-theme-argon
             luci-app-openclash
+            luci-app-temp-status
 
 
       - name: List files
