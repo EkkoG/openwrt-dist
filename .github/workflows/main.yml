@@ -31,7 +31,8 @@ jobs:
 
           git clone --depth=1 https://github.com/vernesong/OpenClash.git openwrt-packages/luci-app-openclash
           git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon.git openwrt-packages/luci-theme-argon
-          git clone --depth=1 https://github.com/muink/openwrt-Natter.git openwrt-packages/natter
+          git clone --depth=1 https://github.com/gSpotx2f/luci-app-temp-status.git openwrt-packages/luci-app-temp-status
+
           wget -O openwrt-packages/luci-app-openclash/root/etc/openclash/Country.mmdb https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/lite/Country.mmdb
           wget -O openwrt-packages/luci-app-openclash/root/etc/openclash/geosite.dat https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat
 
@@ -45,7 +46,7 @@ jobs:
           PACKAGES: |
             luci-theme-argon
             luci-app-openclash
-            natter
+            luci-app-temp-status
 
 
       - name: List files
