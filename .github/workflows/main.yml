@@ -34,8 +34,11 @@ jobs:
           git clone --depth=1 https://github.com/gSpotx2f/luci-app-temp-status.git openwrt-packages/luci-app-temp-status
 
           
+          sha256sum openwrt-packages/luci-app-openclash/luci-app-openclash/root/etc/openclash/Country.mmdb
           wget -O openwrt-packages/luci-app-openclash/luci-app-openclash/root/etc/openclash/Country.mmdb https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/lite/Country.mmdb
+          sha256sum openwrt-packages/luci-app-openclash/luci-app-openclash/root/etc/openclash/Country.mmdb
           wget -O openwrt-packages/luci-app-openclash/luci-app-openclash/root/etc/openclash/geosite.dat https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat
+          wget https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat -O openwrt-packages/luci-app-openclash/luci-app-openclash/root/etc/openclash/geoip.dat
 
       - name: Build
         uses: ekkog/gh-action-sdk@index
