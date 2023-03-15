@@ -42,7 +42,7 @@ jobs:
 
 
       - name: Build
-        uses: ekkog/gh-action-sdk@index
+        uses: ekkog/gh-action-sdk@upx
         # only build for 22.03
         if: ${{ contains(matrix.arch, '22.03') }}
         env:
