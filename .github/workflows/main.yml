@@ -43,7 +43,8 @@ jobs:
 
       - name: Build
         uses: ekkog/gh-action-sdk@index
-        if: ${{ matrix.arch.contains('22.03') }}
+        # only build for 22.03
+        if: ${{ contains(matrix.arch, '22.03') }}
         env:
           ARCH: ${{ matrix.arch }}
           KEY_BUILD: ${{ secrets.KEY_BUILD }}
@@ -58,7 +59,7 @@ jobs:
 
       - name: Build
         uses: ekkog/gh-action-sdk@index
-        if: ${{ matrix.arch.contains('21.02') }}
+        if: ${{ contains(matrix.arch, '21.02') }}
         env:
           ARCH: ${{ matrix.arch }}
           KEY_BUILD: ${{ secrets.KEY_BUILD }}
