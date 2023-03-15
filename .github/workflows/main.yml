@@ -17,9 +17,9 @@ jobs:
       matrix:
         arch:
           - x86_64-21.02.5
-          - x86_64-22.03.2
+          - x86_64-22.03.3
           - aarch64_generic-21.02.5
-          - aarch64_generic-22.03.2
+          - aarch64_generic-22.03.3
     steps:
       - uses: actions/checkout@v2
         with:
