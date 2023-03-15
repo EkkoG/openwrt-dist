@@ -32,6 +32,8 @@ jobs:
           git clone --depth=1 https://github.com/vernesong/OpenClash.git openwrt-packages/luci-app-openclash
           git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon.git openwrt-packages/luci-theme-argon
           git clone --depth=1 https://github.com/gSpotx2f/luci-app-temp-status.git openwrt-packages/luci-app-temp-status
+          git clone --depth=1 https://github.com/EkkoG/sdm.git openwrt-packages/sdm
+          git clone --depth=1 https://github.com/QiuSimons/openwrt-mos.git openwrt-packages/mos
 
           
           wget https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/lite/Country.mmdb -O openwrt-packages/luci-app-openclash/luci-app-openclash/root/etc/openclash/Country.mmdb
@@ -46,6 +48,8 @@ jobs:
           EXTRA_FEEDS: src-link|ekkog|/github/workspace/openwrt-packages
           INDEX: 1
           PACKAGES: |
+            sdm
+            mosdns
             luci-theme-argon
             luci-app-openclash
             luci-app-temp-status
