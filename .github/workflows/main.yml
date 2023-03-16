@@ -53,6 +53,7 @@ jobs:
           PACKAGES: |
             sdm
             mosdns
+            luci-app-mosdns
             luci-theme-argon
             luci-app-openclash
             luci-app-temp-status
