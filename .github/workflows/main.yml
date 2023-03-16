@@ -67,6 +67,7 @@ jobs:
           EXTRA_FEEDS: src-link|ekkog|/github/workspace/openwrt-packages
           INDEX: 1
           PACKAGES: |
+            sdm
             luci-theme-argon
             luci-app-openclash
             luci-app-temp-status
