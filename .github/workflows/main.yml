@@ -33,7 +33,6 @@ jobs:
           git clone --depth=1 https://github.com/immortalwrt/packages.git immortal-packages
           git clone --depth=1 https://github.com/immortalwrt/luci.git immortal-luci
 
-          cp -r immortal-packages/net/mosdns openwrt-packages/mosdns
           cp -r immortal-luci/applications/luci-app-openclash openwrt-packages/luci-app-openclash
           cp -r qiu-packages/luci-app-mosdns openwrt-packages/luci-app-mosdns
 
@@ -42,6 +41,8 @@ jobs:
           git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon.git openwrt-packages/luci-theme-argon
           git clone --depth=1 https://github.com/gSpotx2f/luci-app-temp-status.git openwrt-packages/luci-app-temp-status
           git clone --depth=1 https://github.com/EkkoG/sdm.git openwrt-packages/sdm
+          git clone --depth=1 https://github.com/EkkoG/openwrt-mosdns.git openwrt-packages/mosdns
+          ls openwrt-packages
 
           
           wget https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/lite/Country.mmdb -O openwrt-packages/luci-app-openclash/root/etc/openclash/Country.mmdb
