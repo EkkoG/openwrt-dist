@@ -33,9 +33,9 @@ jobs:
           git clone --depth=1 https://github.com/immortalwrt/packages.git immortal-packages
           git clone --depth=1 https://github.com/immortalwrt/luci.git immortal-luci
 
-          cp -r immortal-packages/net/mosdns openwrt-packages/
-          cp -r immortal-luci/applications/luci-app-openclash openwrt-packages/
-          cp -r qiu-packages/luci-app-mosdns openwrt-packages/
+          cp -r immortal-packages/net/mosdns openwrt-packages/mosdns
+          cp -r immortal-luci/applications/luci-app-openclash openwrt-packages/luci-app-openclash
+          cp -r qiu-packages/luci-app-mosdns openwrt-packages/luci-app-mosdns
 
 
 
