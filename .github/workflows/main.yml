@@ -54,7 +54,7 @@ jobs:
       - name: Build
         uses: ekkog/gh-action-sdk@upx
         # only build for 22.03
-        if: ${{ contains(matrix.arch, '22.03') }}
+        # if: ${{ contains(matrix.arch, '22.03') }}
         env:
           ARCH: ${{ matrix.arch }}
           KEY_BUILD: ${{ secrets.KEY_BUILD }}
@@ -67,21 +67,6 @@ jobs:
             luci-theme-argon
             luci-app-openclash
             luci-app-temp-status
-
-      - name: Build
-        uses: ekkog/gh-action-sdk@index
-        if: ${{ contains(matrix.arch, '21.02') }}
-        env:
-          ARCH: ${{ matrix.arch }}
-          KEY_BUILD: ${{ secrets.KEY_BUILD }}
-          EXTRA_FEEDS: src-link|ekkog|/github/workspace/openwrt-packages
-          INDEX: 1
-          PACKAGES: |
-            sdm
-            luci-theme-argon
-            luci-app-openclash
-            luci-app-temp-status
-
 
       - name: List files
         run: |
