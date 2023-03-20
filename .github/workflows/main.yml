@@ -57,7 +57,6 @@ jobs:
           - arm_cortex-a5_vfpv4-21.02.5
           - arm_cortex-a7-21.02.5
           - arm_cortex-a7_neon-vfpv4-21.02.5
-          - arm_cortex-a7_vfpv4-21.02.5
           - arm_cortex-a8_vfpv3-21.02.5
           - arm_cortex-a9-21.02.5
           - arm_cortex-a9_neon-21.02.5
