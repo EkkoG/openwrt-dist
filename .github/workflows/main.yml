@@ -20,6 +20,16 @@ jobs:
           - x86_64-22.03.3
           - aarch64_generic-21.02.5
           - aarch64_generic-22.03.3
+          - aarch64_cortex-a72-21.02.5
+          - aarch64_cortex-a72-22.03.3
+          - aarch64_cortex-a53-22.03.3
+          - aarch64_cortex-a53-21.02.5
+          - mvebu-cortexa9-22.03.3
+          - mvebu-cortexa9-21.02.5
+          - arm_cortex-a7-22.03.3
+          - arm_cortex-a7-21.02.5
+          - arm_cortex-a9-22.03.3
+          - arm_cortex-a9-21.02.5
     steps:
       - uses: actions/checkout@v2
         with:
@@ -91,33 +101,3 @@ jobs:
           git add .
           git commit -m "$(TZ='Asia/Shanghai' date +@%Y%m%d)"
           git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$BRANCH
-
-          LUCI_BRANCH="luci/${ARCH::-2}"
-          cd ../luci
-          sudo chown runner:runner -R .
-          git init
-          git config user.name "bot"
-          git config user.email "bot@github.com"
-          git add .
-          git commit -m "$(TZ='Asia/Shanghai' date +@%Y%m%d)"
-          git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$LUCI_BRANCH
-
-          BASE_BRANCH="base/${ARCH::-2}"
-          cd ../base
-          sudo chown runner:runner -R .
-          git init
-          git config user.name "bot"
-          git config user.email "bot@github.com"
-          git add .
-          git commit -m "$(TZ='Asia/Shanghai' date +@%Y%m%d)"
-          git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$BASE_BRANCH
-
-          PKG_BRANCH="origin_packages/${ARCH::-2}"
-          cd ../packages
-          sudo chown runner:runner -R .
-          git init
-          git config user.name "bot"
-          git config user.email "bot@github.com"
-          git add .
-          git commit -m "$(TZ='Asia/Shanghai' date +@%Y%m%d)"
-          git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$PKG_BRANCH
