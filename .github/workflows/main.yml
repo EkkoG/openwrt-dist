@@ -36,7 +36,7 @@ jobs:
           cp -r immortal-luci/applications/luci-app-openclash openwrt-packages/luci-app-openclash
           cp -r qiu-packages/luci-app-mosdns openwrt-packages/luci-app-mosdns
           cp -r immortal-packages/net/mosdns openwrt-packages/mosdns
-          sed -i '/golang-package.mk/ c\include $(TOPDIR)/feeds/packages/lang/golang/golang-package.mk' mosdns/Makefile
+          sed -i '/golang-package.mk/ c\include $(TOPDIR)/feeds/packages/lang/golang/golang-package.mk' openwrt-packages/mosdns/Makefile
 
           rm -r qiu-packages
           rm -r immortal-packages
