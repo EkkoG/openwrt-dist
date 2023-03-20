@@ -69,6 +69,7 @@ jobs:
             rm -rf feeds/packages/lang/golang
             git clone https://github.com/openwrt/packages official-packages
             cp -r official-packages/lang/golang feeds/packages/lang/golang
+            ls feeds/packages/lang/golang
             rm -rf official-packages
           PACKAGES: |
             sdm
