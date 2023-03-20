@@ -61,7 +61,7 @@ jobs:
           EXTRA_FEEDS: src-link|ekkog|/github/workspace/openwrt-packages
           INDEX: 1
           EXTRA_SCRIPT_AFTER_UPDATE: |
-            rm -rf feeds/packages/lang/golang
+            rm -rf feed/packages/lang/golang
             git clone https://github.com/openwrt/packages official-packages
             cp -r official-packages/lang/golang feed/packages/lang/golang
             rm -rf official-packages
