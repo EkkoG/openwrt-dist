@@ -36,6 +36,7 @@ jobs:
           cp -r immortal-luci/applications/luci-app-openclash openwrt-packages/luci-app-openclash
           cp -r qiu-packages/luci-app-mosdns openwrt-packages/luci-app-mosdns
           cp -r immortal-packages/net/mosdns openwrt-packages/mosdns
+          sed -i '/golang-package.mk/ c\include $(TOPDIR)/feeds/packages/lang/golang/golang-package.mk' mosdns/Makefile
 
           rm -r qiu-packages
           rm -r immortal-packages
@@ -62,14 +63,8 @@ jobs:
           EXTRA_FEEDS: src-link|ekkog|/github/workspace/openwrt-packages
           INDEX: 1
           EXTRA_SCRIPT_AFTER_UPDATE: |
-            ls feeds
-
-            ls feeds/packages/lang/golang
-
-            rm -rf feeds/packages/lang/golang
             git clone https://github.com/openwrt/packages official-packages
             cp -r official-packages/lang/golang feeds/packages/lang/golang
-            ls feeds/packages/lang/golang
             rm -rf official-packages
           PACKAGES: |
             sdm
