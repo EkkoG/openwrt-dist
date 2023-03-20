@@ -19,7 +19,6 @@ jobs:
           - aarch64_cortex-a53-22.03.3
           - aarch64_cortex-a72-22.03.3
           - aarch64_generic-22.03.3
-          - arc_archs-22.03.3
           - arm_arm1176jzf-s_vfp-22.03.3
           - arm_arm926ej-s-22.03.3
           - arm_cortex-a15_neon-vfpv4-22.03.3
@@ -50,7 +49,6 @@ jobs:
           - aarch64_cortex-a53-21.02.5
           - aarch64_cortex-a72-21.02.5
           - aarch64_generic-21.02.5
-          - arc_archs-21.02.5
           - arm_arm1176jzf-s_vfp-21.02.5
           - arm_arm926ej-s-21.02.5
           - arm_cortex-a15_neon-vfpv4-21.02.5
