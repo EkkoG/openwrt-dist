@@ -29,17 +29,18 @@ jobs:
         run: |
           mkdir openwrt-packages
 
-          git clone --depth=1 https://github.com/QiuSimons/openwrt-mos.git qiu-packages
+          git clone --depth=1 --branch v5-dev https://github.com/sbwml/openwrt-mos.git sbwml-packages
+          cp -r sbwml-packages/luci-app-mosdns openwrt-packages/luci-app-mosdns
+          rm -r sbwml-packages
+
           git clone --depth=1 https://github.com/immortalwrt/packages.git immortal-packages
-          git clone --depth=1 https://github.com/immortalwrt/luci.git immortal-luci
-
-          cp -r immortal-luci/applications/luci-app-openclash openwrt-packages/luci-app-openclash
-          cp -r qiu-packages/luci-app-mosdns openwrt-packages/luci-app-mosdns
           cp -r immortal-packages/net/mosdns openwrt-packages/mosdns
+          cp -r immortal-packages/net/v2ray-geodata openwrt-packages/v2ray-geodata
           sed -i '/golang-package.mk/ c\include $(TOPDIR)/feeds/packages/lang/golang/golang-package.mk' openwrt-packages/mosdns/Makefile
-
-          rm -r qiu-packages
           rm -r immortal-packages
+
+          git clone --depth=1 https://github.com/immortalwrt/luci.git immortal-luci
+          cp -r immortal-luci/applications/luci-app-openclash openwrt-packages/luci-app-openclash
           rm -r immortal-luci
 
           git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon.git openwrt-packages/luci-theme-argon
