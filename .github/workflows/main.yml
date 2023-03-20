@@ -61,7 +61,6 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}
           KEY_BUILD: ${{ secrets.KEY_BUILD }}
-          EXTRA_FEEDS: src-link|ekkog|/github/workspace/openwrt-packages
           INDEX: 1
           EXTRA_SCRIPT_AFTER_UPDATE: |
             git clone https://github.com/openwrt/packages official-packages
