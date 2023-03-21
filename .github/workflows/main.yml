@@ -86,7 +86,7 @@ jobs:
           git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon.git openwrt-packages/luci-theme-argon
           git clone --depth=1 https://github.com/gSpotx2f/luci-app-temp-status.git openwrt-packages/luci-app-temp-status
           git clone --depth=1 https://github.com/EkkoG/sdm.git openwrt-packages/sdm
-          ls openwrt-packages
+          git clone --depth=1 https://github.com/EkkoG/clash-meta-for-openclash.git openwrt-packages/clash-meta-for-openclash
 
           
           wget https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/lite/Country.mmdb -O openwrt-packages/luci-app-openclash/root/etc/openclash/Country.mmdb
@@ -103,10 +103,12 @@ jobs:
           KEY_BUILD: ${{ secrets.KEY_BUILD }}
           INDEX: 1
           EXTRA_SCRIPT_AFTER_UPDATE: |
+            rm -rf feeds/packages/lang/golang
             git clone https://github.com/openwrt/packages official-packages
             cp -r official-packages/lang/golang feeds/packages/lang/golang
             rm -rf official-packages
           PACKAGES: |
+            clash-meta-for-openclash
             sdm
             mosdns
             luci-app-mosdns
