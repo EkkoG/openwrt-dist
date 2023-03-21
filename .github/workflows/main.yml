@@ -16,6 +16,24 @@ jobs:
     strategy:
       matrix:
         arch:
+          - mips64_octeonplus-21.02.5
+          - mips_24kc-21.02.5
+          - mips_4kec-21.02.5
+          - mips_mips32-21.02.5
+          - mipsel_24kc-21.02.5
+          - mipsel_24kc_24kf-21.02.5
+          - mipsel_74kc-21.02.5
+          - mipsel_mips32-21.02.5
+          - mips64_octeonplus-22.03.3
+          - mips_24kc-22.03.3
+          - mips_4kec-22.03.3
+          - mips_mips32-22.03.3
+          - mipsel_24kc-22.03.3
+          - mipsel_24kc_24kf-22.03.3
+          - mipsel_74kc-22.03.3
+          - mipsel_mips32-22.03.3
+          - x86_64-22.03.3
+          - x86_64-21.02.5
           - aarch64_cortex-a53-22.03.3
           - aarch64_cortex-a72-22.03.3
           - aarch64_generic-22.03.3
@@ -37,7 +55,6 @@ jobs:
           - i386_pentium4-22.03.3
           - powerpc_464fp-22.03.3
           - powerpc_8540-22.03.3
-          - x86_64-22.03.3
           - aarch64_cortex-a53-21.02.5
           - aarch64_cortex-a72-21.02.5
           - aarch64_generic-21.02.5
@@ -58,7 +75,6 @@ jobs:
           - i386_pentium4-21.02.5
           - powerpc_464fp-21.02.5
           - powerpc_8540-21.02.5
-          - x86_64-21.02.5
 
     steps:
       - uses: actions/checkout@v2
@@ -71,6 +87,7 @@ jobs:
 
           git clone --depth=1 --branch v5-dev https://github.com/sbwml/luci-app-mosdns.git sbwml-packages
           cp -r sbwml-packages/luci-app-mosdns openwrt-packages/luci-app-mosdns
+          cp -r sbwml-packages/v2dat openwrt-packages/v2dat
           rm -r sbwml-packages
 
           git clone --depth=1 https://github.com/immortalwrt/packages.git immortal-packages
