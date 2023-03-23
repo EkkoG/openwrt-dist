@@ -93,11 +93,6 @@ jobs:
           ARCH: ${{ matrix.arch }}
           KEY_BUILD: ${{ secrets.KEY_BUILD }}
           INDEX: 1
-          EXTRA_SCRIPT_AFTER_UPDATE: |
-            rm -rf feeds/packages/lang/golang
-            git clone https://github.com/openwrt/packages official-packages
-            cp -r official-packages/lang/golang feeds/packages/lang/golang
-            rm -rf official-packages
           PACKAGES: |
             clash-meta-for-openclash
             sdm

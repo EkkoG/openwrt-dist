@@ -26,6 +26,9 @@ git clone --depth=1 https://github.com/gSpotx2f/luci-app-temp-status.git openwrt
 git clone --depth=1 https://github.com/EkkoG/sdm.git openwrt-packages/sdm
 git clone --depth=1 https://github.com/EkkoG/clash-meta-for-openclash.git openwrt-packages/clash-meta-for-openclash
 
+git clone https://github.com/openwrt/packages official-packages
+cp -r official-packages/lang/golang openwrt-packages/golang
+rm -rf official-packages
 
 wget https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/lite/Country.mmdb -O openwrt-packages/luci-app-openclash/root/etc/openclash/Country.mmdb
 wget https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat -O openwrt-packages/luci-app-openclash/root/etc/openclash/GeoSite.dat
