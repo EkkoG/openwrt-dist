@@ -13,7 +13,7 @@ rm -rf sbwml-packages
 git clone --depth=1 https://github.com/immortalwrt/packages.git immortal-packages
 cp -r immortal-packages/net/mosdns openwrt-packages/mosdns
 cp -r immortal-packages/net/v2ray-geodata openwrt-packages/v2ray-geodata
-sed -i '/golang-package.mk/ c\include ../../golang/golang-package.mk' openwrt-packages/mosdns/Makefile
+sed -i '/golang-package.mk/ c\include ../golang/golang-package.mk' openwrt-packages/mosdns/Makefile
 rm -rf immortal-packages
 
 openclash_version=$(get_latest_release "vernesong/OpenClash")
@@ -25,7 +25,7 @@ git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon.git openwrt-pa
 git clone --depth=1 https://github.com/gSpotx2f/luci-app-temp-status.git openwrt-packages/luci-app-temp-status
 git clone --depth=1 https://github.com/EkkoG/sdm.git openwrt-packages/sdm
 git clone --depth=1 https://github.com/EkkoG/clash-meta-for-openclash.git openwrt-packages/clash-meta-for-openclash
-sed -i '/golang-package.mk/ c\include ../../golang/golang-package.mk' openwrt-packages/clash-meta-for-openclash/Makefile
+sed -i '/golang-package.mk/ c\include ../golang/golang-package.mk' openwrt-packages/clash-meta-for-openclash/Makefile
 
 git clone https://github.com/openwrt/packages official-packages
 cp -r official-packages/lang/golang openwrt-packages/golang
