@@ -27,7 +27,7 @@ git clone --depth=1 https://github.com/EkkoG/sdm.git openwrt-packages/sdm
 git clone --depth=1 https://github.com/EkkoG/clash-meta-for-openclash.git openwrt-packages/clash-meta-for-openclash
 sed -i '/golang-package.mk/ c\include ../golang/golang-package.mk' openwrt-packages/clash-meta-for-openclash/Makefile
 
-git clone https://github.com/openwrt/packages official-packages
+git clone --depth=1 https://github.com/openwrt/packages official-packages
 cp -r official-packages/lang/golang openwrt-packages/golang
 rm -rf official-packages
 

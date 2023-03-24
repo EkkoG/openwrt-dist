@@ -77,7 +77,7 @@ jobs:
           - powerpc_8540-21.02.5
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -86,9 +86,7 @@ jobs:
           ./fetch.sh
 
       - name: Build
-        uses: ekkog/gh-action-sdk@master
-        # only build for 22.03
-        # if: ${{ contains(matrix.arch, '22.03') }}
+        uses: openwrt/gh-action-sdk@master
         env:
           ARCH: ${{ matrix.arch }}
           KEY_BUILD: ${{ secrets.KEY_BUILD }}
