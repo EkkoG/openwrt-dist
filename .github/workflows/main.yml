@@ -12,7 +12,7 @@ on:
 jobs:
   buildpkg:
     name: Build Openwrt Package
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         arch:
@@ -93,6 +93,7 @@ jobs:
           INDEX: 1
           PACKAGES: |
             clash-meta-for-openclash
+            clash-for-openclash
             sdm
             mosdns
             luci-app-mosdns
