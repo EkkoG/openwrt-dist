@@ -5,7 +5,7 @@ get_latest_release() {
 }
 mkdir openwrt-packages
 
-git clone --depth=1 --branch v5-dev https://github.com/sbwml/luci-app-mosdns.git sbwml-packages
+git clone --depth=1 --branch v5 https://github.com/sbwml/luci-app-mosdns.git sbwml-packages
 cp -r sbwml-packages/luci-app-mosdns openwrt-packages/luci-app-mosdns
 cp -r sbwml-packages/v2dat openwrt-packages/v2dat
 rm -rf sbwml-packages
