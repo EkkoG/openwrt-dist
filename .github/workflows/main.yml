@@ -161,7 +161,7 @@ jobs:
           ARCH: ${{ matrix.arch }}
         run: |
           BRANCH="packages/${ARCH::-2}"
-          if [ $ARCH ~= "snapshots" ]; then
+          if [ $ARCH ~= "snapshot" ]; then
             BRANCH="packages/$ARCH"
           fi
           cd bin/packages/*/action
