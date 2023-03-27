@@ -36,6 +36,7 @@ sed -i '/golang-package.mk/ c\include ../golang/golang-package.mk' openwrt-packa
 
 git clone --depth=1 https://github.com/openwrt/packages official-packages
 cp -r official-packages/lang/golang openwrt-packages/golang
+cp -r official-packages/net/natmap openwrt-packages/natmap
 rm -rf official-packages
 
 wget https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/lite/Country.mmdb -O openwrt-packages/luci-app-openclash/root/etc/openclash/Country.mmdb
