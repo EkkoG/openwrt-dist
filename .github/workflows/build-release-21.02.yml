@@ -63,7 +63,9 @@ jobs:
           ARCH: ${{ matrix.arch }}
           KEY_BUILD: ${{ secrets.KEY_BUILD }}
           INDEX: 1
+          IGNORE_ERRORS: 1
           PACKAGES: |
+            natmap
             clash-meta-for-openclash
             clash-for-openclash
             sdm
