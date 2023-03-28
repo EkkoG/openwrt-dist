@@ -16,19 +16,10 @@ jobs:
     strategy:
       matrix:
         arch:
-          - mips64_octeonplus-snapshot
-          - mips_24kc-snapshot
-          - mips_4kec-snapshot
-          - mips_mips32-snapshot
-          - mipsel_24kc-snapshot
-          - mipsel_24kc_24kf-snapshot
-          - mipsel_74kc-snapshot
-          - mipsel_mips32-snapshot
-          - x86_64-snapshot
-          - x86_64-21.02.5
           - aarch64_cortex-a53-snapshot
           - aarch64_cortex-a72-snapshot
           - aarch64_generic-snapshot
+          - arc_archs-snapshot
           - arm_arm1176jzf-s_vfp-snapshot
           - arm_arm926ej-s-snapshot
           - arm_cortex-a15_neon-vfpv4-snapshot
@@ -45,8 +36,18 @@ jobs:
           - arm_xscale-snapshot
           - i386_pentium-mmx-snapshot
           - i386_pentium4-snapshot
+          - mips64_octeonplus-snapshot
+          - mips_24kc-snapshot
+          - mips_4kec-snapshot
+          - mips_mips32-snapshot
+          - mipsel_24kc-snapshot
+          - mipsel_24kc_24kf-snapshot
+          - mipsel_74kc-snapshot
+          - mipsel_mips32-snapshot
           - powerpc_464fp-snapshot
           - powerpc_8540-snapshot
+          - powerpc_8548-snapshot
+          - x86_64-snapshot
 
     steps:
       - uses: actions/checkout@v3

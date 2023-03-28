@@ -16,19 +16,10 @@ jobs:
     strategy:
       matrix:
         arch:
-          - mips64_octeonplus-22.03.3
-          - mips_24kc-22.03.3
-          - mips_4kec-22.03.3
-          - mips_mips32-22.03.3
-          - mipsel_24kc-22.03.3
-          - mipsel_24kc_24kf-22.03.3
-          - mipsel_74kc-22.03.3
-          - mipsel_mips32-22.03.3
-          - x86_64-22.03.3
-          - x86_64-21.02.5
           - aarch64_cortex-a53-22.03.3
           - aarch64_cortex-a72-22.03.3
           - aarch64_generic-22.03.3
+          - arc_archs-22.03.3
           - arm_arm1176jzf-s_vfp-22.03.3
           - arm_arm926ej-s-22.03.3
           - arm_cortex-a15_neon-vfpv4-22.03.3
@@ -45,8 +36,17 @@ jobs:
           - arm_xscale-22.03.3
           - i386_pentium-mmx-22.03.3
           - i386_pentium4-22.03.3
+          - mips64_octeonplus-22.03.3
+          - mips_24kc-22.03.3
+          - mips_4kec-22.03.3
+          - mips_mips32-22.03.3
+          - mipsel_24kc-22.03.3
+          - mipsel_24kc_24kf-22.03.3
+          - mipsel_74kc-22.03.3
+          - mipsel_mips32-22.03.3
           - powerpc_464fp-22.03.3
           - powerpc_8540-22.03.3
+          - x86_64-22.03.3
 
     steps:
       - uses: actions/checkout@v3
