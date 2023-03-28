@@ -1,0 +1,85 @@
+name: Openwrt Build Bot for snapshot
+on:
+  push:
+    branches: master
+    paths:
+      - '**'
+      - '!README.md'
+      - '!.gitignore'
+  schedule:
+  - cron: 0 19 * * *
+
+jobs:
+  buildpkg:
+    name: Build Openwrt Package
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        arch:
+          - mips64_octeonplus-snapshot
+          - mips_24kc-snapshot
+          - mips_4kec-snapshot
+          - mips_mips32-snapshot
+          - mipsel_24kc-snapshot
+          - mipsel_24kc_24kf-snapshot
+          - mipsel_74kc-snapshot
+          - mipsel_mips32-snapshot
+          - x86_64-snapshot
+          - x86_64-21.02.5
+          - aarch64_cortex-a53-snapshot
+          - aarch64_cortex-a72-snapshot
+          - aarch64_generic-snapshot
+          - arm_arm1176jzf-s_vfp-snapshot
+          - arm_arm926ej-s-snapshot
+          - arm_cortex-a15_neon-vfpv4-snapshot
+          - arm_cortex-a5_vfpv4-snapshot
+          - arm_cortex-a7-snapshot
+          - arm_cortex-a7_neon-vfpv4-snapshot
+          - arm_cortex-a7_vfpv4-snapshot
+          - arm_cortex-a8_vfpv3-snapshot
+          - arm_cortex-a9-snapshot
+          - arm_cortex-a9_neon-snapshot
+          - arm_cortex-a9_vfpv3-d16-snapshot
+          - arm_fa526-snapshot
+          - arm_mpcore-snapshot
+          - arm_xscale-snapshot
+          - i386_pentium-mmx-snapshot
+          - i386_pentium4-snapshot
+          - powerpc_464fp-snapshot
+          - powerpc_8540-snapshot
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Prepare feeds
+        run: |
+          ./fetch.sh
+
+      - name: Build
+        uses: openwrt/gh-action-sdk@master
+        env:
+          ARCH: ${{ matrix.arch }}
+          KEY_BUILD: ${{ secrets.KEY_BUILD }}
+          INDEX: 1
+          PACKAGES: |
+            natmap
+            clash-meta-for-openclash
+            clash-for-openclash
+            sdm
+            mosdns
+            luci-app-mosdns
+            luci-theme-argon
+            luci-app-openclash
+            luci-app-temp-status
+
+      - name: List files
+        run: |
+          ls -R bin/
+
+      - name: Upload
+        env:
+          ARCH: ${{ matrix.arch }}
+        run: |
+          ./push.sh

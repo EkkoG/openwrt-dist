@@ -1,0 +1,85 @@
+name: Openwrt Build Bot for 22.03
+on:
+  push:
+    branches: master
+    paths:
+      - '**'
+      - '!README.md'
+      - '!.gitignore'
+  schedule:
+  - cron: 0 17 * * *
+
+jobs:
+  buildpkg:
+    name: Build Openwrt Package
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        arch:
+          - mips64_octeonplus-22.03.3
+          - mips_24kc-22.03.3
+          - mips_4kec-22.03.3
+          - mips_mips32-22.03.3
+          - mipsel_24kc-22.03.3
+          - mipsel_24kc_24kf-22.03.3
+          - mipsel_74kc-22.03.3
+          - mipsel_mips32-22.03.3
+          - x86_64-22.03.3
+          - x86_64-21.02.5
+          - aarch64_cortex-a53-22.03.3
+          - aarch64_cortex-a72-22.03.3
+          - aarch64_generic-22.03.3
+          - arm_arm1176jzf-s_vfp-22.03.3
+          - arm_arm926ej-s-22.03.3
+          - arm_cortex-a15_neon-vfpv4-22.03.3
+          - arm_cortex-a5_vfpv4-22.03.3
+          - arm_cortex-a7-22.03.3
+          - arm_cortex-a7_neon-vfpv4-22.03.3
+          - arm_cortex-a7_vfpv4-22.03.3
+          - arm_cortex-a8_vfpv3-22.03.3
+          - arm_cortex-a9-22.03.3
+          - arm_cortex-a9_neon-22.03.3
+          - arm_cortex-a9_vfpv3-d16-22.03.3
+          - arm_fa526-22.03.3
+          - arm_mpcore-22.03.3
+          - arm_xscale-22.03.3
+          - i386_pentium-mmx-22.03.3
+          - i386_pentium4-22.03.3
+          - powerpc_464fp-22.03.3
+          - powerpc_8540-22.03.3
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Prepare feeds
+        run: |
+          ./fetch.sh
+
+      - name: Build
+        uses: openwrt/gh-action-sdk@master
+        env:
+          ARCH: ${{ matrix.arch }}
+          KEY_BUILD: ${{ secrets.KEY_BUILD }}
+          INDEX: 1
+          PACKAGES: |
+            natmap
+            clash-meta-for-openclash
+            clash-for-openclash
+            sdm
+            mosdns
+            luci-app-mosdns
+            luci-theme-argon
+            luci-app-openclash
+            luci-app-temp-status
+
+      - name: List files
+        run: |
+          ls -R bin/
+
+      - name: Upload
+        env:
+          ARCH: ${{ matrix.arch }}
+        run: |
+          ./push.sh
