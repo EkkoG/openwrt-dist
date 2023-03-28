@@ -6,7 +6,7 @@ echo "src-link openwrtpackages $(pwd)/openwrt-packages" >> ./feeds.conf
 ./scripts/feeds update -a
 make defconfig
 
-pkgs="luci-app-mosdns"
+pkgs="natmap"
 for pkg in $pkgs; do
     ./scripts/feeds install -p openwrtpackages -f $pkg
     make package/$pkg/download V=s

@@ -1,6 +1,6 @@
 services:
   sdk:
-    image: openwrtorg/sdk:mips_24kc-snapshot
+    image: openwrtorg/sdk:arm_fa526-22.03.3
     volumes:
       - ./bin:/home/build/openwrt/bin
       - ./build.sh:/home/build/openwrt/build.sh
