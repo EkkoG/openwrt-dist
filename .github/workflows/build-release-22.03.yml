@@ -7,7 +7,7 @@ on:
       - '!README.md'
       - '!.gitignore'
   schedule:
-  - cron: 0 17 * * *
+  - cron: 0 17 * * 5
 
 jobs:
   buildpkg:
