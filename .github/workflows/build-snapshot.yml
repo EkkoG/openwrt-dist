@@ -44,9 +44,6 @@ jobs:
           - mipsel_24kc_24kf-snapshot
           - mipsel_74kc-snapshot
           - mipsel_mips32-snapshot
-          - powerpc_464fp-snapshot
-          - powerpc_8540-snapshot
-          - powerpc_8548-snapshot
           - x86_64-snapshot
 
     steps:
