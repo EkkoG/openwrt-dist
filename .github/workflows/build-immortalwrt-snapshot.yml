@@ -86,7 +86,7 @@ jobs:
         run: |
           BRANCH="immortalwrt/packages/${ARCH::-2}"
           if [[ $ARCH =~ "snapshot" ]]; then
-              BRANCH="packages/$ARCH"
+              BRANCH="immortalwrt/packages/$ARCH"
           fi
           cd bin/packages/*/action
           sudo chown runner:runner -R .
