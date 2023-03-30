@@ -1,4 +1,4 @@
-name: Openwrt Build Bot for 21.02
+name: Openwrt Build Bot for immortalwrt snapshot
 on:
   push:
     branches: master
@@ -6,11 +6,12 @@ on:
       - '**'
       - '!README.md'
       - '!.gitignore'
+      - '!.github/workflows/build-release-21.02.yml'
       - '!.github/workflows/build-release-22.03.yml'
       - '!.github/workflows/build-snapshot.yml'
-      - '!.github/workflows/build-immortalwrt-snapshot.yml'
+
   schedule:
-  - cron: 0 18 * * 5
+  - cron: 0 19 * * *
 
 jobs:
   buildpkg:
@@ -19,37 +20,34 @@ jobs:
     strategy:
       matrix:
         arch:
-          - aarch64_cortex-a53-21.02.5
-          - aarch64_cortex-a72-21.02.5
-          - aarch64_generic-21.02.5
-          - arc_arc700-21.02.5
-          - arc_archs-21.02.5
-          - arm_arm1176jzf-s_vfp-21.02.5
-          - arm_arm926ej-s-21.02.5
-          - arm_cortex-a15_neon-vfpv4-21.02.5
-          - arm_cortex-a5_vfpv4-21.02.5
-          - arm_cortex-a7-21.02.5
-          - arm_cortex-a7_neon-vfpv4-21.02.5
-          - arm_cortex-a8_vfpv3-21.02.5
-          - arm_cortex-a9-21.02.5
-          - arm_cortex-a9_neon-21.02.5
-          - arm_cortex-a9_vfpv3-d16-21.02.5
-          - arm_fa526-21.02.5
-          - arm_mpcore-21.02.5
-          - arm_xscale-21.02.5
-          - i386_pentium-mmx-21.02.5
-          - i386_pentium4-21.02.5
-          - mips64_octeonplus-21.02.5
-          - mips_24kc-21.02.5
-          - mips_4kec-21.02.5
-          - mips_mips32-21.02.5
-          - mipsel_24kc-21.02.5
-          - mipsel_24kc_24kf-21.02.5
-          - mipsel_74kc-21.02.5
-          - mipsel_mips32-21.02.5
-          - powerpc_464fp-21.02.5
-          - powerpc_8540-21.02.5
-          - x86_64-21.02.5
+          - aarch64_cortex-a53-snapshot
+          - aarch64_cortex-a72-snapshot
+          - aarch64_generic-snapshot
+          - arm_arm1176jzf-s_vfp-snapshot
+          - arm_arm926ej-s-snapshot
+          - arm_cortex-a15_neon-vfpv4-snapshot
+          - arm_cortex-a5_vfpv4-snapshot
+          - arm_cortex-a7-snapshot
+          - arm_cortex-a7_neon-vfpv4-snapshot
+          - arm_cortex-a7_vfpv4-snapshot
+          - arm_cortex-a8_vfpv3-snapshot
+          - arm_cortex-a9-snapshot
+          - arm_cortex-a9_neon-snapshot
+          - arm_cortex-a9_vfpv3-d16-snapshot
+          - arm_fa526-snapshot
+          - arm_mpcore-snapshot
+          - arm_xscale-snapshot
+          - i386_pentium-mmx-snapshot
+          - i386_pentium4-snapshot
+          - mips64_octeonplus-snapshot
+          - mips_24kc-snapshot
+          - mips_4kec-snapshot
+          - mips_mips32-snapshot
+          - mipsel_24kc-snapshot
+          - mipsel_24kc_24kf-snapshot
+          - mipsel_74kc-snapshot
+          - mipsel_mips32-snapshot
+          - x86_64-snapshot
 
     steps:
       - uses: actions/checkout@v3
@@ -61,7 +59,7 @@ jobs:
           ./fetch.sh
 
       - name: Build
-        uses: openwrt/gh-action-sdk@master
+        uses: immortalwrt/gh-action-sdk@master
         env:
           ARCH: ${{ matrix.arch }}
           KEY_BUILD: ${{ secrets.KEY_BUILD }}
