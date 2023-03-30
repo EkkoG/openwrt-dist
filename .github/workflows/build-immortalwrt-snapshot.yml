@@ -84,7 +84,7 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}
         run: |
-          BRANCH="packages/${ARCH::-2}"
+          BRANCH="immortalwrt/packages/${ARCH::-2}"
           if [[ $ARCH =~ "snapshot" ]]; then
               BRANCH="packages/$ARCH"
           fi
