@@ -36,8 +36,11 @@ sed -i '/golang-package.mk/ c\include ../golang/golang-package.mk' openwrt-packa
 
 git clone --depth=1 https://github.com/openwrt/packages official-packages
 cp -r official-packages/lang/golang openwrt-packages/golang
-cp -r official-packages/net/natmap openwrt-packages/natmap
 rm -rf official-packages
+
+git clone --depth=1 https://github.com/EkkoG/openwrt-natmap.git openwrt-packages/natmap
+git clone --depth=1 https://github.com/EkkoG/luci-app-natmap.git openwrt-packages/luci-app-natmap
+sed -i '/luci.mk/ c\include $(TOPDIR)/feeds/luci/luci.mk' openwrt-packages/luci-app-natmap/Makefile
 
 wget https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/lite/Country.mmdb -O openwrt-packages/luci-app-openclash/root/etc/openclash/Country.mmdb
 wget https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat -O openwrt-packages/luci-app-openclash/root/etc/openclash/GeoSite.dat

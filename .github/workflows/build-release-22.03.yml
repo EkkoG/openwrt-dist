@@ -69,6 +69,7 @@ jobs:
           IGNORE_ERRORS: 1
           PACKAGES: |
             natmap
+            luci-app-natmap
             clash-meta-for-openclash
             clash-for-openclash
             sdm
