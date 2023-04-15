@@ -13,7 +13,6 @@ rm -rf sbwml-packages
 git clone --depth=1 https://github.com/immortalwrt/packages.git immortal-packages
 cp -r immortal-packages/net/mosdns openwrt-packages/mosdns
 cp -r immortal-packages/net/v2ray-geodata openwrt-packages/v2ray-geodata
-sed -i '/golang-package.mk/ c\include ../golang/golang-package.mk' openwrt-packages/mosdns/Makefile
 rm -rf immortal-packages
 
 openclash_version=$(get_latest_release "vernesong/OpenClash")
@@ -29,10 +28,8 @@ git clone --depth=1 https://github.com/gSpotx2f/luci-app-temp-status.git openwrt
 git clone --depth=1 https://github.com/EkkoG/sdm.git openwrt-packages/sdm
 
 git clone --depth=1 https://github.com/EkkoG/clash-meta-for-openclash.git openwrt-packages/clash-meta-for-openclash
-sed -i '/golang-package.mk/ c\include ../golang/golang-package.mk' openwrt-packages/clash-meta-for-openclash/Makefile
 
 git clone --depth=1 https://github.com/EkkoG/clash-for-openclash.git openwrt-packages/clash-for-openclash
-sed -i '/golang-package.mk/ c\include ../golang/golang-package.mk' openwrt-packages/clash-for-openclash/Makefile
 
 git clone --depth=1 https://github.com/openwrt/packages official-packages
 cp -r official-packages/lang/golang openwrt-packages/golang
@@ -40,8 +37,15 @@ rm -rf official-packages
 
 git clone --depth=1 https://github.com/EkkoG/openwrt-natmap.git openwrt-packages/natmap
 git clone --depth=1 https://github.com/EkkoG/luci-app-natmap.git openwrt-packages/luci-app-natmap
-sed -i '/luci.mk/ c\include $(TOPDIR)/feeds/luci/luci.mk' openwrt-packages/luci-app-natmap/Makefile
-
 wget https://testingcf.jsdelivr.net/gh/alecthw/mmdb_china_ip_list@release/lite/Country.mmdb -O openwrt-packages/luci-app-openclash/root/etc/openclash/Country.mmdb
 wget https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat -O openwrt-packages/luci-app-openclash/root/etc/openclash/GeoSite.dat
 wget https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat -O openwrt-packages/luci-app-openclash/root/etc/openclash/GeoIP.dat
+
+
+# find all files in openwrt-packages and exclude .git to calculate md5sum
+find openwrt-packages -type f -not -path "*/.git/*" -exec md5sum {} \; | sort -k 2 | md5sum | cut -d ' ' -f 1 > .latest_md5sums
+
+sed -i '/golang-package.mk/ c\include ../golang/golang-package.mk' openwrt-packages/mosdns/Makefile
+sed -i '/luci.mk/ c\include $(TOPDIR)/feeds/luci/luci.mk' openwrt-packages/luci-app-natmap/Makefile
+sed -i '/golang-package.mk/ c\include ../golang/golang-package.mk' openwrt-packages/clash-for-openclash/Makefile
+sed -i '/golang-package.mk/ c\include ../golang/golang-package.mk' openwrt-packages/clash-meta-for-openclash/Makefile
