@@ -17,7 +17,7 @@ sed -i '/golang-package.mk/ c\include ../golang/golang-package.mk' openwrt-packa
 rm -rf immortal-packages
 
 openclash_version=$(get_latest_release "vernesong/OpenClash")
-openclash_version=${openclash_version:-0.45.103-beta}
+openclash_version=${openclash_version:-0.45.109-beta}
 git clone --depth=1 --branch v$openclash_version https://github.com/vernesong/OpenClash.git
 cp -r OpenClash/luci-app-openclash openwrt-packages/luci-app-openclash
 rm -rf OpenClash
