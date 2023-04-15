@@ -43,9 +43,13 @@ wget https://testingcf.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoi
 
 
 # find all files in openwrt-packages and exclude .git to calculate md5sum
-find openwrt-packages -type f -not -path "*/.git/*" -exec md5sum {} \; | sort -k 2 | md5sum | cut -d ' ' -f 1 > .latest_md5sums
+if [ $1 = '--check' ]; then
+    find openwrt-packages -type f -not -path "*/.git/*" -exec md5sum {} \; | sort -k 2 | md5sum | cut -d ' ' -f 1 > .latest_md5sums
+    rm -rf openwrt-packages
+else
+    sed -i '/luci.mk/ c\include $(TOPDIR)/feeds/luci/luci.mk' openwrt-packages/luci-app-natmap/Makefile
+    sed -i '/golang-package.mk/ c\include ../golang/golang-package.mk' openwrt-packages/mosdns/Makefile
+    sed -i '/golang-package.mk/ c\include ../golang/golang-package.mk' openwrt-packages/clash-for-openclash/Makefile
+    sed -i '/golang-package.mk/ c\include ../golang/golang-package.mk' openwrt-packages/clash-meta-for-openclash/Makefile
 
-sed -i '/golang-package.mk/ c\include ../golang/golang-package.mk' openwrt-packages/mosdns/Makefile
-sed -i '/luci.mk/ c\include $(TOPDIR)/feeds/luci/luci.mk' openwrt-packages/luci-app-natmap/Makefile
-sed -i '/golang-package.mk/ c\include ../golang/golang-package.mk' openwrt-packages/clash-for-openclash/Makefile
-sed -i '/golang-package.mk/ c\include ../golang/golang-package.mk' openwrt-packages/clash-meta-for-openclash/Makefile
+fi
