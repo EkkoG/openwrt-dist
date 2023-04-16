@@ -123,7 +123,7 @@ a850cef4bf709ac7cf90d333f29fd5b0  openwrt-packages/luci-app-openclash/luasrc/vie
 01f77686b5ac47519cccb73ba159eae6  openwrt-packages/luci-app-openclash/root/etc/init.d/openclash
 53382e99eaad1eb00094d0d854a6f975  openwrt-packages/luci-app-openclash/root/etc/openclash/Country.mmdb
 174a1575b4bfe160ea9dd050aee01648  openwrt-packages/luci-app-openclash/root/etc/openclash/GeoIP.dat
-2b9062f1fac2d11443433e041a18a9fc  openwrt-packages/luci-app-openclash/root/etc/openclash/GeoSite.dat
+6f340ab1549cf7b810941888b2e2f40a  openwrt-packages/luci-app-openclash/root/etc/openclash/GeoSite.dat
 0dbec6e3e6620bde63d4f4abb613ba0c  openwrt-packages/luci-app-openclash/root/etc/openclash/accelerated-domains.china.conf
 2aebf1519be8865cf78b9f1203c15948  openwrt-packages/luci-app-openclash/root/etc/openclash/china_ip6_route.ipset
 a17b8a74cbb763dfa04ac9066a56eeb8  openwrt-packages/luci-app-openclash/root/etc/openclash/china_ip_route.ipset
