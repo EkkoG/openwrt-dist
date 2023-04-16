@@ -19,6 +19,7 @@ for repo in $(echo $config | jq -c '.[]'); do
   subdir=$(echo $repo | jq -r '.subdir[]?')
   tag=$(echo $repo | jq -r '.tag')
   use_latest_tag=$(echo $repo | jq -r '.use_latest_tag')
+  rename_to=$(echo $repo | jq -r '.rename_to')
 
   repo_name=$(echo $url | sed 's/.*\///' | sed 's/.git//')
   # https://github.com/vernesong/OpenClash.git
@@ -47,10 +48,17 @@ for repo in $(echo $config | jq -c '.[]'); do
   if [[ ! -z $subdir ]]; then
     for dir in $subdir; do
       last_path=$(echo $dir | sed 's/.*\///')
+      if [[ ! -z $rename_to ]] && [ $rename_to != "null" ]; then
+        last_path=$rename_to
+      fi
       cp -r $repo_name/$dir openwrt-packages/$last_path
     done
   else
-    cp -r $repo_name openwrt-packages/$repo_name
+    to_name=$repo_name
+      if [[ ! -z $rename_to ]] && [ $rename_to != "null" ]; then
+        to_name=$rename_to
+      fi
+    cp -r $repo_name openwrt-packages/$to_name
   fi
 
   # Remove cloned repository

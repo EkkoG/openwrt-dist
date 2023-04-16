@@ -36,7 +36,8 @@
         ]
     },
     {
-        "URL": "https://github.com/EkkoG/openwrt-natmap.git"
+        "URL": "https://github.com/EkkoG/openwrt-natmap.git",
+        "rename_to": "natmap"
     },
     {
         "URL": "https://github.com/EkkoG/luci-app-natmap.git"
