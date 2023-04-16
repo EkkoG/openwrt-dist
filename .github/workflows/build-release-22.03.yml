@@ -59,7 +59,9 @@ jobs:
 
       - name: Prepare feeds
         run: |
-          ./fetch.sh
+          ./feed_build.sh
+          ./patch.sh
+          
 
       - name: Build
         uses: openwrt/gh-action-sdk@v5.4
