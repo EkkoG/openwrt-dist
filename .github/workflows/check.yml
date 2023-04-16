@@ -22,7 +22,10 @@ jobs:
 
       - name: Prepare feeds
         run: |
-          ./fetch.sh --check
+          ./feed_build.sh
+
+          find openwrt-packages -type f -not -path "*/.git/*" -exec md5sum {} \; | sort -k 2 > .last_md5sum
+          rm -rf openwrt-packages
 
 
       - name: Commit
