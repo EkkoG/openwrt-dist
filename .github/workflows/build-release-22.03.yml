@@ -60,6 +60,7 @@ jobs:
       - name: Prepare feeds
         run: |
           ./feed_build.sh
+          find openwrt-packages -type f -not -path "*/.git/*" -exec md5sum {} \; | sort -k 2
           ./patch.sh
           
 
