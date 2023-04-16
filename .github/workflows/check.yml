@@ -22,12 +22,6 @@ jobs:
 
       - name: Prepare feeds
         run: |
-          # if latest commit is bot's commit, skip
-          if [ "$(git log -1 --pretty=format:'%an')" = "bot" ]; then
-            echo "Latest commit is bot's commit, skip"
-            exit 0
-          fi
-
           ./fetch.sh --check
 
 
