@@ -51,6 +51,7 @@ bc33de8ae3a469dc4af3236b001b3072  openwrt-packages/luci-app-mosdns/root/usr/shar
 82af7101b6fded0bb139da4c09eaf85a  openwrt-packages/luci-app-mosdns/root/usr/share/mosdns/sp_low.tdata
 47a894fc77dd937889e8f904e63fc598  openwrt-packages/luci-app-mosdns/root/usr/share/rpcd/acl.d/luci-app-mosdns.json
 e79da638c3d6d9567517c3ecac24e1d4  openwrt-packages/luci-app-natmap/Makefile
+af5fd906ef403119317ece83613c9ac8  openwrt-packages/luci-app-natmap/README.md
 2beb647e58630779ab42979a51c91e16  openwrt-packages/luci-app-natmap/build.sh
 05ff8c33f27f0430b053c1758c987866  openwrt-packages/luci-app-natmap/docker-compose.yml
 ec2cd481c4bfca83df289b95fa5d0428  openwrt-packages/luci-app-natmap/htdocs/luci-static/resources/view/natmap.js
