@@ -58,8 +58,6 @@ jobs:
           fetch-depth: 0
 
       - name: Prepare feeds
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           ./feed_build.sh
           current_md5=$(./get_md5.sh)
@@ -71,11 +69,12 @@ jobs:
 
               if [ "$current_md5" = "$last_md5" ]; then
                   echo "No changes in feeds, skip build"
-                  gh run cancel ${{ github.run_id }}
+                  echo "SKIP_BUILD=1" >> $GITHUB_ENV
               else
                   echo "Feeds changed, continue build"
                   # diff current_md5 last_md5
-                  diff <(echo "$current_md5") <(echo "$last_md5")
+                  diff_result=$(diff <(echo "$current_md5") <(echo "$last_md5") -y | echo "$(cat -)")
+                  echo "$diff_result"
               fi
           fi
           echo "$current_md5" > .21_last_feed_md5
@@ -84,6 +83,7 @@ jobs:
 
       - name: Build
         uses: openwrt/gh-action-sdk@v5.4
+        if: ${{ env.SKIP_BUILD != 1 }}
         env:
           ARCH: ${{ matrix.arch }}
           KEY_BUILD: ${{ secrets.KEY_BUILD }}
@@ -102,10 +102,12 @@ jobs:
             luci-app-temp-status
 
       - name: List files
+        if: ${{ env.SKIP_BUILD != 1 }}
         run: |
           ls -R bin/
 
       - name: Upload
+        if: ${{ env.SKIP_BUILD != 1 }}
         env:
           ARCH: ${{ matrix.arch }}
         run: |
@@ -123,6 +125,7 @@ jobs:
           git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$BRANCH
 
       - name: Commit
+        if: ${{ env.SKIP_BUILD != 1 }}
         run: |
           cd $GITHUB_WORKSPACE
 
