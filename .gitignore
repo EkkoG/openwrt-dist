@@ -1,2 +1,4 @@
 key-build
 clean-branches.sh
+bin/
+openwrt-packages/

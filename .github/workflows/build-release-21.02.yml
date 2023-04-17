@@ -11,7 +11,7 @@ on:
       - '!.github/workflows/check.yml'
       - '!.github/workflows/build-immortalwrt-snapshot.yml'
   schedule:
-  - cron: 0 18 * * 5
+  - cron: 0 */6 * * *
 
 jobs:
   buildpkg:
@@ -60,8 +60,17 @@ jobs:
       - name: Prepare feeds
         run: |
           ./feed_build.sh
-          find openwrt-packages -type f -not -path "*/.git/*" -exec md5sum {} \; | sort -k 2
+          current_md5=$(./get_md5.sh)
+          if [ -f .21_last_feed_md5 ]; then
+              last_md5=$(cat .21_last_feed_md5)
+              if [ "$current_md5" = "$last_md5" ]; then
+                  echo "No changes in feeds, skip build"
+                  gh run cancel ${{ github.run_id }}
+              fi
+          fi
+          echo $current_md5 > .21_last_feed_md5
           ./patch.sh
+          ./get_md5.sh > .21_last_build_md5
 
       - name: Build
         uses: openwrt/gh-action-sdk@v5.4
@@ -102,3 +111,15 @@ jobs:
           git add .
           git commit -m "$(TZ='Asia/Shanghai' date +@%Y%m%d)"
           git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$BRANCH
+
+        - name: Commit
+          run: |
+            cd $GITHUB_WORKSPACE
+
+            git config --global user.name "bot"
+            git config --global user.email "bot@github.com"
+
+            git add .
+
+            git commit -m "Update feeds"
+            git push --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:master
