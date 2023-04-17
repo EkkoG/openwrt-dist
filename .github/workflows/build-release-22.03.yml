@@ -10,8 +10,6 @@ on:
       - '!.github/workflows/build-snapshot.yml'
       - '!.github/workflows/check.yml'
       - '!.github/workflows/build-immortalwrt-snapshot.yml'
-  schedule:
-  - cron: 0 */6 * * *
 
 jobs:
   buildpkg:
