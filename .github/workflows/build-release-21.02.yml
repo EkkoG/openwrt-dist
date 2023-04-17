@@ -65,6 +65,10 @@ jobs:
           current_md5=$(./get_md5.sh)
           if [ -f .21_last_feed_md5 ]; then
               last_md5=$(cat .21_last_feed_md5)
+
+              echo "Current feeds md5: $current_md5"
+              echo "Last feeds md5: $last_md5"
+
               if [ "$current_md5" = "$last_md5" ]; then
                   echo "No changes in feeds, skip build"
                   gh run cancel ${{ github.run_id }}
@@ -74,7 +78,7 @@ jobs:
                   diff <(echo "$current_md5") <(echo "$last_md5")
               fi
           fi
-          echo $current_md5 > .21_last_feed_md5
+          echo "$current_md5" > .21_last_feed_md5
           ./patch.sh
           ./get_md5.sh > .21_last_build_md5
 
