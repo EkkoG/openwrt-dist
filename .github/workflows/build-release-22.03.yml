@@ -58,6 +58,8 @@ jobs:
           fetch-depth: 0
           
       - name: Prepare feeds
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           ./feed_build.sh
           current_md5=$(./get_md5.sh)
