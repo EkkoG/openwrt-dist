@@ -61,26 +61,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          ./feed_build.sh
-          current_md5=$(./get_md5.sh)
-          if [ -f .22_last_feed_md5 ]; then
-              last_md5=$(cat .22_last_feed_md5)
-              if [ "$current_md5" = "$last_md5" ]; then
-                  echo "No changes in feeds, skip build"
-                  echo "SKIP_BUILD=1" >> $GITHUB_ENV
-              else
-                  echo "Feeds changed, continue build"
-                  # diff current_md5 last_md5
-                  diff_result=$(diff <(echo "$current_md5") <(echo "$last_md5") -y | echo "$(cat -)")
-                  echo "$diff_result"
-              fi
-          fi
-          echo "$current_md5" > .22_last_feed_md5
-          ./patch.sh
-          ./get_md5.sh > .22_last_build_md5
+          ./scripts/patch.sh
 
       - name: Build
-        if: ${{ env.SKIP_BUILD != 1 }}
         uses: openwrt/gh-action-sdk@v5.4
         env:
           ARCH: ${{ matrix.arch }}
@@ -100,12 +83,10 @@ jobs:
             luci-app-temp-status
 
       - name: List files
-        if: ${{ env.SKIP_BUILD != 1 }}
         run: |
           ls -R bin/
 
       - name: Upload
-        if: ${{ env.SKIP_BUILD != 1 }}
         env:
           ARCH: ${{ matrix.arch }}
         run: |
@@ -122,15 +103,3 @@ jobs:
           git commit -m "$(TZ='Asia/Shanghai' date +@%Y%m%d)"
           git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$BRANCH
 
-      - name: Commit
-        if: ${{ env.SKIP_BUILD != 1 }}
-        run: |
-          cd $GITHUB_WORKSPACE
-
-          git config --global user.name "bot"
-          git config --global user.email "bot@github.com"
-
-          git add .
-
-          git commit -m "Update feeds"
-          git push --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:master

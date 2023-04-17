@@ -10,8 +10,6 @@ on:
       - '!.github/workflows/build-snapshot.yml'
       - '!.github/workflows/check.yml'
       - '!.github/workflows/build-immortalwrt-snapshot.yml'
-  schedule:
-  - cron: 0 */6 * * *
 
 jobs:
   buildpkg:
@@ -59,31 +57,10 @@ jobs:
 
       - name: Prepare feeds
         run: |
-          ./feed_build.sh
-          current_md5=$(./get_md5.sh)
-          if [ -f .21_last_feed_md5 ]; then
-              last_md5=$(cat .21_last_feed_md5)
-
-              echo "Current feeds md5: $current_md5"
-              echo "Last feeds md5: $last_md5"
-
-              if [ "$current_md5" = "$last_md5" ]; then
-                  echo "No changes in feeds, skip build"
-                  echo "SKIP_BUILD=1" >> $GITHUB_ENV
-              else
-                  echo "Feeds changed, continue build"
-                  # diff current_md5 last_md5
-                  diff_result=$(diff <(echo "$current_md5") <(echo "$last_md5") -y | echo "$(cat -)")
-                  echo "$diff_result"
-              fi
-          fi
-          echo "$current_md5" > .21_last_feed_md5
-          ./patch.sh
-          ./get_md5.sh > .21_last_build_md5
+          ./scripts/patch.sh
 
       - name: Build
         uses: openwrt/gh-action-sdk@v5.4
-        if: ${{ env.SKIP_BUILD != 1 }}
         env:
           ARCH: ${{ matrix.arch }}
           KEY_BUILD: ${{ secrets.KEY_BUILD }}
@@ -102,12 +79,10 @@ jobs:
             luci-app-temp-status
 
       - name: List files
-        if: ${{ env.SKIP_BUILD != 1 }}
         run: |
           ls -R bin/
 
       - name: Upload
-        if: ${{ env.SKIP_BUILD != 1 }}
         env:
           ARCH: ${{ matrix.arch }}
         run: |
@@ -124,15 +99,3 @@ jobs:
           git commit -m "$(TZ='Asia/Shanghai' date +@%Y%m%d)"
           git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$BRANCH
 
-      - name: Commit
-        if: ${{ env.SKIP_BUILD != 1 }}
-        run: |
-          cd $GITHUB_WORKSPACE
-
-          git config --global user.name "bot"
-          git config --global user.email "bot@github.com"
-
-          git add .
-
-          git commit -m "Update feeds"
-          git push --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:master
