@@ -6,6 +6,7 @@ on:
       - '**'
       - '!README.md'
       - '!.gitignore'
+      - '!packages/**'
   schedule:
   - cron: 12 */6 * * *
 
