@@ -68,6 +68,10 @@ jobs:
               if [ "$current_md5" = "$last_md5" ]; then
                   echo "No changes in feeds, skip build"
                   gh run cancel ${{ github.run_id }}
+              else
+                  echo "Feeds changed, continue build"
+                  # diff current_md5 last_md5
+                  diff <(echo "$current_md5") <(echo "$last_md5")
               fi
           fi
           echo $current_md5 > .21_last_feed_md5
