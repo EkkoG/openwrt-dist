@@ -1,7 +1,7 @@
 name: Openwrt Build Bot
 on:
   schedule:
-  - cron: 0 16 * * *
+  - cron: 18 * * * *
   push:
     branches:
       - main
