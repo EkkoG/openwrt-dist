@@ -112,14 +112,14 @@ jobs:
           git commit -m "$(TZ='Asia/Shanghai' date +@%Y%m%d)"
           git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$BRANCH
 
-        - name: Commit
-          run: |
-            cd $GITHUB_WORKSPACE
+      - name: Commit
+        run: |
+          cd $GITHUB_WORKSPACE
 
-            git config --global user.name "bot"
-            git config --global user.email "bot@github.com"
+          git config --global user.name "bot"
+          git config --global user.email "bot@github.com"
 
-            git add .
+          git add .
 
-            git commit -m "Update feeds"
-            git push --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:master
+          git commit -m "Update feeds"
+          git push --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:master
