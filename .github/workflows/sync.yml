@@ -8,6 +8,8 @@ on:
       - '!.gitignore'
       - '!packages/**'
       - '!scripts/patch.sh'
+      - '!add-feed.sh'
+
   schedule:
   - cron: 12 */6 * * *
 

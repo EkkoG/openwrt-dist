@@ -14,6 +14,7 @@ on:
       - '!.github/workflows/sync.yml'
       - '!.github/workflows/build-immortalwrt-snapshot.yml'
       - '!scripts/feed_build.sh'
+      - '!add-feed.sh'
 
 jobs:
   buildpkg:
