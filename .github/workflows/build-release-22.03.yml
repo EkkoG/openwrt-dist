@@ -4,13 +4,16 @@ on:
     branches: master
     paths:
       - '**'
-      - '!README.md'
-      - '!.gitignore'
       - '!.github/workflows/build-release-21.02.yml'
       - '!.github/workflows/build-snapshot.yml'
       - '!.github/workflows/sync.yml'
       - '!.github/workflows/build-immortalwrt-snapshot.yml'
       - '!scripts/feed_build.sh'
+      - '!**/.gitignore'
+      - '!**/README.md'
+      - '!**/LICENSE'
+      - '!**/LICENSES'
+      - '!**/github/workflows/**'
 
 jobs:
   buildpkg:

@@ -4,8 +4,11 @@ on:
     branches: master
     paths:
       - '**'
-      - '!README.md'
-      - '!.gitignore'
+      - '!**/.gitignore'
+      - '!**/README.md'
+      - '!**/LICENSE'
+      - '!**/LICENSES'
+      - '!**/github/workflows/**'
       - '!.github/workflows/build-release-22.03.yml'
       - '!.github/workflows/build-snapshot.yml'
       - '!.github/workflows/sync.yml'
