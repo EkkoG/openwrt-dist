@@ -10,6 +10,7 @@ on:
       - '!.github/workflows/build-snapshot.yml'
       - '!.github/workflows/check.yml'
       - '!.github/workflows/build-immortalwrt-snapshot.yml'
+      - '!scripts/feed_build.sh'
 
 jobs:
   buildpkg:

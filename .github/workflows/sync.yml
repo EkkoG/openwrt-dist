@@ -7,6 +7,7 @@ on:
       - '!README.md'
       - '!.gitignore'
       - '!packages/**'
+      - '!scripts/patch.sh'
   schedule:
   - cron: 12 */6 * * *
 
