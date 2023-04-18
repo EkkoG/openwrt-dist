@@ -3,15 +3,23 @@
         "URL": "https://github.com/sbwml/luci-app-mosdns.git",
         "use_latest_tag": true,
         "subdir": [
-            "luci-app-mosdns",
-            "v2dat"
+            {
+                "dir": "luci-app-mosdns"
+            },
+            {
+                "dir": "v2dat"
+            }
         ]
     },
     {
         "URL": "https://github.com/immortalwrt/packages.git",
         "subdir": [
-            "net/mosdns",
-            "net/v2ray-geodata"
+            {
+                "dir": "net/mosdns"
+            },
+            {
+                "dir": "net/v2ray-geodata"
+            }
         ]
     },
     {
@@ -32,12 +40,19 @@
     {
         "URL": "https://github.com/openwrt/packages.git",
         "subdir": [
-            "lang/golang"
+            {
+                "dir": "lang/golang"
+            }
         ]
     },
     {
         "URL": "https://github.com/EkkoG/openwrt-natmap.git",
-        "rename_to": "natmap"
+        "subdir": [
+            {
+                "dir": ".",
+                "rename_to": "natmap"
+            }
+        ]
     },
     {
         "URL": "https://github.com/EkkoG/luci-app-natmap.git"
@@ -45,7 +60,9 @@
     {
         "URL": "https://github.com/vernesong/OpenClash.git",
         "subdir": [
-            "luci-app-openclash"
+            {
+                "dir": "luci-app-openclash"
+            }
         ],
         "use_latest_tag": true
     }

@@ -20,7 +20,7 @@ for repo in $(echo $config | jq -c '.[]'); do
   # Parse config and assign values to variables
   url=$(echo $repo | jq -r '.URL')
   branch=$(echo $repo | jq -r '.branch')
-  subdir=$(echo $repo | jq -r '.subdir[]?')
+  subdir=$(echo $repo | jq -r '.subdir?')
   tag=$(echo $repo | jq -r '.tag')
   use_latest_tag=$(echo $repo | jq -r '.use_latest_tag')
   rename_to=$(echo $repo | jq -r '.rename_to')
@@ -49,19 +49,25 @@ for repo in $(echo $config | jq -c '.[]'); do
   if [[ ! -d openwrt-packages ]]; then
     mkdir openwrt-packages
   fi
-  if [[ ! -z $subdir ]]; then
-    for dir in $subdir; do
+
+  if [[ ! -z $subdir ]] && [ "$subdir" != 'null' ]; then
+
+    for dir_info in $(echo $subdir | jq -c '.[]'); do
+      dir=$(echo $dir_info | jq -r '.dir')
+      rename_to=$(echo $dir_info | jq -r '.rename_to')
+
+      src_dir=$repo_name/$dir
       last_path=$(echo $dir | sed 's/.*\///')
+      if [ $dir = '.' ]; then
+        src_dir=$repo_name
+      fi
       if [[ ! -z $rename_to ]] && [ $rename_to != "null" ]; then
         last_path=$rename_to
       fi
-      cp -r $repo_name/$dir openwrt-packages/$last_path
+      cp -r $src_dir openwrt-packages/$last_path
     done
   else
     to_name=$repo_name
-    if [[ ! -z $rename_to ]] && [ $rename_to != "null" ]; then
-      to_name=$rename_to
-    fi
     rm -rf $repo_name/.git
     cp -r $repo_name openwrt-packages/$to_name
   fi
