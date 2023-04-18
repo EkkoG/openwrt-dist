@@ -19,7 +19,7 @@ wget https://github.com/ekkog/openwrt-dist/raw/master/cd5844109a8e9dda
 opkg-key add cd5844109a8e9dda
 ```
 
-# Use script to add feed and key
+### Use script to add feed and key
 
 ```
 curl -fsSL https://github.com/ekkog/openwrt-dist/raw/master/add-feed.sh | sh 
