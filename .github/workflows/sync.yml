@@ -35,5 +35,5 @@ jobs:
             echo "No changes to commit"
             exit 0
           fi
-          git commit -m "$(TZ='Asia/Shanghai' date +@%Y%m%d)"
+          git commit -m "Sync $(TZ='Asia/Shanghai' date +@%Y%m%d-%H%M%S)"
           git push --quiet "https://x-access-token:${{ secrets.COMMIT_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:master
