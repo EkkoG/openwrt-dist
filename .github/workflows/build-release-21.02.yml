@@ -58,7 +58,7 @@ jobs:
 
       - name: Prepare feeds
         run: |
-          ./scripts/patch.sh
+          ./scripts/patch.sh ${{ matrix.arch }}
 
       - name: Build
         uses: openwrt/gh-action-sdk@v5.4
