@@ -142,7 +142,8 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}
         run: |
-          BRANCH="luci/$(echo $ARCH | cut -d'-' -f2 | cut -d'.' -f1-2)
+          VERSION=$(echo $ARCH | cut -d'-' -f2 | cut -d'.' -f1-2)
+          BRANCH="luci/$VERSION"
           if [[ $ARCH =~ "snapshot" ]]; then
               BRANCH="luci/$ARCH"
           fi
