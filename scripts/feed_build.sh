@@ -14,6 +14,10 @@ if [ -d packages ]; then
   rm -rf packages
 fi
 
+if [ -d luci ]; then
+  rm -rf luci
+fi
+
 echo "$config"
 # Loop through each repository in the config
 for repo in $(echo $config | jq -c '.[]'); do
@@ -77,3 +81,6 @@ for repo in $(echo $config | jq -c '.[]'); do
 done
 
 mv openwrt-packages packages
+
+mkdir luci
+mv packages/luci* ./luci

@@ -71,14 +71,6 @@ jobs:
           KEY_BUILD: ${{ secrets.KEY_BUILD }}
           INDEX: 1
           IGNORE_ERRORS: 1
-          PACKAGES: |
-            natmap
-            clash-meta-for-openclash
-            clash-for-openclash
-            sdm
-            mosdns
-            v2ray-geodata
-            v2dat
 
       - name: List files
         run: |
@@ -120,8 +112,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           ./scripts/patch.sh ${{ matrix.arch }}
-          mkdir -p /luci
-          mv packages/luci* /luci/
 
       - name: Build
         uses: openwrt/gh-action-sdk@v5.4
@@ -130,7 +120,8 @@ jobs:
           KEY_BUILD: ${{ secrets.KEY_BUILD }}
           INDEX: 1
           IGNORE_ERRORS: 1
-          EXTRA_FEEDS: src-link|custom_luci|/luci/
+          EXTRA_FEEDS: src-link|custom_packages|/home/build/openwrt/packages/
+          FEED_DIR: /home/build/openwrt/luci/
           PACKAGES: |
             luci-app-natmap
             luci-app-mosdns
@@ -151,7 +142,7 @@ jobs:
           if [[ $ARCH =~ "snapshot" ]]; then
               BRANCH="luci/$ARCH"
           fi
-          cd bin/packages/*/custom_luci
+          cd bin/packages/*/action
           sudo chown runner:runner -R .
           git init
           git config user.name "bot"
