@@ -75,11 +75,60 @@ jobs:
           IGNORE_ERRORS: 1
           PACKAGES: |
             natmap
-            luci-app-natmap
             clash-meta-for-openclash
             clash-for-openclash
             sdm
             mosdns
+
+      - name: List files
+        run: |
+          ls -R bin/
+
+      - name: Upload
+        env:
+          ARCH: ${{ matrix.arch }}
+        run: |
+          BRANCH="packages/${ARCH::-2}"
+          if [[ $ARCH =~ "snapshot" ]]; then
+              BRANCH="packages/$ARCH"
+          fi
+          cd bin/packages/*/action
+          sudo chown runner:runner -R .
+          git init
+          git config user.name "bot"
+          git config user.email "bot@github.com"
+          git add .
+          git commit -m "$(TZ='Asia/Shanghai' date +@%Y%m%d)"
+          git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$BRANCH
+
+  build-luci:
+    name: Build Openwrt Luci
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        arch:
+          - x86_64-22.03.3
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          
+      - name: Prepare feeds
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ./scripts/patch.sh ${{ matrix.arch }}
+
+      - name: Build
+        uses: openwrt/gh-action-sdk@v5.4
+        env:
+          ARCH: ${{ matrix.arch }}
+          KEY_BUILD: ${{ secrets.KEY_BUILD }}
+          INDEX: 1
+          IGNORE_ERRORS: 1
+          PACKAGES: |
+            luci-app-natmap
             luci-app-mosdns
             luci-theme-argon
             luci-app-openclash
@@ -93,9 +142,9 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}
         run: |
-          BRANCH="packages/${ARCH::-2}"
+          BRANCH="luci/$(echo $ARCH | cut -d'-' -f2 | cut -d'.' -f1-2)
           if [[ $ARCH =~ "snapshot" ]]; then
-              BRANCH="packages/$ARCH"
+              BRANCH="luci/$ARCH"
           fi
           cd bin/packages/*/action
           sudo chown runner:runner -R .

@@ -91,7 +91,7 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}
         run: |
-          BRANCH="packages/${ARCH::-2}"
+          BRANCH="luci/$(echo $ARCH | cut -d'-' -f2 | cut -d'.' -f1-2)
           if [[ $ARCH =~ "snapshot" ]]; then
               BRANCH="packages/$ARCH"
           fi
