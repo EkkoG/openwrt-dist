@@ -71,7 +71,15 @@ jobs:
           KEY_BUILD: ${{ secrets.KEY_BUILD }}
           INDEX: 1
           IGNORE_ERRORS: 1
-          FEED_DIR: /github/workspace/packages
+          PACKAGES: |
+            clash-for-openclash
+            clash-meta-for-openclash
+            mosdns
+            natmap
+            sdm
+            v2dat
+            v2ray-geodata
+
 
       - name: List files
         run: |
@@ -121,8 +129,6 @@ jobs:
           KEY_BUILD: ${{ secrets.KEY_BUILD }}
           INDEX: 1
           IGNORE_ERRORS: 1
-          EXTRA_FEEDS: src-link|custom_packages|/github/workspace/packages/
-          FEED_DIR: /github/workspace/luci
           PACKAGES: |
             luci-app-natmap
             luci-app-mosdns
@@ -145,6 +151,7 @@ jobs:
           fi
           cd bin/packages/*/action
           sudo chown runner:runner -R .
+          find . -type f ! -name 'luci*.ipk' -name '*.ipk' -exec rm {} +
           git init
           git config user.name "bot"
           git config user.email "bot@github.com"
