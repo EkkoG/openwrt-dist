@@ -70,7 +70,6 @@ jobs:
           PACKAGES: |
             clash-for-openclash
             clash-meta-for-openclash
-            golang
             mosdns
             natmap
             sdm
