@@ -13,20 +13,10 @@ if [ "$DISTRIB_RELEASE" = "snapshot" ]; then
 elif [ "$ISTRIB_RELEASE" != "21.02" ] && [ "$DISTRIB_RELEASE" != "22.03" ]; then
     DISTRIB_RELEASE="21.02"
 fi
-feed="src/gz ekkog https://github.com/ekkog/openwrt-dist/raw/packages/${DISTRIB_ARCH}-${DISTRIB_RELEASE}"
-
-echo "Add feed: $feed"
-
-
-echo "Test feed..."
-curl -s $feed/Packages > /dev/null
-
-if [ $? -ne 0 ]; then
-    echo "Feed not found"
-    exit 1
-else
-    echo "Feed found"
-fi
+feed="
+src/gz ekkog_packages https://github.com/ekkog/openwrt-dist/raw/packages/${DISTRIB_ARCH}-${DISTRIB_RELEASE}
+src/gz ekkog_luci https://github.com/ekkog/openwrt-dist/raw/luci/${DISTRIB_RELEASE}
+"
 
 echo "Add feed..."
 
