@@ -19,6 +19,36 @@ jobs:
     strategy:
       matrix:
         arch:
+          - aarch64_cortex-a53-22.03.3
+          - aarch64_cortex-a72-22.03.3
+          - aarch64_generic-22.03.3
+          - arc_archs-22.03.3
+          - arm_arm1176jzf-s_vfp-22.03.3
+          - arm_arm926ej-s-22.03.3
+          - arm_cortex-a15_neon-vfpv4-22.03.3
+          - arm_cortex-a5_vfpv4-22.03.3
+          - arm_cortex-a7-22.03.3
+          - arm_cortex-a7_neon-vfpv4-22.03.3
+          - arm_cortex-a7_vfpv4-22.03.3
+          - arm_cortex-a8_vfpv3-22.03.3
+          - arm_cortex-a9-22.03.3
+          - arm_cortex-a9_neon-22.03.3
+          - arm_cortex-a9_vfpv3-d16-22.03.3
+          - arm_fa526-22.03.3
+          - arm_mpcore-22.03.3
+          - arm_xscale-22.03.3
+          - i386_pentium-mmx-22.03.3
+          - i386_pentium4-22.03.3
+          - mips64_octeonplus-22.03.3
+          - mips_24kc-22.03.3
+          - mips_4kec-22.03.3
+          - mips_mips32-22.03.3
+          - mipsel_24kc-22.03.3
+          - mipsel_24kc_24kf-22.03.3
+          - mipsel_74kc-22.03.3
+          - mipsel_mips32-22.03.3
+          - powerpc_464fp-22.03.3
+          - powerpc_8540-22.03.3
           - x86_64-22.03.3
 
     steps:
@@ -29,14 +59,6 @@ jobs:
       - name: Prepare feeds
         run: |
           ./scripts/patch.sh ${{ matrix.arch }}
-          cp Makefile2 packages/sdm/Makefile
-          cat packages/sdm/Makefile
-          cd packages
-          git init
-          git config user.name "bot"
-          git config user.email "bot@github.com"
-          git add .
-          git commit -m "$(TZ='Asia/Shanghai' date +@%Y%m%d)"
 
       - name: Build
         uses: ekkog/gh-action-sdk@master
@@ -45,8 +67,12 @@ jobs:
           KEY_BUILD: ${{ secrets.KEY_BUILD }}
           INDEX: 1
           IGNORE_ERRORS: 1
-          FEED_DIR: $GITHUB_WORKSPACE/packages
+          NO_SHFMT_CHECK: 1
           PACKAGES: |
+            clash-for-openclash
+            clash-meta-for-openclash
+            mosdns
+            natmap
             sdm
             v2dat
             v2ray-geodata
@@ -60,7 +86,10 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}
         run: |
-          BRANCH="testpackages/${ARCH::-2}"
+          BRANCH="packages/${ARCH::-2}"
+          if [[ $ARCH =~ "snapshot" ]]; then
+              BRANCH="packages/$ARCH"
+          fi
           cd bin/packages/*/action
           sudo chown runner:runner -R .
           git init
