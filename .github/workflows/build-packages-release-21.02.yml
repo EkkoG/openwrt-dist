@@ -70,6 +70,7 @@ jobs:
           PACKAGES: |
             clash-for-openclash
             clash-meta-for-openclash
+            mosdns
 
 
       - name: List files
