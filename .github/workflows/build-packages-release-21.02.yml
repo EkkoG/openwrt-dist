@@ -7,7 +7,8 @@ on:
       - 'scripts/patch.sh'
       - 'packages/**'
       - '!packages/**/github/workflows/**'
-      - '!packages/**/README.md'
+      - '!packages/**/README*'
+      - '!**/.gitignore'
       - '!packages/**/LICENSE'
       - '!packages/**/LICENSES'
 

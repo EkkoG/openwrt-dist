@@ -7,7 +7,8 @@ on:
       - 'scripts/patch.sh'
       - 'luci/**'
       - '!luci/**/github/workflows/**'
-      - '!luci/**/README.md'
+      - '!packages/**/README*'
+      - '!**/.gitignore'
       - '!luci/**/LICENSE'
       - '!luci/**/LICENSES'
 
