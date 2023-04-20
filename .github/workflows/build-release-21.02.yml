@@ -3,18 +3,14 @@ on:
   push:
     branches: master
     paths:
-      - '**'
-      - '!**/.gitignore'
-      - '!**/README.md'
-      - '!**/LICENSE'
-      - '!**/LICENSES'
-      - '!/packages/**/github/workflows/**'
-      - '!.github/workflows/build-release-22.03.yml'
-      - '!.github/workflows/build-snapshot.yml'
-      - '!.github/workflows/sync.yml'
-      - '!.github/workflows/build-immortalwrt-snapshot.yml'
-      - '!scripts/feed_build.sh'
-      - '!add-feed.sh'
+      - '.github/workflows/build-release-21.02.yml'
+      - 'scripts/feed_build.sh'
+      - 'scripts/patch.sh'
+      - 'packages/**'
+      - '!packages/**/github/workflows/**'
+      - '!packages/**/README.md'
+      - '!packages/**/LICENSE'
+      - '!packages/**/LICENSES'
 
 jobs:
   buildpkg:
@@ -104,60 +100,3 @@ jobs:
           git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$BRANCH
 
 
-  build-luci:
-    name: Build Openwrt Luci
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        arch:
-          - x86_64-21.02.5
-
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          
-      - name: Prepare feeds
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          ./scripts/patch.sh ${{ matrix.arch }}
-
-      - name: Build
-        uses: ekkog/gh-action-sdk@master
-        env:
-          ARCH: ${{ matrix.arch }}
-          KEY_BUILD: ${{ secrets.KEY_BUILD }}
-          INDEX: 1
-          IGNORE_ERRORS: 1
-          FEED_DIR: $GITHUB_WORKSPACE/luci
-          EXTRA_FEEDS: |
-            src-link|custom_packages|/workspace/packages
-          PACKAGES: |
-            luci-app-natmap
-            luci-app-mosdns
-            luci-theme-argon
-            luci-app-openclash
-            luci-app-temp-status
-
-      - name: List files
-        run: |
-          ls -R bin/
-
-      - name: Upload
-        env:
-          ARCH: ${{ matrix.arch }}
-        run: |
-          VERSION=$(echo $ARCH | cut -d'-' -f2 | cut -d'.' -f1-2)
-          BRANCH="luci/$VERSION"
-          if [[ $ARCH =~ "snapshot" ]]; then
-              BRANCH="luci/$ARCH"
-          fi
-          cd bin/packages/*/action
-          sudo chown runner:runner -R .
-          git init
-          git config user.name "bot"
-          git config user.email "bot@github.com"
-          git add .
-          git commit -m "$(TZ='Asia/Shanghai' date +@%Y%m%d)"
-          git push --force --quiet "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY" HEAD:$BRANCH
