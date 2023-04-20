@@ -4,7 +4,6 @@ on:
     branches: master
     paths:
       - '.github/workflows/build-release-22.03.yml'
-      - 'scripts/feed_build.sh'
       - 'scripts/patch.sh'
       - 'packages/**'
       - '!packages/**/github/workflows/**'
