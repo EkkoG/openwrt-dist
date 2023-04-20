@@ -1,4 +1,4 @@
-name: Openwrt Build Bot for 21.02
+name: Openwrt Luci Build Bot for 21.02
 on:
   push:
     branches: master

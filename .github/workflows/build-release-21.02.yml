@@ -1,4 +1,4 @@
-name: Openwrt Build Bot for 21.02
+name: Openwrt Packages Build Bot for 21.02
 on:
   push:
     branches: master
