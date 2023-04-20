@@ -67,6 +67,7 @@ jobs:
           KEY_BUILD: ${{ secrets.KEY_BUILD }}
           INDEX: 1
           IGNORE_ERRORS: 1
+          FEED_DIR: $GITHUB_WORKSPACE/packages
           PACKAGES: |
             clash-for-openclash
             clash-meta-for-openclash
