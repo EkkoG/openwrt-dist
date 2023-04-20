@@ -39,7 +39,6 @@ jobs:
           IGNORE_ERRORS: 1
           FEED_DIR: $GITHUB_WORKSPACE/packages
           PACKAGES: |
-            mosdns
             natmap
             sdm
             v2dat
