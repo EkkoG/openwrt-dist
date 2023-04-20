@@ -74,6 +74,15 @@ jobs:
           INDEX: 1
           IGNORE_ERRORS: 1
           FEED_DIR: $GITHUB_WORKSPACE/packages
+          PACKAGES: |
+            clash-for-openclash
+            clash-meta-for-openclash
+            mosdns
+            natmap
+            sdm
+            v2dat
+            v2ray-geodata
+
 
       - name: List files
         run: |
