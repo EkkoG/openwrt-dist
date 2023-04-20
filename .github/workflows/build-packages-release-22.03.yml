@@ -3,7 +3,7 @@ on:
   push:
     branches: master
     paths:
-      - '.github/workflows/build-release-22.03.yml'
+      - '.github/workflows/build-packages-release-22.03.yml'
       - 'scripts/patch.sh'
       - 'packages/**'
       - '!packages/**/github/workflows/**'
