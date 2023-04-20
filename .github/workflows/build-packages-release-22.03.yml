@@ -39,6 +39,7 @@ jobs:
           IGNORE_ERRORS: 1
           FEED_DIR: $GITHUB_WORKSPACE/packages
           PACKAGES: |
+            sdm
             v2dat
             v2ray-geodata
 
