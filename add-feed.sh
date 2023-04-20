@@ -19,7 +19,9 @@ else
     echo "$feed" >> /etc/opkg/customfeeds.conf
 fi
 
-if [ ! -f /etc/opkg/keys/cd5844109a8e9dda ]; then
+if [ -f /etc/opkg/keys/cd5844109a8e9dda ]; then
+    echo "Key already added"
+else
     echo "Add key..."
     wget https://github.com/ekkog/openwrt-dist/raw/master/cd5844109a8e9dda
     opkg-key add cd5844109a8e9dda
