@@ -9,6 +9,8 @@ on:
       - '!packages/**'
       - '!scripts/patch.sh'
       - '!add-feed.sh'
+      - '!.github/workflows/build-release-22.03.yml'
+      - '!.github/workflows/build-release-21.02.yml'
 
   schedule:
   - cron: 12 */6 * * *
