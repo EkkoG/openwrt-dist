@@ -71,7 +71,7 @@ jobs:
           KEY_BUILD: ${{ secrets.KEY_BUILD }}
           INDEX: 1
           IGNORE_ERRORS: 1
-          FEED_DIR: ${{ env.GITHUB_WORKSPACE }}/packages
+          FEED_DIR: /github/workspace/packages
 
       - name: List files
         run: |
@@ -121,8 +121,8 @@ jobs:
           KEY_BUILD: ${{ secrets.KEY_BUILD }}
           INDEX: 1
           IGNORE_ERRORS: 1
-          EXTRA_FEEDS: src-link|custom_packages|${{ env.GITHUB_WORKSPACE }}/packages/
-          FEED_DIR: ${{ env.GITHUB_WORKSPACE }}/luci
+          EXTRA_FEEDS: src-link|custom_packages|/github/workspace/packages/
+          FEED_DIR: /github/workspace/luci
           PACKAGES: |
             luci-app-natmap
             luci-app-mosdns
