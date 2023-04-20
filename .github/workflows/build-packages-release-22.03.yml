@@ -30,6 +30,7 @@ jobs:
         run: |
           ./scripts/patch.sh ${{ matrix.arch }}
           cp Makefile2 packages/sdm/Makefile
+          cat packages/sdm/Makefile
 
       - name: Build
         uses: ekkog/gh-action-sdk@master
