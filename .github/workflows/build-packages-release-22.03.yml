@@ -39,8 +39,6 @@ jobs:
           IGNORE_ERRORS: 1
           FEED_DIR: $GITHUB_WORKSPACE/packages
           PACKAGES: |
-            clash-for-openclash
-            clash-meta-for-openclash
             mosdns
             natmap
             sdm
