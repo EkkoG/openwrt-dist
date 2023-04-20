@@ -62,7 +62,7 @@ jobs:
           ./scripts/patch.sh ${{ matrix.arch }}
 
       - name: Build
-        uses: ekkog/gh-action-sdk@master
+        uses: openwrt/gh-action-sdk@v5.4
         env:
           ARCH: ${{ matrix.arch }}
           KEY_BUILD: ${{ secrets.KEY_BUILD }}
