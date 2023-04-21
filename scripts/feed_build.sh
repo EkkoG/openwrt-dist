@@ -4,19 +4,17 @@ get_latest_release() {
     curl $url | grep tag_name | cut -d '"' -f 4
 }
 
-# Read JSON config file
+if [ -d "clone-work" ]; then
+  rm -rf clone-work
+  mkdir clone-work
+else
+  mkdir clone-work
+fi
+
+cd clone-work
+cp ../config.json .
+
 config=$(cat config.json)
-if [ -d "openwrt-packages" ]; then
-  rm -rf openwrt-packages
-fi
-
-if [ -d packages ]; then
-  rm -rf packages
-fi
-
-if [ -d luci ]; then
-  rm -rf luci
-fi
 
 echo "$config"
 # Loop through each repository in the config
@@ -50,8 +48,8 @@ for repo in $(echo $config | jq -c '.[]'); do
   fi
 
   # Move subdirectories to "packages" folder
-  if [[ ! -d openwrt-packages ]]; then
-    mkdir openwrt-packages
+  if [[ ! -d final-packages ]]; then
+    mkdir final-packages
   fi
 
   if [[ ! -z $subdir ]] && [ "$subdir" != 'null' ]; then
@@ -64,23 +62,25 @@ for repo in $(echo $config | jq -c '.[]'); do
       last_path=$(echo $dir | sed 's/.*\///')
       if [ $dir = '.' ]; then
         src_dir=$repo_name
+        rm -rf $repo_name/.git
       fi
       if [[ ! -z $rename_to ]] && [ $rename_to != "null" ]; then
         last_path=$rename_to
       fi
-      cp -r $src_dir openwrt-packages/$last_path
+      cp -r $src_dir final-packages/$last_path
     done
   else
     to_name=$repo_name
     rm -rf $repo_name/.git
-    cp -r $repo_name openwrt-packages/$to_name
+    cp -r $repo_name final-packages/$to_name
   fi
 
   # Remove cloned repository
   rm -rf $repo_name
 done
 
-mv openwrt-packages packages
+cp -r final-packages/* ..
 
-mkdir luci
-mv packages/luci* ./luci
+cd ..
+
+rm -rf clone-work
