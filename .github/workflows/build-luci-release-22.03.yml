@@ -19,7 +19,7 @@ jobs:
     strategy:
       matrix:
         arch:
-          - x86_64-22.03.3
+          - x86_64-v22.03.4
 
     steps:
       - uses: actions/checkout@v3
@@ -58,6 +58,7 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}
         run: |
+          ARCH=$(echo $ARCH | sed 's/-v/-/g')
           VERSION=$(echo $ARCH | cut -d'-' -f2 | cut -d'.' -f1-2)
           BRANCH="luci/$VERSION"
           if [[ $ARCH =~ "snapshot" ]]; then
