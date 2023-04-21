@@ -1,0 +1,22 @@
+name: Openwrt Build Bot
+on:
+  schedule:
+  - cron: 18 * * * *
+  push:
+    branches:
+      - main
+
+jobs:
+  check:
+    name: Check new version of Clash
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - uses: EkkoG/openwrt-packages-version-checker@main
+        env:
+          COMMIT_TOKEN: ${{ secrets.P_TOKEN }}
+          REPO: Dreamacro/clash
+          BRANCH: main
