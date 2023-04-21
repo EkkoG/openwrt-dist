@@ -48,7 +48,7 @@ for repo in $(echo $config | jq -c '.[]'); do
   fi
 
   # Move subdirectories to "packages" folder
-  if [[ ! -d final-packages ]]; then
+  if [ ! -d final-packages ]; then
     mkdir final-packages
   fi
 
