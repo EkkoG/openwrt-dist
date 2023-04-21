@@ -40,6 +40,7 @@ jobs:
           INDEX: 1
           IGNORE_ERRORS: 1
           FEED_DIR: $GITHUB_WORKSPACE/luci
+          V: 99
           EXTRA_FEEDS: |
             src-link|custom_packages|/workspace/packages
           PACKAGES: |

@@ -68,6 +68,7 @@ jobs:
           INDEX: 1
           IGNORE_ERRORS: 1
           NO_SHFMT_CHECK: 1
+          V: 99
           PACKAGES: |
             clash-for-openclash
             clash-meta-for-openclash
