@@ -12,8 +12,8 @@ if grep -q "ekkog" /etc/opkg/customfeeds.conf; then
     echo "Feed already added"
 else
     feed="
-    src/gz ekkog_packages https://github.com/ekkog/openwrt-dist/raw/packages/${DISTRIB_ARCH}-${DISTRIB_RELEASE}
-    src/gz ekkog_luci https://github.com/ekkog/openwrt-dist/raw/luci/${DISTRIB_RELEASE}
+    src/gz ekkog_packages https://github.com/ekkog/openwrt-packages/raw/${DISTRIB_ARCH}-${DISTRIB_RELEASE}
+    src/gz ekkog_luci https://github.com/ekkog/openwrt-luci/raw/${DISTRIB_RELEASE}
     "
     echo "Add feed..."
     echo "$feed" >> /etc/opkg/customfeeds.conf
