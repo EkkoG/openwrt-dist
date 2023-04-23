@@ -28,7 +28,7 @@ For user who's OpenWrt is running, add feed to `/etc/opkg/customfeeds.conf`, and
 ```
 wget https://github.com/ekkog/openwrt-dist/raw/master/cd5844109a8e9dda
 opkg-key add cd5844109a8e9dda
-
+```
 
 ### Where the feed is
 
