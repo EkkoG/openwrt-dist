@@ -10,14 +10,17 @@ fi
 
 if grep -q "ekkog" /etc/opkg/customfeeds.conf; then
     echo "Feed already added"
-else
-    feed="
-    src/gz ekkog_packages https://github.com/ekkog/openwrt-packages/raw/${DISTRIB_ARCH}-${DISTRIB_RELEASE}
-    src/gz ekkog_luci https://github.com/ekkog/openwrt-luci/raw/${DISTRIB_RELEASE}
-    "
-    echo "Add feed..."
-    echo "$feed" >> /etc/opkg/customfeeds.conf
+
+    echo "Remove feed..."
+    sed -i '/ekkog/d' /etc/opkg/customfeeds.conf
 fi
+
+feed="
+src/gz ekkog_packages https://github.com/ekkog/openwrt-packages/raw/${DISTRIB_ARCH}-${DISTRIB_RELEASE}
+src/gz ekkog_luci https://github.com/ekkog/openwrt-luci/raw/${DISTRIB_RELEASE}
+"
+echo "Add feed..."
+echo "$feed" >> /etc/opkg/customfeeds.conf
 
 if [ -f /etc/opkg/keys/cd5844109a8e9dda ]; then
     echo "Key already added"
