@@ -1,4 +1,4 @@
-This is all the feed url. Choose one depends on your device arch.
+This is feed included some common used packages and luci-apps for OpenWrt.
 
 
 ### Install use script
@@ -28,3 +28,9 @@ For user who's OpenWrt is running, add feed to `/etc/opkg/customfeeds.conf`, and
 ```
 wget https://github.com/ekkog/openwrt-dist/raw/master/cd5844109a8e9dda
 opkg-key add cd5844109a8e9dda
+
+
+### Where the feed is
+
+https://github.com/EkkoG/openwrt-luci
+https://github.com/EkkoG/openwrt-packages
