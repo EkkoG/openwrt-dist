@@ -3,7 +3,7 @@
 . /etc/openwrt_release 
 DISTRIB_RELEASE=$(echo $DISTRIB_RELEASE | awk -F. '{print $1"."$2}')
 if [ "$DISTRIB_RELEASE" = "snapshot" ]; then
-    DISTRIB_RELEASE="22.03"
+    DISTRIB_RELEASE="SNAPSHOT"
 elif [ "$ISTRIB_RELEASE" != "21.02" ] && [ "$DISTRIB_RELEASE" != "22.03" ]; then
     DISTRIB_RELEASE="21.02"
 fi
