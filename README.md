@@ -1,23 +1,15 @@
 This is feed included some common used packages and luci-apps for OpenWrt.
 
+#### List
 
-### Install use script
+https://github.com/EkkoG/openwrt-packages
 
-```
-curl -fsSL https://github.com/ekkog/openwrt-dist/raw/master/add-feed.sh | sh 
-```
+https://github.com/EkkoG/openwrt-luci
 
-### Install manually
+https://github.com/EkkoG/dae-dist
 
-```
-src/gz ekkog_packages https://github.com/ekkog/openwrt-dist/raw/packages/${architecture}/${openwrt_release}
-src/gz ekkog_luci https://github.com/ekkog/openwrt-luci/raw/${openwrt_release}
-```
+https://github.com/EkkoG/clash-for-openclash-dist
 
-`architecture` can be found at hardware data, like https://openwrt.org/toh/hwdata/8devices/8devices_carambola1
-hardware list is at https://openwrt.org/toh/views/toh_fwdownload
-
-`openwrt_release` is the OpenWrt release version excluding the patch version, like `22.03` or `21.02`.
 
 #### Install sign key
 
