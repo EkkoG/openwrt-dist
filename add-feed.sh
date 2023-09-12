@@ -62,7 +62,7 @@ else
     fi
     echo "Feed version: $feed_version"
     remove_old
-    echo "src/gz ekkog_$feed https://ghproxy.imciel.com/https://downloads.sourceforge.net/project/ekko-openwrt-dist/clash/$feed_version" >> /etc/opkg/customfeeds.conf
+    echo "src/gz ekkog_$feed https://ghproxy.imciel.com/https://downloads.sourceforge.net/project/ekko-openwrt-dist/$feed/$feed_version" >> /etc/opkg/customfeeds.conf
     add_key
 fi
 
