@@ -32,19 +32,23 @@ all_supported=$(curl https://sourceforge.net/projects/ekko-openwrt-dist/files/$f
 echo "All supported version: "
 echo "$all_supported"
 
-branch=$(echo "$DISTRIB_RELEASE" | awk -F- '{print $1}')
-
-if [ -z "$supported" ]; then
-    echo "Your device is not supported"
-    exit 1
-fi
+version=$(echo "$DISTRIB_RELEASE" | awk -F- '{print $1}')
 
 add_packages() {
-    supported=$(echo "$all_supported" | grep $DISTRIB_ARCH | grep $branch)
-    feed_version="$DISTRIB_ARCH-v$DISTRIB_RELEASE"
+
     if [ "$feed" == "luci" ]; then
+        supported=$(echo "$all_supported" | grep $version)
         feed_version="$DISTRIB_RELEASE"
+    else
+        supported=$(echo "$all_supported" | grep $DISTRIB_ARCH | grep $version)
+        feed_version="$DISTRIB_ARCH-v$DISTRIB_RELEASE"
     fi
+
+    if [ -z "$supported" ]; then
+        echo "Your device is not supported"
+        exit 1
+    fi
+
     full_support=0
     for i in $supported; do
         if [ "$i" = "$feed_version" ]; then
