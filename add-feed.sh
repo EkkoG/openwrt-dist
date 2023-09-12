@@ -28,21 +28,26 @@ add_key() {
     fi
 }
 
-
 all_supported=$(curl https://sourceforge.net/projects/ekko-openwrt-dist/files/$feed/ | grep -e "<th.*files/$feed" | grep -o 'href="/projects[^"]*"' | sed 's/href="//' | sed 's/"$//' | awk -F/ '{print $6}')
 echo "All supported version: "
 echo "$all_supported"
 
 branch=$(echo "$DISTRIB_RELEASE" | awk -F- '{print $1}')
-supported=$(echo "$all_supported" | grep $DISTRIB_ARCH | grep $branch)
 
 if [ -z "$supported" ]; then
     echo "Your device is not supported"
-else
-    feed_version="$DISTRIB_ARCH-v$DISTRIB_RELEASE"
+    exit 1
+fi
+
+add_packages() {
+    supported=$(echo "$all_supported" | grep $DISTRIB_ARCH | grep $branch)
+    feed_version="$DISTRIB_ARCH-$DISTRIB_RELEASE"
+    if [ "$feed" == "luci" ]; then
+        feed_version="$DISTRIB_RELEASE"
+    fi
     full_support=0
     for i in $supported; do
-        if [ "$i" = "$DISTRIB_ARCH-v$DISTRIB_RELEASE" ]; then
+        if [ "$i" = "$feed_version" ]; then
             full_support=1
             break
         fi
@@ -64,5 +69,6 @@ else
     remove_old
     echo "src/gz ekkog_$feed https://ghproxy.imciel.com/https://downloads.sourceforge.net/project/ekko-openwrt-dist/$feed/$feed_version" >> /etc/opkg/customfeeds.conf
     add_key
-fi
+}
 
+add_packages
