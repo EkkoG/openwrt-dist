@@ -41,7 +41,7 @@ fi
 
 add_packages() {
     supported=$(echo "$all_supported" | grep $DISTRIB_ARCH | grep $branch)
-    feed_version="$DISTRIB_ARCH-$DISTRIB_RELEASE"
+    feed_version="$DISTRIB_ARCH-v$DISTRIB_RELEASE"
     if [ "$feed" == "luci" ]; then
         feed_version="$DISTRIB_RELEASE"
     fi
