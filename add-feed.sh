@@ -1,8 +1,8 @@
 #!/bin/sh -e
 
-feed=$1
+global_feed=$1
 
-if [ -z "$feed" ]; then
+if [ -z "$global_feed" ]; then
     echo "Usage: $0 <feed>"
     echo "Example: $0 clash"
     exit 1
@@ -11,6 +11,7 @@ fi
 . /etc/openwrt_release 
 
 remove_old() {
+    feed=$1
     if grep -q "ekkog_$feed" /etc/opkg/customfeeds.conf; then
         echo "Old feed already exists, remove it..."
         sed -i "/ekkog_$feed/d" /etc/opkg/customfeeds.conf
@@ -28,13 +29,14 @@ add_key() {
     fi
 }
 
-all_supported=$(curl https://sourceforge.net/projects/ekko-openwrt-dist/files/$feed/ | grep -e "<th.*files/$feed" | grep -o 'href="/projects[^"]*"' | sed 's/href="//' | sed 's/"$//' | awk -F/ '{print $6}')
-echo "All supported version: "
-echo "$all_supported"
-
-version=$(echo "$DISTRIB_RELEASE" | awk -F- '{print $1}')
-
 add_packages() {
+    feed=$1
+
+    all_supported=$(curl https://sourceforge.net/projects/ekko-openwrt-dist/files/$feed/ | grep -e "<th.*files/$feed" | grep -o 'href="/projects[^"]*"' | sed 's/href="//' | sed 's/"$//' | awk -F/ '{print $6}')
+    echo "All supported version: "
+    echo "$all_supported"
+
+    version=$(echo "$DISTRIB_RELEASE" | awk -F- '{print $1}')
 
     if [ "$feed" == "luci" ]; then
         supported=$(echo "$all_supported" | grep $version)
@@ -70,9 +72,16 @@ add_packages() {
         fi
     fi
     echo "Feed version: $feed_version"
-    remove_old
+    remove_old $feed
     echo "src/gz ekkog_$feed https://ghproxy.imciel.com/https://downloads.sourceforge.net/project/ekko-openwrt-dist/$feed/$feed_version" >> /etc/opkg/customfeeds.conf
     add_key
 }
 
-add_packages
+if [ $global_feed = all ]; then
+    add_packages luci
+    add_packages dae
+    add_packages packages
+    add_packages clash
+else
+    add_packages $global_feed
+fi
