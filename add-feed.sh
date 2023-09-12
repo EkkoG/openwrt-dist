@@ -2,6 +2,12 @@
 
 feed=$1
 
+if [ -z "$feed" ]; then
+    echo "Usage: $0 <feed>"
+    echo "Example: $0 clash"
+    exit 1
+fi
+
 . /etc/openwrt_release 
 
 remove_old() {
