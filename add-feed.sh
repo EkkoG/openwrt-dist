@@ -72,8 +72,9 @@ add_packages() {
         fi
     fi
     echo "Feed version: $feed_version"
-    remove_old $feed
-    echo "src/gz ekkog_$feed https://ghproxy.imciel.com/https://downloads.sourceforge.net/project/ekko-openwrt-dist/$feed/$feed_version" >> /etc/opkg/customfeeds.conf
+    valid_feed=$(echo $feed | sed 's/[^[:alnum:]]\+/_/g')
+    remove_old $valid_feed
+    echo "src/gz ekkog_$valid_feed https://ghproxy.imciel.com/https://downloads.sourceforge.net/project/ekko-openwrt-dist/$feed/$feed_version" >> /etc/opkg/customfeeds.conf
     add_key
 }
 
