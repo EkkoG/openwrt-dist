@@ -72,9 +72,18 @@ add_packages() {
         fi
     fi
     echo "Feed version: $feed_version"
+
     valid_feed=$(echo $feed | sed 's/[^[:alnum:]]\+/_/g')
     remove_old $valid_feed
     echo "src/gz ekkog_$valid_feed https://ghproxy.imciel.com/https://downloads.sourceforge.net/project/ekko-openwrt-dist/$feed/$feed_version" >> /etc/opkg/customfeeds.conf
+    add_key
+}
+
+add_geodata() {
+    feed=$1
+    valid_feed=$(echo $feed | sed 's/[^[:alnum:]]\+/_/g')
+    remove_old $valid_feed
+    echo "src/gz ekkog_$valid_feed https://ghproxy.imciel.com/https://downloads.sourceforge.net/project/ekko-openwrt-dist/$feed" >> /etc/opkg/customfeeds.conf
     add_key
 }
 
@@ -83,6 +92,12 @@ if [ $global_feed = all ]; then
     add_packages dae
     add_packages packages
     add_packages clash
+    add_geodata geodata/v2ray
 else
-    add_packages $global_feed
+    # check global feed contains geodata
+    if echo $global_feed | grep -q geodata; then
+        add_geodata $global_feed
+    else
+        add_packages $global_feed
+    fi
 fi
