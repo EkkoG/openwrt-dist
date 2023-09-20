@@ -11,10 +11,9 @@ fi
 . /etc/openwrt_release 
 
 remove_old() {
-    feed=$1
-    if grep -q "ekkog_$feed" /etc/opkg/customfeeds.conf; then
+    if grep -q "ekkog_$1" /etc/opkg/customfeeds.conf; then
         echo "Old feed already exists, remove it..."
-        sed -i "/ekkog_$feed/d" /etc/opkg/customfeeds.conf
+        sed -i "/ekkog_$1/d" /etc/opkg/customfeeds.conf
     fi
 }
 
@@ -30,15 +29,14 @@ add_key() {
 }
 
 add_packages() {
-    feed=$1
 
-    all_supported=$(curl https://sourceforge.net/projects/ekko-openwrt-dist/files/$feed/ | grep -e "<th.*files/$feed" | grep -o 'href="/projects[^"]*"' | sed 's/href="//' | sed 's/"$//' | awk -F/ '{print $6}')
+    all_supported=$(curl https://sourceforge.net/projects/ekko-openwrt-dist/files/$1/ | grep -e "<th.*files/$1" | grep -o 'href="/projects[^"]*"' | sed 's/href="//' | sed 's/"$//' | awk -F/ '{print $6}')
     echo "All supported version: "
     echo "$all_supported"
 
     version=$(echo "$DISTRIB_RELEASE" | awk -F- '{print $1}')
 
-    if [ "$feed" == "luci" ]; then
+    if [ "$1" == "luci" ]; then
         supported=$(echo "$all_supported" | grep $version)
         feed_version="$DISTRIB_RELEASE"
     else
@@ -73,17 +71,16 @@ add_packages() {
     fi
     echo "Feed version: $feed_version"
 
-    valid_feed=$(echo $feed | sed 's/[^[:alnum:]]\+/_/g')
+    valid_feed=$(echo $1 | sed 's/[^[:alnum:]]\+/_/g')
     remove_old $valid_feed
-    echo "src/gz ekkog_$valid_feed https://ghproxy.imciel.com/https://downloads.sourceforge.net/project/ekko-openwrt-dist/$feed/$feed_version" >> /etc/opkg/customfeeds.conf
+    echo "src/gz ekkog_$valid_feed https://ghproxy.imciel.com/https://downloads.sourceforge.net/project/ekko-openwrt-dist/$1/$feed_version" >> /etc/opkg/customfeeds.conf
     add_key
 }
 
 add_geodata() {
-    feed=$1
-    valid_feed=$(echo $feed | sed 's/[^[:alnum:]]\+/_/g')
+    valid_feed=$(echo $1 | sed 's/[^[:alnum:]]\+/_/g')
     remove_old $valid_feed
-    echo "src/gz ekkog_$valid_feed https://ghproxy.imciel.com/https://downloads.sourceforge.net/project/ekko-openwrt-dist/$feed" >> /etc/opkg/customfeeds.conf
+    echo "src/gz ekkog_$valid_feed https://ghproxy.imciel.com/https://downloads.sourceforge.net/project/ekko-openwrt-dist/$1" >> /etc/opkg/customfeeds.conf
     add_key
 }
 
