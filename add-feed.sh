@@ -78,7 +78,7 @@ add_packages() {
 }
 
 add_geodata() {
-    remove_old ekkog_geodata
+    remove_old geodata
     echo "src/gz ekkog_geodata https://ghproxy.imciel.com/https://downloads.sourceforge.net/project/ekko-openwrt-dist/$1" >> /etc/opkg/customfeeds.conf
     add_key
 }
