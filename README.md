@@ -10,6 +10,8 @@ https://github.com/EkkoG/dae-dist
 
 https://github.com/EkkoG/clash-for-openclash-dist
 
+https://github.com/EkkoG/geodata-dist
+
 
 #### Install with scripts
 
