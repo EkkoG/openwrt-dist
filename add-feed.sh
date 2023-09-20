@@ -85,11 +85,11 @@ add_geodata() {
 }
 
 if [ $global_feed = all ]; then
+    add_geodata geodata/v2ray
     add_packages luci
     add_packages dae
     add_packages packages
     add_packages clash
-    add_geodata geodata/v2ray
 else
     # check global feed contains geodata
     if echo $global_feed | grep -q geodata; then
