@@ -78,9 +78,8 @@ add_packages() {
 }
 
 add_geodata() {
-    valid_feed=$(echo $1 | sed 's/[^[:alnum:]]\+/_/g')
-    remove_old $valid_feed
-    echo "src/gz ekkog_$valid_feed https://ghproxy.imciel.com/https://downloads.sourceforge.net/project/ekko-openwrt-dist/$1" >> /etc/opkg/customfeeds.conf
+    remove_old ekkog_geodata
+    echo "src/gz ekkog_geodata https://ghproxy.imciel.com/https://downloads.sourceforge.net/project/ekko-openwrt-dist/$1" >> /etc/opkg/customfeeds.conf
     add_key
 }
 
