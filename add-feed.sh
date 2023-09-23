@@ -35,12 +35,14 @@ add_packages() {
     echo "$all_supported"
 
     version=$(echo "$DISTRIB_RELEASE" | awk -F- '{print $1}')
+    # get the first two version number
+    big_version=$(echo "$version" | awk -F. '{print $1"."$2}')
 
     if [ "$1" == "luci" ]; then
-        supported=$(echo "$all_supported" | grep $version)
+        supported=$(echo "$all_supported" | grep $big_version)
         feed_version="$DISTRIB_RELEASE"
     else
-        supported=$(echo "$all_supported" | grep $DISTRIB_ARCH | grep $version)
+        supported=$(echo "$all_supported" | grep $DISTRIB_ARCH | grep $big_version)
         feed_version="$DISTRIB_ARCH-v$DISTRIB_RELEASE"
     fi
 
