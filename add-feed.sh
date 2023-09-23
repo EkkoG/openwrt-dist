@@ -57,6 +57,10 @@ add_packages() {
         fi
     done
 
+    echo ""
+    echo "Supported version: "
+    echo "$supported"
+
     if [ "$full_support" = "0" ]; then
         echo "Your device is not fully supported"
         echo "Find the latest version that supports your device"
