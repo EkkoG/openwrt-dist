@@ -16,7 +16,7 @@ https://github.com/EkkoG/geodata-dist
 #### Install with scripts
 
 ```
-sh -c "$(curl https://raw.fgit.cf/EkkoG/openwrt-dist/master/add-feed.sh)" -- all
+sh -c "$(curl https://fastly.jsdelivr.net/gh/EkkoG/openwrt-dist@master/add-feed.sh)" -- all
 ```
 
 #### Install sign key
