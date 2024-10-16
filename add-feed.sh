@@ -29,57 +29,12 @@ add_key() {
 }
 
 add_packages() {
-
-    all_supported=$(curl https://sourceforge.net/projects/ekko-openwrt-dist/files/$1/ | grep -e "<th.*files/$1" | grep -o 'href="/projects[^"]*"' | sed 's/href="//' | sed 's/"$//' | awk -F/ '{print $6}')
-    echo "All supported version: "
-    echo "$all_supported"
-
-    version=$(echo "$DISTRIB_RELEASE" | awk -F- '{print $1}')
-    # get the first two version number
-    big_version=$(echo "$version" | awk -F. '{print $1"."$2}')
-
-    if [ "$1" == "luci" ]; then
-        supported=$(echo "$all_supported" | grep $big_version)
-        feed_version="$DISTRIB_RELEASE"
-    else
-        supported=$(echo "$all_supported" | grep $DISTRIB_ARCH | grep $big_version)
-        feed_version="$DISTRIB_ARCH-v$DISTRIB_RELEASE"
+    remove_old $1
+    dist_path="$1/$DISTRIB_ARCH"
+    if [ $1 = luci ]; then
+        dist_path="luci"
     fi
-
-    if [ -z "$supported" ]; then
-        echo "Your device is not supported"
-        exit 1
-    fi
-
-    full_support=0
-    for i in $supported; do
-        if [ "$i" = "$feed_version" ]; then
-            full_support=1
-            break
-        fi
-    done
-
-    echo ""
-    echo "Supported version: "
-    echo "$supported"
-
-    if [ "$full_support" = "0" ]; then
-        echo "Your device is not fully supported"
-        echo "Find the latest version that supports your device"
-
-        final_release=$(echo "$supported" | grep -v "\-rc" | grep -v "\-SNAPSHOT")
-        if [ -z "$final_release" ]; then
-            echo "No final release found, use the latest rc version"
-            feed_version=$(echo "$supported" | grep "\-rc" | tail -n 1)
-        else
-            feed_version=$final_release
-        fi
-    fi
-    echo "Feed version: $feed_version"
-
-    valid_feed=$(echo $1 | sed 's/[^[:alnum:]]\+/_/g')
-    remove_old $valid_feed
-    echo "src/gz ekkog_$valid_feed https://ghproxy.imciel.com/https://downloads.sourceforge.net/project/ekko-openwrt-dist/$1/$feed_version" >> /etc/opkg/customfeeds.conf
+    echo "src/gz ekkog_$1 https://ghproxy.imciel.com/https://downloads.sourceforge.net/project/ekko-openwrt-dist/$dist_path" >> /etc/opkg/customfeeds.conf
     add_key
 }
 
@@ -90,11 +45,11 @@ add_geodata() {
 }
 
 if [ $global_feed = all ]; then
-    add_geodata geodata/v2ray
+    add_geodata geodata/MetaCubeX
     add_packages luci
     add_packages dae
     add_packages packages
-    add_packages clash
+    add_packages mihomo
 else
     # check global feed contains geodata
     if echo $global_feed | grep -q geodata; then
